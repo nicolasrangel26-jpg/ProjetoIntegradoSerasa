@@ -301,7 +301,11 @@
             btnAttEstoque.Name = "btnAttEstoque";
             btnAttEstoque.Size = new Size(92, 30);
             btnAttEstoque.TabIndex = 11;
+<<<<<<< HEAD
             btnAttEstoque.Text = "REMOVER";
+=======
+            btnAttEstoque.Text = "EDITAR";
+>>>>>>> 5da86caee8f458bf579291f7a5cd5af2d2bdd80f
             btnAttEstoque.UseVisualStyleBackColor = true;
             btnAttEstoque.Click += btnAttEstoque_Click;
             // 
