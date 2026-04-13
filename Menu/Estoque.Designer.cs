@@ -307,7 +307,7 @@
             btnAttEstoque.Name = "btnAttEstoque";
             btnAttEstoque.Size = new Size(92, 30);
             btnAttEstoque.TabIndex = 11;
-            btnAttEstoque.Text = "ATUALIZAR";
+            btnAttEstoque.Text = "EDITAR";
             btnAttEstoque.UseVisualStyleBackColor = true;
             btnAttEstoque.Click += btnAttEstoque_Click;
             // 

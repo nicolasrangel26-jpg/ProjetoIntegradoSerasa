@@ -115,7 +115,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(8, 323);
+            pictureBox4.Location = new Point(18, 435);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(42, 48);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -126,7 +126,7 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(12, 517);
+            pictureBox5.Location = new Point(18, 546);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(42, 48);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -139,11 +139,11 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(3, 510);
+            button5.Location = new Point(3, 537);
             button5.Name = "button5";
             button5.Size = new Size(197, 66);
             button5.TabIndex = 11;
-            button5.Text = "Fechar";
+            button5.Text = "  Fechar";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
@@ -153,20 +153,20 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(3, 314);
+            button4.Location = new Point(3, 426);
             button4.Name = "button4";
-            button4.Size = new Size(205, 66);
+            button4.Size = new Size(197, 66);
             button4.TabIndex = 10;
-            button4.Text = "Encomendas";
+            button4.Text = "        Encomendas";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(12, 422);
+            pictureBox3.Location = new Point(13, 335);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 38);
+            pictureBox3.Size = new Size(42, 40);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 9;
             pictureBox3.TabStop = false;
@@ -174,9 +174,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 224);
+            pictureBox1.Location = new Point(18, 230);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 38);
+            pictureBox1.Size = new Size(42, 48);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -188,11 +188,11 @@
             btnEstoqueEnco.FlatStyle = FlatStyle.Popup;
             btnEstoqueEnco.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEstoqueEnco.ForeColor = Color.White;
-            btnEstoqueEnco.Location = new Point(3, 212);
+            btnEstoqueEnco.Location = new Point(3, 221);
             btnEstoqueEnco.Name = "btnEstoqueEnco";
             btnEstoqueEnco.Size = new Size(197, 66);
             btnEstoqueEnco.TabIndex = 4;
-            btnEstoqueEnco.Text = "Estoque";
+            btnEstoqueEnco.Text = "      Estoque";
             btnEstoqueEnco.UseVisualStyleBackColor = false;
             btnEstoqueEnco.Click += button1_Click;
             // 
@@ -212,11 +212,11 @@
             BtnMenuEnco.FlatStyle = FlatStyle.Popup;
             BtnMenuEnco.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BtnMenuEnco.ForeColor = Color.White;
-            BtnMenuEnco.Location = new Point(3, 408);
+            BtnMenuEnco.Location = new Point(3, 322);
             BtnMenuEnco.Name = "BtnMenuEnco";
             BtnMenuEnco.Size = new Size(197, 66);
             BtnMenuEnco.TabIndex = 5;
-            BtnMenuEnco.Text = "Cadastro ";
+            BtnMenuEnco.Text = "     Cadastro";
             BtnMenuEnco.UseVisualStyleBackColor = false;
             BtnMenuEnco.Click += BtnMenuEnco_Click;
             // 
