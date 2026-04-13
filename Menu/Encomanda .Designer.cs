@@ -53,11 +53,12 @@
             txtObs = new TextBox();
             label2 = new Label();
             btnConfirmarObs = new Button();
-            comboBox1 = new ComboBox();
             panel4 = new Panel();
             textBox1 = new TextBox();
             label5 = new Label();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -69,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -240,7 +242,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(892, 215);
+            label6.Location = new Point(905, 231);
             label6.Name = "label6";
             label6.Size = new Size(418, 43);
             label6.TabIndex = 19;
@@ -250,6 +252,7 @@
             // panel5
             // 
             panel5.BackColor = Color.WhiteSmoke;
+            panel5.Controls.Add(comboBox1);
             panel5.Controls.Add(numericUpDown1);
             panel5.Controls.Add(label3);
             panel5.Controls.Add(label9);
@@ -261,7 +264,7 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(78, 118);
+            numericUpDown1.Location = new Point(80, 120);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(120, 23);
             numericUpDown1.TabIndex = 23;
@@ -284,7 +287,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(55, 7);
+            label9.Location = new Point(62, 8);
             label9.Name = "label9";
             label9.Size = new Size(149, 43);
             label9.TabIndex = 19;
@@ -346,14 +349,6 @@
             btnConfirmarObs.Text = "Confirmar ";
             btnConfirmarObs.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(892, 289);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(418, 23);
-            comboBox1.TabIndex = 22;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.WhiteSmoke;
@@ -397,14 +392,30 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(905, 306);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(418, 358);
+            dataGridView1.TabIndex = 24;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(47, 54);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(189, 23);
+            comboBox1.TabIndex = 25;
+            // 
             // Encomanda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(dataGridView1);
             Controls.Add(panel4);
-            Controls.Add(comboBox1);
             Controls.Add(panel6);
             Controls.Add(label6);
             Controls.Add(panel5);
@@ -431,6 +442,7 @@
             panel6.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -461,10 +473,11 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private NumericUpDown numericUpDown1;
-        private ComboBox comboBox1;
         private Panel panel4;
         private TextBox textBox1;
         private Label label5;
         private Button button1;
+        private DataGridView dataGridView1;
+        private ComboBox comboBox1;
     }
 }

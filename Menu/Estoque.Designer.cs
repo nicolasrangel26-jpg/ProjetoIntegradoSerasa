@@ -45,7 +45,6 @@
             dgvTabelaEstoque = new DataGridView();
             txtNomeProduto = new TextBox();
             txtQuant = new TextBox();
-            txtValidade = new TextBox();
             btnAdicionarEstoque = new Button();
             btnRemoveEstoque = new Button();
             label2 = new Label();
@@ -56,6 +55,7 @@
             label5 = new Label();
             panel4 = new Panel();
             panel5 = new Panel();
+            dateTimePicker2 = new DateTimePicker();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -64,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).BeginInit();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -238,13 +239,6 @@
             txtQuant.Size = new Size(124, 23);
             txtQuant.TabIndex = 4;
             // 
-            // txtValidade
-            // 
-            txtValidade.Location = new Point(694, 197);
-            txtValidade.Name = "txtValidade";
-            txtValidade.Size = new Size(172, 23);
-            txtValidade.TabIndex = 5;
-            // 
             // btnAdicionarEstoque
             // 
             btnAdicionarEstoque.FlatStyle = FlatStyle.System;
@@ -307,7 +301,7 @@
             btnAttEstoque.Name = "btnAttEstoque";
             btnAttEstoque.Size = new Size(92, 30);
             btnAttEstoque.TabIndex = 11;
-            btnAttEstoque.Text = "ATUALIZAR";
+            btnAttEstoque.Text = "REMOVER";
             btnAttEstoque.UseVisualStyleBackColor = true;
             btnAttEstoque.Click += btnAttEstoque_Click;
             // 
@@ -342,10 +336,20 @@
             // 
             panel5.BackColor = Color.Snow;
             panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(dateTimePicker2);
             panel5.Location = new Point(250, 150);
             panel5.Name = "panel5";
             panel5.Size = new Size(760, 78);
             panel5.TabIndex = 15;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.ImeMode = ImeMode.On;
+            dateTimePicker2.Location = new Point(443, 43);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(143, 23);
+            dateTimePicker2.TabIndex = 16;
             // 
             // Estoque
             // 
@@ -361,7 +365,6 @@
             Controls.Add(label2);
             Controls.Add(btnRemoveEstoque);
             Controls.Add(btnAdicionarEstoque);
-            Controls.Add(txtValidade);
             Controls.Add(txtQuant);
             Controls.Add(txtNomeProduto);
             Controls.Add(dgvTabelaEstoque);
@@ -382,6 +385,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).EndInit();
+            panel5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -399,7 +403,6 @@
         private PictureBox pictureBox3;
         private TextBox txtNomeProduto;
         private TextBox txtQuant;
-        private TextBox txtValidade;
         private Button btnAdicionarEstoque;
         private Button btnRemoveEstoque;
         private Label label2;
@@ -416,5 +419,6 @@
         private PictureBox pictureBox6;
         private Button btnCadastroEstoque;
         private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
     }
 }
