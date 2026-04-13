@@ -42,12 +42,11 @@ namespace Menu
 
                 cmd.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
                 cmd.Parameters.AddWithValue("@quant", txtQuant.Text);
-                cmd.Parameters.AddWithValue("@validade", txtValidade.Text);
+                cmd.Parameters.AddWithValue("@validade", dateTimePicker2);
 
                 cmd.ExecuteNonQuery();
                 txtNomeProduto.Clear();
                 txtQuant.Clear();
-                txtValidade.Clear();
 
             }
             catch (Exception ex)
