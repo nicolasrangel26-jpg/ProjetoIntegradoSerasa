@@ -53,11 +53,12 @@
             txtObs = new TextBox();
             label2 = new Label();
             btnConfirmarObs = new Button();
-            comboBox1 = new ComboBox();
             panel4 = new Panel();
             textBox1 = new TextBox();
             label5 = new Label();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -69,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -115,7 +117,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(8, 323);
+            pictureBox4.Location = new Point(18, 435);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(42, 48);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -126,7 +128,7 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(12, 517);
+            pictureBox5.Location = new Point(18, 546);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(42, 48);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -139,11 +141,11 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(3, 510);
+            button5.Location = new Point(3, 537);
             button5.Name = "button5";
             button5.Size = new Size(197, 66);
             button5.TabIndex = 11;
-            button5.Text = "Fechar";
+            button5.Text = "  Fechar";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
@@ -153,20 +155,20 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(3, 314);
+            button4.Location = new Point(3, 426);
             button4.Name = "button4";
-            button4.Size = new Size(205, 66);
+            button4.Size = new Size(197, 66);
             button4.TabIndex = 10;
-            button4.Text = "Encomendas";
+            button4.Text = "        Encomendas";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(12, 422);
+            pictureBox3.Location = new Point(13, 335);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 38);
+            pictureBox3.Size = new Size(42, 40);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 9;
             pictureBox3.TabStop = false;
@@ -174,9 +176,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 224);
+            pictureBox1.Location = new Point(18, 230);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 38);
+            pictureBox1.Size = new Size(42, 48);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -188,11 +190,11 @@
             btnEstoqueEnco.FlatStyle = FlatStyle.Popup;
             btnEstoqueEnco.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEstoqueEnco.ForeColor = Color.White;
-            btnEstoqueEnco.Location = new Point(3, 212);
+            btnEstoqueEnco.Location = new Point(3, 221);
             btnEstoqueEnco.Name = "btnEstoqueEnco";
             btnEstoqueEnco.Size = new Size(197, 66);
             btnEstoqueEnco.TabIndex = 4;
-            btnEstoqueEnco.Text = "Estoque";
+            btnEstoqueEnco.Text = "      Estoque";
             btnEstoqueEnco.UseVisualStyleBackColor = false;
             btnEstoqueEnco.Click += button1_Click;
             // 
@@ -212,11 +214,11 @@
             BtnMenuEnco.FlatStyle = FlatStyle.Popup;
             BtnMenuEnco.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BtnMenuEnco.ForeColor = Color.White;
-            BtnMenuEnco.Location = new Point(3, 408);
+            BtnMenuEnco.Location = new Point(3, 322);
             BtnMenuEnco.Name = "BtnMenuEnco";
             BtnMenuEnco.Size = new Size(197, 66);
             BtnMenuEnco.TabIndex = 5;
-            BtnMenuEnco.Text = "Cadastro ";
+            BtnMenuEnco.Text = "     Cadastro";
             BtnMenuEnco.UseVisualStyleBackColor = false;
             BtnMenuEnco.Click += BtnMenuEnco_Click;
             // 
@@ -240,7 +242,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(892, 215);
+            label6.Location = new Point(905, 231);
             label6.Name = "label6";
             label6.Size = new Size(418, 43);
             label6.TabIndex = 19;
@@ -250,6 +252,7 @@
             // panel5
             // 
             panel5.BackColor = Color.WhiteSmoke;
+            panel5.Controls.Add(comboBox1);
             panel5.Controls.Add(numericUpDown1);
             panel5.Controls.Add(label3);
             panel5.Controls.Add(label9);
@@ -261,7 +264,7 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(78, 118);
+            numericUpDown1.Location = new Point(80, 120);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(120, 23);
             numericUpDown1.TabIndex = 23;
@@ -284,7 +287,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(55, 7);
+            label9.Location = new Point(62, 8);
             label9.Name = "label9";
             label9.Size = new Size(149, 43);
             label9.TabIndex = 19;
@@ -346,14 +349,6 @@
             btnConfirmarObs.Text = "Confirmar ";
             btnConfirmarObs.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(892, 289);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(418, 23);
-            comboBox1.TabIndex = 22;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.WhiteSmoke;
@@ -397,14 +392,30 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(905, 306);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(418, 358);
+            dataGridView1.TabIndex = 24;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(47, 54);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(189, 23);
+            comboBox1.TabIndex = 25;
+            // 
             // Encomanda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(dataGridView1);
             Controls.Add(panel4);
-            Controls.Add(comboBox1);
             Controls.Add(panel6);
             Controls.Add(label6);
             Controls.Add(panel5);
@@ -431,6 +442,7 @@
             panel6.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -461,10 +473,11 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private NumericUpDown numericUpDown1;
-        private ComboBox comboBox1;
         private Panel panel4;
         private TextBox textBox1;
         private Label label5;
         private Button button1;
+        private DataGridView dataGridView1;
+        private ComboBox comboBox1;
     }
 }
