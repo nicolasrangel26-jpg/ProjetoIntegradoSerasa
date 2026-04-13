@@ -49,6 +49,20 @@ namespace Menu
                 txtQuant.Clear();
                 txtValidade.Clear();
 
+                
+                //select procura e seleciona todos
+                string sqql = "SELECT * FROM estoque";
+                MySqlCommand cmmd = new MySqlCommand(sqql, con);
+
+                // DAtaAdapter sera a ponte para visualizar
+                MySqlDataAdapter banco = new MySqlDataAdapter(cmmd);
+
+                //Criando uma tabela na memorira C#
+                DataTable dt = new DataTable();
+                banco.Fill(dt);
+                //exibr no gridview
+                dgvTabelaEstoque.DataSource = dt;
+
             }
             catch (Exception ex)
             {
@@ -61,25 +75,21 @@ namespace Menu
             MySqlConnection con = new MySqlConnection(conexao);
             try
             {
-                con.Open();
-                //select procura e seleciona todos
-                string sql = "SELECT * FROM estoque";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-
-                // DAtaAdapter sera a ponte para visualizar
-                MySqlDataAdapter banco = new MySqlDataAdapter(cmd);
-
-                //Criando uma tabela na memorira C#
-                DataTable dt = new DataTable();
-                banco.Fill(dt);
-                //exibr no gridview
-                dgvTabelaEstoque.DataSource = dt;
             }
             catch (Exception ex) { }
         }
 
         private void btnRemoveEstoque_Click(object sender, EventArgs e)
         {
+            MySqlConnection con= new MySqlConnection(conexao);
+
+            MySqlCommand cmd = new MySqlCommand();
+            try
+            {
+                string sql = "DELETE FROM clientes where id_clientes = @";
+
+
+            } catch (Exception ex) { }
 
         }
 
