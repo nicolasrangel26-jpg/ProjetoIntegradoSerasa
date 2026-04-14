@@ -42,7 +42,7 @@ namespace Menu
 
                 cmd.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
                 cmd.Parameters.AddWithValue("@quant", txtQuant.Text);
-                cmd.Parameters.AddWithValue("@validade", dateTimePicker2);
+                cmd.Parameters.AddWithValue("@validade", dateTimePicker2.Value);
 
                 cmd.ExecuteNonQuery();
                 txtNomeProduto.Clear();
@@ -53,28 +53,26 @@ namespace Menu
             {
                 MessageBox.Show("sucesso :D");
             }
+
+            try
+            {
+                con.Open();
+
+                string sql = "SELECT * FROM estoque";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                MySqlDataAdapter banco = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+
+                banco.Fill(dt);
+                dgvTabelaEstoque.DataSource = dt;
+            }
+            catch (Exception ex) { }
         }
 
         private void btnAttEstoque_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection(conexao);
-            try
-            {
-                con.Open();
-                //select procura e seleciona todos
-                string sql = "SELECT * FROM estoque";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-
-                // DAtaAdapter sera a ponte para visualizar
-                MySqlDataAdapter banco = new MySqlDataAdapter(cmd);
-
-                //Criando uma tabela na memorira C#
-                DataTable dt = new DataTable();
-                banco.Fill(dt);
-                //exibr no gridview
-                dgvTabelaEstoque.DataSource = dt;
-            }
-            catch (Exception ex) { }
+            
         }
 
         private void btnRemoveEstoque_Click(object sender, EventArgs e)
