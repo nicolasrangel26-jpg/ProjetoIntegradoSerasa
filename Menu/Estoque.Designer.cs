@@ -50,7 +50,6 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            btnAttEstoque = new Button();
             txtID = new TextBox();
             label5 = new Label();
             panel4 = new Panel();
@@ -293,17 +292,6 @@
             label4.TabIndex = 10;
             label4.Text = "DATA DE VALIDADE";
             // 
-            // btnAttEstoque
-            // 
-            btnAttEstoque.FlatStyle = FlatStyle.System;
-            btnAttEstoque.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAttEstoque.Location = new Point(260, 235);
-            btnAttEstoque.Name = "btnAttEstoque";
-            btnAttEstoque.Size = new Size(92, 30);
-            btnAttEstoque.TabIndex = 11;
-            btnAttEstoque.UseVisualStyleBackColor = true;
-            btnAttEstoque.Click += btnAttEstoque_Click;
-            // 
             // txtID
             // 
             txtID.Location = new Point(1071, 197);
@@ -358,7 +346,6 @@
             ClientSize = new Size(1347, 776);
             Controls.Add(label5);
             Controls.Add(txtID);
-            Controls.Add(btnAttEstoque);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -408,7 +395,6 @@
         private Label label3;
         private Label label4;
         private Panel panel3;
-        private Button btnAttEstoque;
         private TextBox txtID;
         private Label label5;
         private Panel panel4;
