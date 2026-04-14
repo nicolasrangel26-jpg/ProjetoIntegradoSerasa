@@ -110,7 +110,9 @@ namespace Menu
                 conn.Close();
 
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message); 
+                    }
 
             try
             {
