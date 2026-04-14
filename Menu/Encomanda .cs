@@ -100,11 +100,27 @@ namespace Menu
                 string sql = "select * from pizzaz ";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter banco = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                banco.Fill(dt);
+                
+                cbbPedidos.DataSource = dt;
+                cbbPedidos.DisplayMember = "sabores";
 
-
+                MessageBox.Show("Pedido registrado");
+                conn.Close();
 
             }
             catch (Exception ex) { }
+
+            try
+            {
+                conn.Open();
+                string sql = "select * from "
+
+
+            } catch (Exception ex) { }
+
+
         }
 
         private void button5_Click(object sender, EventArgs e)
