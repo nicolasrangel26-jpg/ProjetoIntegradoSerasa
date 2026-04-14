@@ -48,20 +48,6 @@ namespace Menu
                 txtNomeProduto.Clear();
                 txtQuant.Clear();
 
-                
-                //select procura e seleciona todos
-                string sqql = "SELECT * FROM estoque";
-                MySqlCommand cmmd = new MySqlCommand(sqql, con);
-
-                // DAtaAdapter sera a ponte para visualizar
-                MySqlDataAdapter banco = new MySqlDataAdapter(cmmd);
-
-                //Criando uma tabela na memorira C#
-                DataTable dt = new DataTable();
-                banco.Fill(dt);
-                //exibr no gridview
-                dgvTabelaEstoque.DataSource = dt;
-
             }
             catch (Exception ex)
             {
