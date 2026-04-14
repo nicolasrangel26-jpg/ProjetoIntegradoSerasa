@@ -12,11 +12,24 @@ using System.Windows.Forms;
 namespace Menu
 {
     public partial class Estoque : Form
+
+
     {
         string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
+        
+        
         public Estoque()
         {
+            MySqlConnection con = new MySqlConnection(conexao);
+
             InitializeComponent();
+            string sql = "SELECT * FROM estoque";
+
+            MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+            DataTable dt = new DataTable();
+
+            banco.Fill(dt);
+            dgvTabelaEstoque.DataSource = dt;
         }
 
         private void btnEncoEstoque_Click(object sender, EventArgs e)

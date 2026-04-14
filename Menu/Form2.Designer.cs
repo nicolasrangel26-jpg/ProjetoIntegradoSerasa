@@ -53,6 +53,7 @@
             btnSalvar = new Button();
             dgvClientes = new DataGridView();
             label6 = new Label();
+            btnRemover = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -221,7 +222,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.LightBlue;
             label2.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(296, 239);
+            label2.Location = new Point(223, 152);
             label2.Name = "label2";
             label2.Size = new Size(83, 29);
             label2.TabIndex = 4;
@@ -233,7 +234,7 @@
             label3.BackColor = Color.LightBlue;
             label3.BorderStyle = BorderStyle.Fixed3D;
             label3.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(296, 308);
+            label3.Location = new Point(223, 217);
             label3.Name = "label3";
             label3.Size = new Size(59, 31);
             label3.TabIndex = 5;
@@ -245,11 +246,12 @@
             label4.BackColor = Color.LightBlue;
             label4.BorderStyle = BorderStyle.Fixed3D;
             label4.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(296, 455);
+            label4.Location = new Point(659, 217);
             label4.Name = "label4";
             label4.Size = new Size(114, 31);
             label4.TabIndex = 6;
             label4.Text = "Telefone ";
+            label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -257,7 +259,7 @@
             label5.BackColor = Color.LightBlue;
             label5.BorderStyle = BorderStyle.Fixed3D;
             label5.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(296, 381);
+            label5.Location = new Point(659, 150);
             label5.Name = "label5";
             label5.Size = new Size(117, 31);
             label5.TabIndex = 7;
@@ -265,38 +267,39 @@
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(296, 497);
+            txtTelefone.Location = new Point(659, 251);
             txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(235, 23);
+            txtTelefone.Size = new Size(281, 23);
             txtTelefone.TabIndex = 8;
             // 
             // txtCPF
             // 
-            txtCPF.Location = new Point(296, 342);
+            txtCPF.Location = new Point(223, 251);
             txtCPF.Name = "txtCPF";
-            txtCPF.Size = new Size(461, 23);
+            txtCPF.Size = new Size(296, 23);
             txtCPF.TabIndex = 9;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(296, 271);
+            txtNome.Location = new Point(223, 184);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(461, 23);
+            txtNome.Size = new Size(381, 23);
             txtNome.TabIndex = 10;
             // 
             // txtEndereço
             // 
-            txtEndereço.Location = new Point(296, 415);
+            txtEndereço.Location = new Point(659, 184);
             txtEndereço.Name = "txtEndereço";
             txtEndereço.Size = new Size(461, 23);
             txtEndereço.TabIndex = 11;
+            txtEndereço.TextChanged += txtEndereço_TextChanged;
             // 
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(296, 549);
+            btnSalvar.Location = new Point(1180, 204);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(100, 44);
+            btnSalvar.Size = new Size(116, 44);
             btnSalvar.TabIndex = 13;
             btnSalvar.Text = "salvar";
             btnSalvar.UseVisualStyleBackColor = true;
@@ -305,9 +308,9 @@
             // dgvClientes
             // 
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Location = new Point(782, 239);
+            dgvClientes.Location = new Point(270, 342);
             dgvClientes.Name = "dgvClientes";
-            dgvClientes.Size = new Size(538, 467);
+            dgvClientes.Size = new Size(1009, 398);
             dgvClientes.TabIndex = 22;
             // 
             // label6
@@ -315,11 +318,21 @@
             label6.AutoSize = true;
             label6.BorderStyle = BorderStyle.Fixed3D;
             label6.Font = new Font("Georgia", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(964, 142);
+            label6.Location = new Point(691, 289);
             label6.Name = "label6";
             label6.Size = new Size(121, 36);
             label6.TabIndex = 23;
             label6.Text = "Clientes";
+            // 
+            // btnRemover
+            // 
+            btnRemover.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRemover.Location = new Point(1180, 266);
+            btnRemover.Name = "btnRemover";
+            btnRemover.Size = new Size(116, 44);
+            btnRemover.TabIndex = 24;
+            btnRemover.Text = "Remover";
+            btnRemover.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -327,6 +340,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(btnRemover);
             Controls.Add(dgvClientes);
             Controls.Add(label6);
             Controls.Add(btnSalvar);
@@ -384,5 +398,6 @@
         private Button btnSalvar;
         private DataGridView dgvClientes;
         private Label label6;
+        private Button btnRemover;
     }
 }

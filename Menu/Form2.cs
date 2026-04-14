@@ -57,16 +57,26 @@ namespace Menu
 
                 string sql = "insert into clientes (Nome,CPF, Endereço, Telefone) values (@Nome, @CPF, @Endereço,@Telefone) ";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@Nome" ,txtNome.Text);
-                cmd.Parameters.AddWithValue("@CPF" , txtCPF.Text);
+                cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
+                cmd.Parameters.AddWithValue("@CPF", txtCPF.Text);
                 cmd.Parameters.AddWithValue("@Endereço", txtEndereço.Text);
-                cmd.Parameters.AddWithValue("@Telefone",txtTelefone.Text);
+                cmd.Parameters.AddWithValue("@Telefone", txtTelefone.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("sucesso");
             }
             catch (Exception ex) { }
 
 
+
+        }
+
+        private void txtEndereço_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }

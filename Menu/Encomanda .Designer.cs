@@ -269,6 +269,10 @@
             cbbPedidos.Name = "cbbPedidos";
             cbbPedidos.Size = new Size(189, 23);
             cbbPedidos.TabIndex = 25;
+            cbbPedidos.SelectedIndexChanged += cbbPedidos_SelectedIndexChanged;
+            cbbPedidos.Click += cbbPedidos_Click;
+            cbbPedidos.KeyPress += cbbPedidos_KeyPress;
+            cbbPedidos.ChangeUICues += cbbPedidos_ChangeUICues;
             // 
             // numericUpDown1
             // 

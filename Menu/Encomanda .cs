@@ -93,33 +93,6 @@ namespace Menu
 
         private void btnConfirmarPed_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(conexao);
-            try
-            {
-                conn.Open();
-                string sql = "select * from pizzaz ";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                MySqlDataAdapter banco = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                banco.Fill(dt);
-                
-                cbbPedidos.DataSource = dt;
-                cbbPedidos.DisplayMember = "sabores";
-
-                MessageBox.Show("Pedido registrado");
-                conn.Close();
-
-            }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message); 
-                    }
-
-            try
-            {
-                conn.Open();
-
-
-            } catch (Exception ex) { }
 
 
         }
@@ -140,9 +113,10 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO pizzaz (sabores) values (@sabores)";
+                string sql = "INSERT INTO pizzaz (sabores, bebidas) values (@sabores, @bebidas)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@sabores", txtNovoSabor.Text);
+                cmd.Parameters.AddWithValue("@Bebidas", txtNovoSabor.Text);
                 cmd.ExecuteNonQuery();
 
 
@@ -154,10 +128,11 @@ namespace Menu
 
 
             }
-            catch (Exception ex) { 
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
-            
-            
+
+
             }
         }
 
@@ -170,5 +145,47 @@ namespace Menu
         {
 
         }
+
+        private void cbbPedidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void cbbPedidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbPedidos_ChangeUICues(object sender, UICuesEventArgs e)
+        {
+
+        }
+
+        private void cbbPedidos_Click(object sender, EventArgs e)
+        {
+
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try
+            {
+                conn.Open();
+                string sql = "select * from pizzaz ";
+
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+                banco.Fill(dt);
+
+                cbbPedidos.DataSource = dt;
+                cbbPedidos.DisplayMember = "sabores";
+
+
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }   
     }
 }
