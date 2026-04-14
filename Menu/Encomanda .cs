@@ -14,7 +14,7 @@ namespace Menu
 {
     public partial class Encomanda : Form
     {
-        string conexao = "Server=localhost;Database=encomendas;Uid=root;Pwd=;";
+        string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
         public Encomanda()
         {
             InitializeComponent();
@@ -115,7 +115,6 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "select * from ";
 
 
             } catch (Exception ex) { }
@@ -139,15 +138,25 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "insert into pizzaz (sabores) values (@sabores)";
+                string sql = "INSERT INTO pizzaz (sabores) values (@sabores)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@sabores", txtNovoSabor.Text);
                 cmd.ExecuteNonQuery();
+
+
+
                 MessageBox.Show("Novo sabor registrado");
 
+                txtNovoSabor.Clear();
 
 
-             } catch (Exception ex) { }
+
+            }
+            catch (Exception ex) { 
+                MessageBox.Show(ex.Message);
+            
+            
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

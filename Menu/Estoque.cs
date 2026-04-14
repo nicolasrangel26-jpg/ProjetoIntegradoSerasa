@@ -51,23 +51,23 @@ namespace Menu
             }
             catch (Exception ex)
             {
-                MessageBox.Show("sucesso :D");
+                MessageBox.Show(ex.Message);
             }
 
             try
             {
-                con.Open();
-
+                
                 string sql = "SELECT * FROM estoque";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
 
-                MySqlDataAdapter banco = new MySqlDataAdapter(cmd);
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
 
                 banco.Fill(dt);
                 dgvTabelaEstoque.DataSource = dt;
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnRemoveEstoque_Click(object sender, EventArgs e)

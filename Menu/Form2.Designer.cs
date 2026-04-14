@@ -53,7 +53,6 @@
             btnSalvar = new Button();
             dgvClientes = new DataGridView();
             label6 = new Label();
-            panel4 = new Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -62,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
-            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
@@ -221,22 +219,21 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.Snow;
-            label2.BorderStyle = BorderStyle.Fixed3D;
+            label2.BackColor = Color.LightBlue;
             label2.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(279, 267);
+            label2.Location = new Point(296, 239);
             label2.Name = "label2";
-            label2.Size = new Size(85, 31);
+            label2.Size = new Size(83, 29);
             label2.TabIndex = 4;
             label2.Text = "Nome ";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.Snow;
+            label3.BackColor = Color.LightBlue;
             label3.BorderStyle = BorderStyle.Fixed3D;
             label3.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(279, 315);
+            label3.Location = new Point(296, 308);
             label3.Name = "label3";
             label3.Size = new Size(59, 31);
             label3.TabIndex = 5;
@@ -245,10 +242,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = Color.Snow;
+            label4.BackColor = Color.LightBlue;
             label4.BorderStyle = BorderStyle.Fixed3D;
             label4.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(250, 416);
+            label4.Location = new Point(296, 455);
             label4.Name = "label4";
             label4.Size = new Size(114, 31);
             label4.TabIndex = 6;
@@ -257,10 +254,10 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = Color.Snow;
+            label5.BackColor = Color.LightBlue;
             label5.BorderStyle = BorderStyle.Fixed3D;
             label5.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(247, 369);
+            label5.Location = new Point(296, 381);
             label5.Name = "label5";
             label5.Size = new Size(117, 31);
             label5.TabIndex = 7;
@@ -268,28 +265,28 @@
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(368, 422);
+            txtTelefone.Location = new Point(296, 497);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(235, 23);
             txtTelefone.TabIndex = 8;
             // 
             // txtCPF
             // 
-            txtCPF.Location = new Point(368, 321);
+            txtCPF.Location = new Point(296, 342);
             txtCPF.Name = "txtCPF";
             txtCPF.Size = new Size(461, 23);
             txtCPF.TabIndex = 9;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(368, 273);
+            txtNome.Location = new Point(296, 271);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(461, 23);
             txtNome.TabIndex = 10;
             // 
             // txtEndereço
             // 
-            txtEndereço.Location = new Point(368, 375);
+            txtEndereço.Location = new Point(296, 415);
             txtEndereço.Name = "txtEndereço";
             txtEndereço.Size = new Size(461, 23);
             txtEndereço.TabIndex = 11;
@@ -297,7 +294,7 @@
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(503, 470);
+            btnSalvar.Location = new Point(296, 549);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(100, 44);
             btnSalvar.TabIndex = 13;
@@ -308,9 +305,9 @@
             // dgvClientes
             // 
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Location = new Point(630, 50);
+            dgvClientes.Location = new Point(782, 239);
             dgvClientes.Name = "dgvClientes";
-            dgvClientes.Size = new Size(418, 409);
+            dgvClientes.Size = new Size(538, 467);
             dgvClientes.TabIndex = 22;
             // 
             // label6
@@ -318,21 +315,11 @@
             label6.AutoSize = true;
             label6.BorderStyle = BorderStyle.Fixed3D;
             label6.Font = new Font("Georgia", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(780, 11);
+            label6.Location = new Point(964, 142);
             label6.Name = "label6";
             label6.Size = new Size(121, 36);
             label6.TabIndex = 23;
             label6.Text = "Clientes";
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.Snow;
-            panel4.Controls.Add(label6);
-            panel4.Controls.Add(dgvClientes);
-            panel4.Location = new Point(238, 201);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1079, 497);
-            panel4.TabIndex = 24;
             // 
             // Form2
             // 
@@ -340,6 +327,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(dgvClientes);
+            Controls.Add(label6);
             Controls.Add(btnSalvar);
             Controls.Add(txtEndereço);
             Controls.Add(txtNome);
@@ -351,7 +340,6 @@
             Controls.Add(label2);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(panel4);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
@@ -366,8 +354,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -398,6 +384,5 @@
         private Button btnSalvar;
         private DataGridView dgvClientes;
         private Label label6;
-        private Panel panel4;
     }
 }

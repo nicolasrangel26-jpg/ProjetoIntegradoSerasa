@@ -58,7 +58,7 @@
             txtNovoSabor = new TextBox();
             label5 = new Label();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
+            dgvPedidos = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -70,7 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPedidos).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -400,13 +400,13 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
-            // dataGridView1
+            // dgvPedidos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(905, 306);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(418, 358);
-            dataGridView1.TabIndex = 24;
+            dgvPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPedidos.Location = new Point(905, 306);
+            dgvPedidos.Name = "dgvPedidos";
+            dgvPedidos.Size = new Size(418, 358);
+            dgvPedidos.TabIndex = 24;
             // 
             // Encomanda
             // 
@@ -414,7 +414,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvPedidos);
             Controls.Add(panel4);
             Controls.Add(panel6);
             Controls.Add(label6);
@@ -442,7 +442,7 @@
             panel6.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPedidos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -477,7 +477,7 @@
         private TextBox txtNovoSabor;
         private Label label5;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvPedidos;
         private ComboBox cbbPedidos;
     }
 }
