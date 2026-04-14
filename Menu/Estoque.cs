@@ -84,18 +84,7 @@ namespace Menu
             catch (Exception ex) { }
         }
 
-        private void btnAttEstoque_Click(object sender, EventArgs e)
-        {
-<<<<<<< HEAD
-            
-=======
-            MySqlConnection con = new MySqlConnection(conexao);
-            try
-            {
-            }
-            catch (Exception ex) { }
->>>>>>> 4bc0dea01b2a28b7230b00b81bc692bb12e3f450
-        }
+    
 
         private void btnRemoveEstoque_Click(object sender, EventArgs e)
         {

@@ -302,7 +302,6 @@
             btnAttEstoque.Size = new Size(92, 30);
             btnAttEstoque.TabIndex = 11;
             btnAttEstoque.UseVisualStyleBackColor = true;
-            btnAttEstoque.Click += btnAttEstoque_Click;
             // 
             // txtID
             // 
