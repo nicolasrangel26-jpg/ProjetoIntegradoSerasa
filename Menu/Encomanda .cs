@@ -97,7 +97,10 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "";
+                string sql = "select * from pizzaz ";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter banco = new MySqlDataAdapter(cmd);
+
 
 
             }
@@ -116,7 +119,19 @@ namespace Menu
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            MySqlConnection con = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sql = "insert into pizzaz (sabores) values (@sabores)";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@sabores", txtNovoSabor.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Novo sabor registrado");
 
+
+
+             } catch (Exception ex) { }
         }
 
         private void button4_Click(object sender, EventArgs e)

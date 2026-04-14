@@ -45,6 +45,7 @@
             label4 = new Label();
             label6 = new Label();
             panel5 = new Panel();
+            cbbPedidos = new ComboBox();
             numericUpDown1 = new NumericUpDown();
             label3 = new Label();
             label9 = new Label();
@@ -54,11 +55,10 @@
             label2 = new Label();
             btnConfirmarObs = new Button();
             panel4 = new Panel();
-            textBox1 = new TextBox();
+            txtNovoSabor = new TextBox();
             label5 = new Label();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -252,7 +252,7 @@
             // panel5
             // 
             panel5.BackColor = Color.WhiteSmoke;
-            panel5.Controls.Add(comboBox1);
+            panel5.Controls.Add(cbbPedidos);
             panel5.Controls.Add(numericUpDown1);
             panel5.Controls.Add(label3);
             panel5.Controls.Add(label9);
@@ -261,6 +261,14 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(273, 201);
             panel5.TabIndex = 20;
+            // 
+            // cbbPedidos
+            // 
+            cbbPedidos.FormattingEnabled = true;
+            cbbPedidos.Location = new Point(47, 54);
+            cbbPedidos.Name = "cbbPedidos";
+            cbbPedidos.Size = new Size(189, 23);
+            cbbPedidos.TabIndex = 25;
             // 
             // numericUpDown1
             // 
@@ -352,7 +360,7 @@
             // panel4
             // 
             panel4.BackColor = Color.WhiteSmoke;
-            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(txtNovoSabor);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(button1);
             panel4.Location = new Point(243, 282);
@@ -360,12 +368,12 @@
             panel4.Size = new Size(273, 158);
             panel4.TabIndex = 23;
             // 
-            // textBox1
+            // txtNovoSabor
             // 
-            textBox1.Location = new Point(25, 61);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 23);
-            textBox1.TabIndex = 20;
+            txtNovoSabor.Location = new Point(25, 61);
+            txtNovoSabor.Name = "txtNovoSabor";
+            txtNovoSabor.Size = new Size(221, 23);
+            txtNovoSabor.TabIndex = 20;
             // 
             // label5
             // 
@@ -399,14 +407,6 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(418, 358);
             dataGridView1.TabIndex = 24;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(47, 54);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(189, 23);
-            comboBox1.TabIndex = 25;
             // 
             // Encomanda
             // 
@@ -474,10 +474,10 @@
         private PictureBox pictureBox3;
         private NumericUpDown numericUpDown1;
         private Panel panel4;
-        private TextBox textBox1;
+        private TextBox txtNovoSabor;
         private Label label5;
         private Button button1;
         private DataGridView dataGridView1;
-        private ComboBox comboBox1;
+        private ComboBox cbbPedidos;
     }
 }
