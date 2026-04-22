@@ -323,6 +323,7 @@
             label6.Size = new Size(121, 36);
             label6.TabIndex = 23;
             label6.Text = "Clientes";
+            label6.Click += label6_Click;
             // 
             // btnRemover
             // 

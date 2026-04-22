@@ -17,7 +17,21 @@ namespace Menu
         public Form2()
         {
             InitializeComponent();
+
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            InitializeComponent();
+            string sql = "SELECT * FROM estoque";
+
+            MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+            DataTable dt = new DataTable();
+
+            banco.Fill(dt);
+            dgvClientes.DataSource = dt;
+            dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -76,6 +90,11 @@ namespace Menu
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
