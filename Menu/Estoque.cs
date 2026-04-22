@@ -70,7 +70,6 @@ namespace Menu
 
             try
             {
-                
                 string sql = "SELECT * FROM estoque";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
@@ -78,6 +77,7 @@ namespace Menu
 
                 banco.Fill(dt);
                 dgvTabelaEstoque.DataSource = dt;
+                dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
@@ -86,15 +86,38 @@ namespace Menu
 
         private void btnRemoveEstoque_Click(object sender, EventArgs e)
         {
-            MySqlConnection con= new MySqlConnection(conexao);
+            int idSelecionado = Convert.ToInt32(dgvTabelaEstoque.CurrentRow.Cells["id_produto"].Value);
 
-            MySqlCommand cmd = new MySqlCommand();
+            MySqlConnection con= new MySqlConnection(conexao);
             try
             {
-                string sql = "DELETE FROM clientes where id_clientes = @";
+                con.Open();
+                string sqldelete = "DELETE FROM estoque WHERE id_produto = @id_produto";
+                MySqlCommand cmd = new MySqlCommand(sqldelete, con);
+                cmd.Parameters.AddWithValue("@id_produto", idSelecionado);
+                cmd.ExecuteNonQuery();
 
+                MessageBox.Show("Produto excluído com sucesso");
+            } catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message);
+            }
 
-            } catch (Exception ex) { }
+            try
+            {
+                string sql = "SELECT * FROM estoque";
+
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+
+                banco.Fill(dt);
+                dgvTabelaEstoque.DataSource = dt;
+                dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
