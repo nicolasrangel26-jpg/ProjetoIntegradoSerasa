@@ -30,6 +30,7 @@ namespace Menu
 
             banco.Fill(dt);
             dgvTabelaEstoque.DataSource = dt;
+            dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void btnEncoEstoque_Click(object sender, EventArgs e)
