@@ -16,12 +16,20 @@ namespace Menu
         string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
         public Form2()
         {
+<<<<<<< HEAD
            
+=======
+            
+>>>>>>> 8475f8b36c319374394b1bc8c4bf039b9984071b
 
             MySqlConnection con = new MySqlConnection(conexao);
 
             InitializeComponent();
+<<<<<<< HEAD
             string sql = "SELECT * FROM ";
+=======
+            string sql = "SELECT * FROM clientes";
+>>>>>>> 8475f8b36c319374394b1bc8c4bf039b9984071b
 
             MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
