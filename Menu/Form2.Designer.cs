@@ -334,6 +334,7 @@
             btnRemover.TabIndex = 24;
             btnRemover.Text = "Remover";
             btnRemover.UseVisualStyleBackColor = true;
+            btnRemover.Click += btnRemover_Click;
             // 
             // Form2
             // 

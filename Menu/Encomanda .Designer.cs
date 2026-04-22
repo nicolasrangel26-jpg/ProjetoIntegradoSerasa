@@ -44,21 +44,23 @@
             panel3 = new Panel();
             label4 = new Label();
             label6 = new Label();
-            panel5 = new Panel();
             cbbPedidos = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
-            label3 = new Label();
             label9 = new Label();
             btnConfirmarPed = new Button();
-            panel6 = new Panel();
             txtObs = new TextBox();
             label2 = new Label();
-            btnConfirmarObs = new Button();
             panel4 = new Panel();
             txtNovoSabor = new TextBox();
             label5 = new Label();
             button1 = new Button();
             dgvPedidos = new DataGridView();
+            comboBox1 = new ComboBox();
+            comboBox3 = new ComboBox();
+            numericUpDown2 = new NumericUpDown();
+            numericUpDown3 = new NumericUpDown();
+            comboBox2 = new ComboBox();
+            numericUpDown1 = new NumericUpDown();
+            panel5 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -66,11 +68,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            panel6.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPedidos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -242,68 +245,36 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(905, 231);
+            label6.Location = new Point(757, 213);
             label6.Name = "label6";
             label6.Size = new Size(418, 43);
             label6.TabIndex = 19;
             label6.Text = "Total de pedidos de hoje";
             label6.Click += label6_Click;
             // 
-            // panel5
-            // 
-            panel5.BackColor = Color.WhiteSmoke;
-            panel5.Controls.Add(cbbPedidos);
-            panel5.Controls.Add(numericUpDown1);
-            panel5.Controls.Add(label3);
-            panel5.Controls.Add(label9);
-            panel5.Controls.Add(btnConfirmarPed);
-            panel5.Location = new Point(563, 282);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(273, 201);
-            panel5.TabIndex = 20;
-            // 
             // cbbPedidos
             // 
             cbbPedidos.FormattingEnabled = true;
-            cbbPedidos.Location = new Point(47, 54);
+            cbbPedidos.Location = new Point(27, 101);
             cbbPedidos.Name = "cbbPedidos";
-            cbbPedidos.Size = new Size(189, 23);
+            cbbPedidos.Size = new Size(121, 23);
             cbbPedidos.TabIndex = 25;
             cbbPedidos.SelectedIndexChanged += cbbPedidos_SelectedIndexChanged;
             cbbPedidos.Click += cbbPedidos_Click;
             cbbPedidos.KeyPress += cbbPedidos_KeyPress;
             cbbPedidos.ChangeUICues += cbbPedidos_ChangeUICues;
             // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(80, 120);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 23;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Georgia", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(55, 80);
-            label3.Name = "label3";
-            label3.Size = new Size(156, 31);
-            label3.TabIndex = 22;
-            label3.Text = "Quantidade";
-            // 
             // label9
             // 
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Georgia", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(62, 8);
+            label9.Location = new Point(114, 19);
             label9.Name = "label9";
-            label9.Size = new Size(149, 43);
+            label9.Size = new Size(98, 31);
             label9.TabIndex = 19;
-            label9.Text = "Pedidos";
+            label9.Text = "Pedido";
             label9.Click += label9_Click;
             // 
             // btnConfirmarPed
@@ -311,7 +282,7 @@
             btnConfirmarPed.BackColor = Color.LightGray;
             btnConfirmarPed.FlatStyle = FlatStyle.Popup;
             btnConfirmarPed.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnConfirmarPed.Location = new Point(36, 149);
+            btnConfirmarPed.Location = new Point(68, 304);
             btnConfirmarPed.Name = "btnConfirmarPed";
             btnConfirmarPed.Size = new Size(200, 31);
             btnConfirmarPed.TabIndex = 14;
@@ -319,48 +290,24 @@
             btnConfirmarPed.UseVisualStyleBackColor = false;
             btnConfirmarPed.Click += btnConfirmarPed_Click;
             // 
-            // panel6
-            // 
-            panel6.BackColor = Color.WhiteSmoke;
-            panel6.Controls.Add(txtObs);
-            panel6.Controls.Add(label2);
-            panel6.Controls.Add(btnConfirmarObs);
-            panel6.Location = new Point(563, 506);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(273, 158);
-            panel6.TabIndex = 21;
-            // 
             // txtObs
             // 
-            txtObs.Location = new Point(25, 53);
+            txtObs.Location = new Point(47, 243);
             txtObs.Name = "txtObs";
-            txtObs.Size = new Size(221, 23);
+            txtObs.Size = new Size(237, 23);
             txtObs.TabIndex = 20;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(26, 7);
+            label2.Location = new Point(47, 223);
             label2.Name = "label2";
-            label2.Size = new Size(210, 43);
+            label2.Size = new Size(91, 18);
             label2.TabIndex = 19;
             label2.Text = "Observação";
-            // 
-            // btnConfirmarObs
-            // 
-            btnConfirmarObs.BackColor = Color.LightGray;
-            btnConfirmarObs.FlatStyle = FlatStyle.Popup;
-            btnConfirmarObs.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnConfirmarObs.Location = new Point(36, 82);
-            btnConfirmarObs.Name = "btnConfirmarObs";
-            btnConfirmarObs.Size = new Size(200, 31);
-            btnConfirmarObs.TabIndex = 14;
-            btnConfirmarObs.Text = "Confirmar ";
-            btnConfirmarObs.UseVisualStyleBackColor = false;
-            btnConfirmarObs.Click += btnConfirmarObs_Click;
             // 
             // panel4
             // 
@@ -368,14 +315,14 @@
             panel4.Controls.Add(txtNovoSabor);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(button1);
-            panel4.Location = new Point(243, 282);
+            panel4.Location = new Point(229, 143);
             panel4.Name = "panel4";
-            panel4.Size = new Size(273, 158);
+            panel4.Size = new Size(334, 158);
             panel4.TabIndex = 23;
             // 
             // txtNovoSabor
             // 
-            txtNovoSabor.Location = new Point(25, 61);
+            txtNovoSabor.Location = new Point(55, 61);
             txtNovoSabor.Name = "txtNovoSabor";
             txtNovoSabor.Size = new Size(221, 23);
             txtNovoSabor.TabIndex = 20;
@@ -386,7 +333,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(19, 9);
+            label5.Location = new Point(49, 9);
             label5.Name = "label5";
             label5.Size = new Size(239, 43);
             label5.TabIndex = 19;
@@ -397,7 +344,7 @@
             button1.BackColor = Color.LightGray;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(36, 101);
+            button1.Location = new Point(66, 101);
             button1.Name = "button1";
             button1.Size = new Size(200, 31);
             button1.TabIndex = 14;
@@ -408,10 +355,74 @@
             // dgvPedidos
             // 
             dgvPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPedidos.Location = new Point(905, 306);
+            dgvPedidos.Location = new Point(645, 288);
             dgvPedidos.Name = "dgvPedidos";
-            dgvPedidos.Size = new Size(418, 358);
+            dgvPedidos.Size = new Size(648, 358);
             dgvPedidos.TabIndex = 24;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(27, 66);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(273, 23);
+            comboBox1.TabIndex = 0;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(27, 140);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(121, 23);
+            comboBox3.TabIndex = 2;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(180, 102);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(120, 23);
+            numericUpDown2.TabIndex = 3;
+            // 
+            // numericUpDown3
+            // 
+            numericUpDown3.Location = new Point(180, 140);
+            numericUpDown3.Name = "numericUpDown3";
+            numericUpDown3.Size = new Size(120, 23);
+            numericUpDown3.TabIndex = 4;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(27, 180);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(121, 23);
+            comboBox2.TabIndex = 26;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(180, 180);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.TabIndex = 27;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.WhiteSmoke;
+            panel5.Controls.Add(label9);
+            panel5.Controls.Add(numericUpDown1);
+            panel5.Controls.Add(comboBox3);
+            panel5.Controls.Add(comboBox2);
+            panel5.Controls.Add(comboBox1);
+            panel5.Controls.Add(numericUpDown2);
+            panel5.Controls.Add(label2);
+            panel5.Controls.Add(numericUpDown3);
+            panel5.Controls.Add(btnConfirmarPed);
+            panel5.Controls.Add(cbbPedidos);
+            panel5.Controls.Add(txtObs);
+            panel5.Location = new Point(233, 321);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(334, 424);
+            panel5.TabIndex = 28;
             // 
             // Encomanda
             // 
@@ -419,11 +430,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(panel5);
             Controls.Add(dgvPedidos);
             Controls.Add(panel4);
-            Controls.Add(panel6);
             Controls.Add(label6);
-            Controls.Add(panel5);
             Controls.Add(label4);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -440,14 +450,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPedidos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -463,26 +473,28 @@
         private Label label4;
         private PictureBox pictureBox1;
         private Label label6;
-        private Panel panel5;
         private Label label9;
         private Button btnConfirmarPed;
-        private Panel panel6;
         private TextBox txtObs;
         private Label label2;
-        private Button btnConfirmarObs;
-        private Label label3;
         private Panel panel3;
         private Button button5;
         private Button button4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
-        private NumericUpDown numericUpDown1;
         private Panel panel4;
         private TextBox txtNovoSabor;
         private Label label5;
         private Button button1;
         private DataGridView dgvPedidos;
         private ComboBox cbbPedidos;
+        private NumericUpDown numericUpDown3;
+        private NumericUpDown numericUpDown2;
+        private ComboBox comboBox3;
+        private ComboBox comboBox1;
+        private NumericUpDown numericUpDown1;
+        private ComboBox comboBox2;
+        private Panel panel5;
     }
 }

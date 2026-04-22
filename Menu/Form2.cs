@@ -16,20 +16,13 @@ namespace Menu
         string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
         public Form2()
         {
-<<<<<<< HEAD
-           
-=======
-            
->>>>>>> 8475f8b36c319374394b1bc8c4bf039b9984071b
 
             MySqlConnection con = new MySqlConnection(conexao);
 
             InitializeComponent();
-<<<<<<< HEAD
-            string sql = "SELECT * FROM ";
-=======
+
             string sql = "SELECT * FROM clientes";
->>>>>>> 8475f8b36c319374394b1bc8c4bf039b9984071b
+
 
             MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
@@ -84,7 +77,20 @@ namespace Menu
                 cmd.Parameters.AddWithValue("@Endereço", txtEndereço.Text);
                 cmd.Parameters.AddWithValue("@Telefone", txtTelefone.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("sucesso");
+                MessageBox.Show("Cliente cadastrado");
+            }
+            catch (Exception ex) { }
+            try
+            {
+                string sql = "SELECT * FROM clientes";
+
+
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+
+                banco.Fill(dt);
+                dgvClientes.DataSource = dt;
+                dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex) { }
 
@@ -105,6 +111,43 @@ namespace Menu
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            int idSelecionado = Convert.ToInt32(dgvClientes.CurrentRow.Cells["id_cliente"].Value);
+
+            MySqlConnection con = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sqldelete = "DELETE FROM clientes WHERE id_cliente = @id_cliente";
+                MySqlCommand cmd = new MySqlCommand(sqldelete, con);
+                cmd.Parameters.AddWithValue("@id_cliente", idSelecionado);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Cliente excluído com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+                string sql = "SELECT * FROM clientes";
+
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+
+                banco.Fill(dt);
+                dgvClientes.DataSource = dt;
+                dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
