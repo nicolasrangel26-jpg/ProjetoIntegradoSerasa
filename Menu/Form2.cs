@@ -16,12 +16,12 @@ namespace Menu
         string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
         public Form2()
         {
-            InitializeComponent();
+           
 
             MySqlConnection con = new MySqlConnection(conexao);
 
             InitializeComponent();
-            string sql = "SELECT * FROM estoque";
+            string sql = "SELECT * FROM ";
 
             MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
             DataTable dt = new DataTable();

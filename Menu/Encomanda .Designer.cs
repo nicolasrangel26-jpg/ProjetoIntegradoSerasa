@@ -360,6 +360,7 @@
             btnConfirmarObs.TabIndex = 14;
             btnConfirmarObs.Text = "Confirmar ";
             btnConfirmarObs.UseVisualStyleBackColor = false;
+            btnConfirmarObs.Click += btnConfirmarObs_Click;
             // 
             // panel4
             // 

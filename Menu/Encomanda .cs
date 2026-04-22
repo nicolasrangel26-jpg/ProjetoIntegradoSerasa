@@ -17,8 +17,19 @@ namespace Menu
         string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
         public Encomanda()
         {
+            MySqlConnection con = new MySqlConnection(conexao);
+
             InitializeComponent();
+            string sql = "SELECT * FROM pizzaz";
+
+            MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+            DataTable dt = new DataTable();
+
+            banco.Fill(dt);
+           dgvPedidos.DataSource = dt;
+           dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -186,6 +197,13 @@ namespace Menu
                 MessageBox.Show(ex.Message);
             }
 
-        }   
+        }
+
+        private void btnConfirmarObs_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
     }
 }
