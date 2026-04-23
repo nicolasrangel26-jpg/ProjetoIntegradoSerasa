@@ -362,20 +362,10 @@
             // 
             // cbbClientes
             // 
-<<<<<<< HEAD
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(27, 66);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(273, 23);
-            comboBox1.TabIndex = 0;
-            comboBox1.Click += comboBox1_Click;
-=======
-            cbbClientes.FormattingEnabled = true;
-            cbbClientes.Location = new Point(27, 66);
+            cbbClientes.Location = new Point(27, 53);
             cbbClientes.Name = "cbbClientes";
             cbbClientes.Size = new Size(273, 23);
-            cbbClientes.TabIndex = 0;
->>>>>>> f54a44b5fda5b38ad6e8f17ab927203c4a879fbf
+            cbbClientes.TabIndex = 28;
             // 
             // comboBox3
             // 
