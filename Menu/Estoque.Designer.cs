@@ -77,11 +77,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Impact", 48F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(680, 29);
+            label1.Location = new Point(523, 29);
             label1.Name = "label1";
-            label1.Size = new Size(243, 80);
+            label1.Size = new Size(568, 80);
             label1.TabIndex = 0;
-            label1.Text = "Estoque";
+            label1.Text = "Estoque de Produtos";
             // 
             // panel2
             // 
@@ -291,7 +291,7 @@
             // 
             // panel5
             // 
-            panel5.BackColor = Color.Snow;
+            panel5.BackColor = Color.WhiteSmoke;
             panel5.BorderStyle = BorderStyle.FixedSingle;
             panel5.Controls.Add(dateTimePicker2);
             panel5.Controls.Add(btnRemoveEstoque);

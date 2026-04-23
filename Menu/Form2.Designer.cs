@@ -52,8 +52,8 @@
             txtEndereço = new TextBox();
             btnSalvar = new Button();
             dgvClientes = new DataGridView();
-            label6 = new Label();
             btnRemover = new Button();
+            groupBox1 = new GroupBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -62,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
@@ -211,18 +212,18 @@
             label1.AutoSize = true;
             label1.Font = new Font("Impact", 48F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLight;
-            label1.Location = new Point(658, 24);
+            label1.Location = new Point(514, 29);
             label1.Name = "label1";
-            label1.Size = new Size(272, 80);
+            label1.Size = new Size(578, 80);
             label1.TabIndex = 2;
-            label1.Text = "Cadastro";
+            label1.Text = "Cadastro de Clientes";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.LightBlue;
             label2.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(223, 152);
+            label2.Location = new Point(17, 21);
             label2.Name = "label2";
             label2.Size = new Size(83, 29);
             label2.TabIndex = 4;
@@ -234,7 +235,7 @@
             label3.BackColor = Color.LightBlue;
             label3.BorderStyle = BorderStyle.Fixed3D;
             label3.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(223, 217);
+            label3.Location = new Point(17, 86);
             label3.Name = "label3";
             label3.Size = new Size(59, 31);
             label3.TabIndex = 5;
@@ -246,7 +247,7 @@
             label4.BackColor = Color.LightBlue;
             label4.BorderStyle = BorderStyle.Fixed3D;
             label4.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(659, 217);
+            label4.Location = new Point(453, 86);
             label4.Name = "label4";
             label4.Size = new Size(114, 31);
             label4.TabIndex = 6;
@@ -259,7 +260,7 @@
             label5.BackColor = Color.LightBlue;
             label5.BorderStyle = BorderStyle.Fixed3D;
             label5.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(659, 150);
+            label5.Location = new Point(453, 19);
             label5.Name = "label5";
             label5.Size = new Size(117, 31);
             label5.TabIndex = 7;
@@ -267,28 +268,28 @@
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(659, 251);
+            txtTelefone.Location = new Point(453, 120);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(281, 23);
             txtTelefone.TabIndex = 8;
             // 
             // txtCPF
             // 
-            txtCPF.Location = new Point(223, 251);
+            txtCPF.Location = new Point(17, 120);
             txtCPF.Name = "txtCPF";
             txtCPF.Size = new Size(296, 23);
             txtCPF.TabIndex = 9;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(223, 184);
+            txtNome.Location = new Point(17, 53);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(381, 23);
             txtNome.TabIndex = 10;
             // 
             // txtEndereço
             // 
-            txtEndereço.Location = new Point(659, 184);
+            txtEndereço.Location = new Point(453, 53);
             txtEndereço.Name = "txtEndereço";
             txtEndereço.Size = new Size(461, 23);
             txtEndereço.TabIndex = 11;
@@ -296,45 +297,50 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(1180, 204);
+            btnSalvar.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalvar.Location = new Point(1193, 163);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(116, 44);
             btnSalvar.TabIndex = 13;
-            btnSalvar.Text = "salvar";
+            btnSalvar.Text = "SALVAR";
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
             // dgvClientes
             // 
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Location = new Point(270, 342);
+            dgvClientes.Location = new Point(270, 318);
             dgvClientes.Name = "dgvClientes";
-            dgvClientes.Size = new Size(1009, 398);
+            dgvClientes.Size = new Size(1009, 422);
             dgvClientes.TabIndex = 22;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BorderStyle = BorderStyle.Fixed3D;
-            label6.Font = new Font("Georgia", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(691, 289);
-            label6.Name = "label6";
-            label6.Size = new Size(121, 36);
-            label6.TabIndex = 23;
-            label6.Text = "Clientes";
-            label6.Click += label6_Click;
             // 
             // btnRemover
             // 
-            btnRemover.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRemover.Location = new Point(1180, 266);
+            btnRemover.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRemover.Location = new Point(1193, 230);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(116, 44);
             btnRemover.TabIndex = 24;
-            btnRemover.Text = "Remover";
+            btnRemover.Text = "REMOVER";
             btnRemover.UseVisualStyleBackColor = true;
             btnRemover.Click += btnRemover_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.WhiteSmoke;
+            groupBox1.Controls.Add(txtNome);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(txtEndereço);
+            groupBox1.Controls.Add(txtTelefone);
+            groupBox1.Controls.Add(txtCPF);
+            groupBox1.Location = new Point(218, 141);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(952, 155);
+            groupBox1.TabIndex = 25;
+            groupBox1.TabStop = false;
             // 
             // Form2
             // 
@@ -342,18 +348,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(groupBox1);
             Controls.Add(btnRemover);
             Controls.Add(dgvClientes);
-            Controls.Add(label6);
             Controls.Add(btnSalvar);
-            Controls.Add(txtEndereço);
-            Controls.Add(txtNome);
-            Controls.Add(txtCPF);
-            Controls.Add(txtTelefone);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -370,8 +368,9 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -399,7 +398,7 @@
         private TextBox txtEndereço;
         private Button btnSalvar;
         private DataGridView dgvClientes;
-        private Label label6;
         private Button btnRemover;
+        private GroupBox groupBox1;
     }
 }

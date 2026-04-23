@@ -54,7 +54,7 @@
             label5 = new Label();
             button1 = new Button();
             dgvPedidos = new DataGridView();
-            comboBox1 = new ComboBox();
+            cbbClientes = new ComboBox();
             comboBox3 = new ComboBox();
             numericUpDown2 = new NumericUpDown();
             numericUpDown3 = new NumericUpDown();
@@ -91,7 +91,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Impact", 48F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLight;
-            label1.Location = new Point(596, 25);
+            label1.Location = new Point(596, 29);
             label1.Name = "label1";
             label1.Size = new Size(369, 80);
             label1.TabIndex = 2;
@@ -360,14 +360,22 @@
             dgvPedidos.Size = new Size(648, 358);
             dgvPedidos.TabIndex = 24;
             // 
-            // comboBox1
+            // cbbClientes
             // 
+<<<<<<< HEAD
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(27, 66);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(273, 23);
             comboBox1.TabIndex = 0;
             comboBox1.Click += comboBox1_Click;
+=======
+            cbbClientes.FormattingEnabled = true;
+            cbbClientes.Location = new Point(27, 66);
+            cbbClientes.Name = "cbbClientes";
+            cbbClientes.Size = new Size(273, 23);
+            cbbClientes.TabIndex = 0;
+>>>>>>> f54a44b5fda5b38ad6e8f17ab927203c4a879fbf
             // 
             // comboBox3
             // 
@@ -416,7 +424,7 @@
             panel5.Controls.Add(numericUpDown1);
             panel5.Controls.Add(comboBox3);
             panel5.Controls.Add(comboBox2);
-            panel5.Controls.Add(comboBox1);
+            panel5.Controls.Add(cbbClientes);
             panel5.Controls.Add(numericUpDown2);
             panel5.Controls.Add(label2);
             panel5.Controls.Add(numericUpDown3);
@@ -496,7 +504,7 @@
         private NumericUpDown numericUpDown3;
         private NumericUpDown numericUpDown2;
         private ComboBox comboBox3;
-        private ComboBox comboBox1;
+        private ComboBox cbbClientes;
         private NumericUpDown numericUpDown1;
         private ComboBox comboBox2;
         private Panel panel5;
