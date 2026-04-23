@@ -20,7 +20,7 @@ namespace Menu
             MySqlConnection con = new MySqlConnection(conexao);
 
             InitializeComponent();
-            string sql = "SELECT * FROM pizzaz";
+            string sql = "SELECT * FROM perdidos";
 
             MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
@@ -105,18 +105,42 @@ namespace Menu
         private void btnConfirmarPed_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sql = "INSERT INTO perdidos (id_cliente,id_pizza,quant_pizza,id_bebida,quant_bebida,obs) VALUES (@id_cliente,@id_pizza,@quant_pizza,@id_bebida,@quant_bebida,@obs)";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
 
-            InitializeComponent();
-            string sql = "SELECT * FROM pizzaz";
+                cmd.Parameters.AddWithValue("@id_cliente", cbbClientes);
+                cmd.Parameters.AddWithValue("@id_pizza", cbbPedidos);
+                cmd.Parameters.AddWithValue("@quant_pizza", numericUpDown2);
+                cmd.Parameters.AddWithValue("@id_bebida", comboBox3);
+                cmd.Parameters.AddWithValue("@quant_bebida", numericUpDown3);
+                cmd.Parameters.AddWithValue("@obs", txtObs.Text);
 
-            MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-            DataTable dt = new DataTable();
+                cmd.ExecuteNonQuery();
 
-            banco.Fill(dt);
-            dgvPedidos.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
+            try
+            {
+                string sql = "SELECT * FROM perdidos";
 
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
 
+                banco.Fill(dt);
+                dgvPedidos.DataSource = dt;
+                dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -135,10 +159,10 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO pizzaz (sabores, ) values (@sabores, )";
+                string sql = "INSERT INTO pizzaz (sabores) values (@sabores)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@sabores", txtNovoSabor.Text);
-               
+
                 cmd.ExecuteNonQuery();
 
 
@@ -224,14 +248,14 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "select * from pizzaz ";
+                string sql = "select * from bebidas ";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
                 banco.Fill(dt);
 
-                cbbPedidos.DataSource = dt;
-                cbbPedidos.DisplayMember = "sabores";
+                comboBox3.DataSource = dt;
+                comboBox3.DisplayMember = "nome";
 
 
                 conn.Close();
@@ -275,27 +299,34 @@ namespace Menu
             }
         }
 
-        private void comboBox1_Click(object sender, EventArgs e)
+
+        private void cbbClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
-            Form2 form2 = new Form2();
-            form2.btnSalvar_Click(sender, e);
-            MySqlConnection conn = new MySqlConnection(conexao);
-
-
-            InitializeComponent();
-            string sql = "SELECT * FROM clientes";
-
-            MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-
-            banco.Fill(dt);
-            dgvPedidos.DataSource = dt;
 
         }
 
-        private void cbbClientes_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbbClientes_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.btnSalvar_Click(sender, e);
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM clientes";
+
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+
+                banco.Fill(dt);
+                cbbClientes.DataSource = dt;
+                cbbClientes.DisplayMember = "Nome";
+
+            }
+            catch { }
+        }
+
+        private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
