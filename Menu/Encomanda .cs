@@ -26,10 +26,10 @@ namespace Menu
             DataTable dt = new DataTable();
 
             banco.Fill(dt);
-           dgvPedidos.DataSource = dt;
-           dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvPedidos.DataSource = dt;
+            dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-        
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -204,6 +204,84 @@ namespace Menu
 
 
 
+        }
+
+        private void comboBox3_Click(object sender, EventArgs e)
+        {
+
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try
+            {
+                conn.Open();
+                string sql = "select * from pizzaz ";
+
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+                banco.Fill(dt);
+
+                cbbPedidos.DataSource = dt;
+                cbbPedidos.DisplayMember = "sabores";
+
+
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try
+            {
+                conn.Open();
+                string sql = "select * from pizzaz ";
+
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+                banco.Fill(dt);
+
+                cbbPedidos.DataSource = dt;
+                cbbPedidos.DisplayMember = "bebidas";
+
+
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+           
+
+            Form2 form2 = new Form2();
+            form2.btnSalvar_Click(sender, e);
+            MySqlConnection conn = new MySqlConnection(conexao);
+
+
+            InitializeComponent();
+            string sql = "SELECT * FROM clientes";
+
+            MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+
+            banco.Fill(dt);
+            dgvPedidos.DataSource = dt;
+            
         }
     }
 }

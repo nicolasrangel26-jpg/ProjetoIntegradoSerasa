@@ -63,7 +63,7 @@ namespace Menu
             this.Close();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        public void btnSalvar_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection(conexao);
             try

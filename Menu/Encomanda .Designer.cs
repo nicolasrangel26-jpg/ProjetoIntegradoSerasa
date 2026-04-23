@@ -367,6 +367,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(273, 23);
             comboBox1.TabIndex = 0;
+            comboBox1.Click += comboBox1_Click;
             // 
             // comboBox3
             // 
@@ -375,6 +376,7 @@
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(121, 23);
             comboBox3.TabIndex = 2;
+            comboBox3.Click += comboBox3_Click;
             // 
             // numericUpDown2
             // 
@@ -397,6 +399,8 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
             comboBox2.TabIndex = 26;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            comboBox2.Click += comboBox2_Click;
             // 
             // numericUpDown1
             // 
