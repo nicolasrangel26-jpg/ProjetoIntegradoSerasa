@@ -32,6 +32,8 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            pictureBox5 = new PictureBox();
+            button2 = new Button();
             pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
             btnCadastroEstoque = new Button();
@@ -54,6 +56,7 @@
             dateTimePicker2 = new DateTimePicker();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -86,6 +89,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.Controls.Add(pictureBox5);
+            panel2.Controls.Add(button2);
             panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(btnCadastroEstoque);
@@ -100,6 +105,30 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
             panel2.TabIndex = 1;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(18, 524);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(42, 39);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 16;
+            pictureBox5.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(3, 513);
+            button2.Name = "button2";
+            button2.Size = new Size(197, 66);
+            button2.TabIndex = 15;
+            button2.Text = " Menu";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // pictureBox6
             // 
@@ -161,9 +190,9 @@
             // 
             pictureBox2.BackColor = Color.White;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(18, 546);
+            pictureBox2.Location = new Point(13, 616);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(42, 48);
+            pictureBox2.Size = new Size(42, 36);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
@@ -196,7 +225,7 @@
             btnMenuEstoque.FlatStyle = FlatStyle.Popup;
             btnMenuEstoque.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMenuEstoque.ForeColor = Color.White;
-            btnMenuEstoque.Location = new Point(3, 537);
+            btnMenuEstoque.Location = new Point(3, 600);
             btnMenuEstoque.Name = "btnMenuEstoque";
             btnMenuEstoque.Size = new Size(197, 66);
             btnMenuEstoque.TabIndex = 2;
@@ -332,6 +361,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -369,5 +399,7 @@
         private Button btnCadastroEstoque;
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
+        private PictureBox pictureBox5;
+        private Button button2;
     }
 }

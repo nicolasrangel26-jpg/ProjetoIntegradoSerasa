@@ -16,8 +16,8 @@ namespace Menu
 
     {
         string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
-        
-        
+
+
         public Estoque()
         {
             MySqlConnection con = new MySqlConnection(conexao);
@@ -79,7 +79,8 @@ namespace Menu
                 dgvTabelaEstoque.DataSource = dt;
                 dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
         }
@@ -88,7 +89,7 @@ namespace Menu
         {
             int idSelecionado = Convert.ToInt32(dgvTabelaEstoque.CurrentRow.Cells["id_produto"].Value);
 
-            MySqlConnection con= new MySqlConnection(conexao);
+            MySqlConnection con = new MySqlConnection(conexao);
             try
             {
                 con.Open();
@@ -98,8 +99,9 @@ namespace Menu
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Produto excluído com sucesso");
-            } catch (Exception ex) 
-            { 
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
 
@@ -130,6 +132,13 @@ namespace Menu
         {
             Form2 telaCadastro = new Form2();
             telaCadastro.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
             this.Close();
         }
     }

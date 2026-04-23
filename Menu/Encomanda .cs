@@ -138,7 +138,7 @@ namespace Menu
                 string sql = "INSERT INTO pizzaz (sabores, ) values (@sabores, )";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@sabores", txtNovoSabor.Text);
-               
+
                 cmd.ExecuteNonQuery();
 
 
@@ -298,6 +298,13 @@ namespace Menu
         private void cbbClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
         }
     }
 }

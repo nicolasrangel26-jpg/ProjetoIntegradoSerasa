@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             panel2 = new Panel();
+            pictureBox6 = new PictureBox();
+            button1 = new Button();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             button5 = new Button();
@@ -55,6 +57,7 @@
             btnRemover = new Button();
             groupBox1 = new GroupBox();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -68,6 +71,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(button1);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(button5);
@@ -83,6 +88,30 @@
             panel2.Size = new Size(200, 783);
             panel2.TabIndex = 2;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(18, 527);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(42, 40);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 26;
+            pictureBox6.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 517);
+            button1.Name = "button1";
+            button1.Size = new Size(197, 66);
+            button1.TabIndex = 14;
+            button1.Text = " Menu";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
@@ -97,9 +126,9 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(18, 546);
+            pictureBox5.Location = new Point(18, 614);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(42, 48);
+            pictureBox5.Size = new Size(42, 37);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 12;
             pictureBox5.TabStop = false;
@@ -110,7 +139,7 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(3, 537);
+            button5.Location = new Point(0, 600);
             button5.Name = "button5";
             button5.Size = new Size(197, 66);
             button5.TabIndex = 11;
@@ -360,6 +389,7 @@
             Text = "Form2";
             Load += Form2_Load;
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -400,5 +430,7 @@
         private DataGridView dgvClientes;
         private Button btnRemover;
         private GroupBox groupBox1;
+        private PictureBox pictureBox6;
+        private Button button1;
     }
 }
