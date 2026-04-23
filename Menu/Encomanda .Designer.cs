@@ -91,7 +91,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Impact", 48F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLight;
-            label1.Location = new Point(596, 25);
+            label1.Location = new Point(596, 29);
             label1.Name = "label1";
             label1.Size = new Size(369, 80);
             label1.TabIndex = 2;
