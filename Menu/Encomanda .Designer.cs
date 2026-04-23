@@ -54,7 +54,7 @@
             label5 = new Label();
             button1 = new Button();
             dgvPedidos = new DataGridView();
-            comboBox1 = new ComboBox();
+            cbbClientes = new ComboBox();
             comboBox3 = new ComboBox();
             numericUpDown2 = new NumericUpDown();
             numericUpDown3 = new NumericUpDown();
@@ -360,13 +360,13 @@
             dgvPedidos.Size = new Size(648, 358);
             dgvPedidos.TabIndex = 24;
             // 
-            // comboBox1
+            // cbbClientes
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(27, 66);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(273, 23);
-            comboBox1.TabIndex = 0;
+            cbbClientes.FormattingEnabled = true;
+            cbbClientes.Location = new Point(27, 66);
+            cbbClientes.Name = "cbbClientes";
+            cbbClientes.Size = new Size(273, 23);
+            cbbClientes.TabIndex = 0;
             // 
             // comboBox3
             // 
@@ -412,7 +412,7 @@
             panel5.Controls.Add(numericUpDown1);
             panel5.Controls.Add(comboBox3);
             panel5.Controls.Add(comboBox2);
-            panel5.Controls.Add(comboBox1);
+            panel5.Controls.Add(cbbClientes);
             panel5.Controls.Add(numericUpDown2);
             panel5.Controls.Add(label2);
             panel5.Controls.Add(numericUpDown3);
@@ -492,7 +492,7 @@
         private NumericUpDown numericUpDown3;
         private NumericUpDown numericUpDown2;
         private ComboBox comboBox3;
-        private ComboBox comboBox1;
+        private ComboBox cbbClientes;
         private NumericUpDown numericUpDown1;
         private ComboBox comboBox2;
         private Panel panel5;
