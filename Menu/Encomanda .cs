@@ -104,6 +104,17 @@ namespace Menu
 
         private void btnConfirmarPed_Click(object sender, EventArgs e)
         {
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            InitializeComponent();
+            string sql = "SELECT * FROM pizzaz";
+
+            MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+            DataTable dt = new DataTable();
+
+            banco.Fill(dt);
+            dgvPedidos.DataSource = dt;
+
 
 
         }
@@ -124,10 +135,10 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO pizzaz (sabores, bebidas) values (@sabores, @bebidas)";
+                string sql = "INSERT INTO pizzaz (sabores, ) values (@sabores, )";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@sabores", txtNovoSabor.Text);
-                cmd.Parameters.AddWithValue("@Bebidas", txtNovoSabor.Text);
+               
                 cmd.ExecuteNonQuery();
 
 
@@ -266,7 +277,7 @@ namespace Menu
 
         private void comboBox1_Click(object sender, EventArgs e)
         {
-           
+
 
             Form2 form2 = new Form2();
             form2.btnSalvar_Click(sender, e);
@@ -281,7 +292,12 @@ namespace Menu
 
             banco.Fill(dt);
             dgvPedidos.DataSource = dt;
-            
+
+        }
+
+        private void cbbClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

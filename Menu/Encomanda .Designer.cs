@@ -317,7 +317,7 @@
             panel4.Controls.Add(button1);
             panel4.Location = new Point(229, 143);
             panel4.Name = "panel4";
-            panel4.Size = new Size(334, 158);
+            panel4.Size = new Size(338, 158);
             panel4.TabIndex = 23;
             // 
             // txtNovoSabor
@@ -366,6 +366,7 @@
             cbbClientes.Name = "cbbClientes";
             cbbClientes.Size = new Size(273, 23);
             cbbClientes.TabIndex = 28;
+            cbbClientes.SelectedIndexChanged += cbbClientes_SelectedIndexChanged;
             // 
             // comboBox3
             // 
@@ -421,9 +422,9 @@
             panel5.Controls.Add(btnConfirmarPed);
             panel5.Controls.Add(cbbPedidos);
             panel5.Controls.Add(txtObs);
-            panel5.Location = new Point(233, 321);
+            panel5.Location = new Point(229, 321);
             panel5.Name = "panel5";
-            panel5.Size = new Size(334, 424);
+            panel5.Size = new Size(338, 424);
             panel5.TabIndex = 28;
             // 
             // Encomanda
