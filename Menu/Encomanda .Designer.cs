@@ -323,6 +323,7 @@
             txtObs.Name = "txtObs";
             txtObs.Size = new Size(237, 23);
             txtObs.TabIndex = 20;
+            txtObs.TextChanged += txtObs_TextChanged;
             // 
             // label2
             // 

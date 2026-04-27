@@ -140,6 +140,35 @@ namespace Menu
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+
+
+
+            }
+
+
+
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sql = "INSERT INTO pizzaz (obs) values (@obs)";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@sabores", txtObs.Text);
+
+                cmd.ExecuteNonQuery();
+
+
+                ;
+
+                txtObs.Clear();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
             }
         }
 
@@ -345,6 +374,11 @@ namespace Menu
         }
 
         private void numericUpDown2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtObs_TextChanged(object sender, EventArgs e)
         {
 
         }
