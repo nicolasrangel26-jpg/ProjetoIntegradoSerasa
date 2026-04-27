@@ -60,8 +60,6 @@
             comboBox3 = new ComboBox();
             numericUpDown2 = new NumericUpDown();
             numericUpDown3 = new NumericUpDown();
-            comboBox2 = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
             panel5 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -75,7 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvPedidos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel5.SuspendLayout();
             SuspendLayout();
             // 
@@ -124,6 +121,7 @@
             // 
             // pictureBox6
             // 
+            pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(18, 516);
             pictureBox6.Name = "pictureBox6";
@@ -274,7 +272,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(757, 213);
+            label6.Location = new Point(760, 152);
             label6.Name = "label6";
             label6.Size = new Size(418, 43);
             label6.TabIndex = 19;
@@ -384,9 +382,9 @@
             // dgvPedidos
             // 
             dgvPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPedidos.Location = new Point(645, 288);
+            dgvPedidos.Location = new Point(610, 244);
             dgvPedidos.Name = "dgvPedidos";
-            dgvPedidos.Size = new Size(648, 358);
+            dgvPedidos.Size = new Size(703, 501);
             dgvPedidos.TabIndex = 24;
             // 
             // cbbClientes
@@ -396,6 +394,7 @@
             cbbClientes.Size = new Size(273, 23);
             cbbClientes.TabIndex = 28;
             cbbClientes.SelectedIndexChanged += cbbClientes_SelectedIndexChanged;
+            cbbClientes.Click += cbbClientes_Click;
             // 
             // comboBox3
             // 
@@ -412,6 +411,8 @@
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(120, 23);
             numericUpDown2.TabIndex = 3;
+            numericUpDown2.ValueChanged += numericUpDown2_ValueChanged;
+            numericUpDown2.Click += numericUpDown2_Click;
             // 
             // numericUpDown3
             // 
@@ -420,30 +421,11 @@
             numericUpDown3.Size = new Size(120, 23);
             numericUpDown3.TabIndex = 4;
             // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(27, 180);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 26;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            comboBox2.Click += comboBox2_Click;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(180, 180);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 27;
-            // 
             // panel5
             // 
             panel5.BackColor = Color.WhiteSmoke;
             panel5.Controls.Add(label9);
-            panel5.Controls.Add(numericUpDown1);
             panel5.Controls.Add(comboBox3);
-            panel5.Controls.Add(comboBox2);
             panel5.Controls.Add(cbbClientes);
             panel5.Controls.Add(numericUpDown2);
             panel5.Controls.Add(label2);
@@ -488,7 +470,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvPedidos).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ResumeLayout(false);
@@ -526,8 +507,6 @@
         private NumericUpDown numericUpDown2;
         private ComboBox comboBox3;
         private ComboBox cbbClientes;
-        private NumericUpDown numericUpDown1;
-        private ComboBox comboBox2;
         private Panel panel5;
         private Button button2;
         private PictureBox pictureBox6;

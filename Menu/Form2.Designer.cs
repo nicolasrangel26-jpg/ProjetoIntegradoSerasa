@@ -90,6 +90,7 @@
             // 
             // pictureBox6
             // 
+            pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(18, 527);
             pictureBox6.Name = "pictureBox6";

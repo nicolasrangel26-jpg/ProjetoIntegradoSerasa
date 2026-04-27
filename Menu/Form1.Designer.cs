@@ -46,6 +46,7 @@
             btnEstoqueMenu = new Button();
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
+            pictureBox8 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -55,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -80,7 +82,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
-            panel2.Controls.Add(pictureBox7);
+            panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(button1);
@@ -100,11 +102,12 @@
             // 
             // pictureBox7
             // 
+            pictureBox7.BackColor = Color.Transparent;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(22, 528);
+            pictureBox7.Location = new Point(247, 194);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(38, 39);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.Size = new Size(510, 442);
+            pictureBox7.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox7.TabIndex = 3;
             pictureBox7.TabStop = false;
             // 
@@ -124,7 +127,6 @@
             // 
             // pictureBox6
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(13, 335);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(42, 40);
@@ -248,12 +250,23 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(417, 155);
+            pictureBox1.Location = new Point(763, 194);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(688, 576);
+            pictureBox1.Size = new Size(510, 442);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.White;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(18, 525);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(42, 42);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 4;
+            pictureBox8.TabStop = false;
             // 
             // Form1
             // 
@@ -261,6 +274,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(pictureBox7);
             Controls.Add(pictureBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -280,6 +294,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 
@@ -302,5 +317,6 @@
         private Button button1;
         private PictureBox pictureBox7;
         private Button button2;
+        private PictureBox pictureBox8;
     }
 }
