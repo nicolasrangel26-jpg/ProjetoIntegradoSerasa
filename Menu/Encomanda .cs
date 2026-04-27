@@ -113,9 +113,9 @@ namespace Menu
 
                 cmd.Parameters.AddWithValue("@id_cliente", cbbClientes);
                 cmd.Parameters.AddWithValue("@id_pizza", cbbPedidos);
-                cmd.Parameters.AddWithValue("@quant_pizza", numericUpDown2);
+                cmd.Parameters.AddWithValue("@quant_pizza", numericUpDown2.Value);
                 cmd.Parameters.AddWithValue("@id_bebida", comboBox3);
-                cmd.Parameters.AddWithValue("@quant_bebida", numericUpDown3);
+                cmd.Parameters.AddWithValue("@quant_bebida", numericUpDown3.Value);
                 cmd.Parameters.AddWithValue("@obs", txtObs.Text);
 
                 cmd.ExecuteNonQuery();
@@ -140,6 +140,35 @@ namespace Menu
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+
+
+
+            }
+
+
+
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sql = "INSERT INTO pizzasx (obs) values (@obs)";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@sabores", txtObs.Text);
+
+                cmd.ExecuteNonQuery();
+
+
+                ;
+
+                txtObs.Clear();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
             }
         }
 
@@ -287,7 +316,7 @@ namespace Menu
                 banco.Fill(dt);
 
                 cbbPedidos.DataSource = dt;
-                cbbPedidos.DisplayMember = "bebidas";
+                cbbPedidos.DisplayMember = "berbidas";
 
 
                 conn.Close();
@@ -345,6 +374,11 @@ namespace Menu
         }
 
         private void numericUpDown2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtObs_TextChanged(object sender, EventArgs e)
         {
 
         }
