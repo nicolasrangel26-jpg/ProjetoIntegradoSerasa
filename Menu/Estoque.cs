@@ -23,7 +23,7 @@ namespace Menu
             MySqlConnection con = new MySqlConnection(conexao);
 
             InitializeComponent();
-            string sql = "SELECT * FROM estoque";
+            string sql = "SELECT * FROM estorque";
 
             MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
@@ -51,7 +51,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO estoque (produto, quant, validade) VALUES (@produto,@quant,@validade)";
+                string sql = "INSERT INTO estorque (produto, quant, validade) VALUES (@produto,@quant,@validade)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
                 cmd.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
@@ -70,7 +70,7 @@ namespace Menu
 
             try
             {
-                string sql = "SELECT * FROM estoque";
+                string sql = "SELECT * FROM estorque";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
@@ -93,7 +93,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sqldelete = "DELETE FROM estoque WHERE id_produto = @id_produto";
+                string sqldelete = "DELETE FROM estorque WHERE id_produto = @id_produto";
                 MySqlCommand cmd = new MySqlCommand(sqldelete, con);
                 cmd.Parameters.AddWithValue("@id_produto", idSelecionado);
                 cmd.ExecuteNonQuery();
@@ -107,7 +107,7 @@ namespace Menu
 
             try
             {
-                string sql = "SELECT * FROM estoque";
+                string sql = "SELECT * FROM estorque";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();

@@ -21,7 +21,7 @@ namespace Menu
 
             InitializeComponent();
 
-            string sql = "SELECT * FROM clientes";
+            string sql = "SELECT * FROM clientens";
 
 
             MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
@@ -70,19 +70,19 @@ namespace Menu
             {
                 con.Open();
 
-                string sql = "insert into clientes (Nome,CPF, Endereço, Telefone) values (@Nome, @CPF, @Endereço,@Telefone) ";
+                string sql = "insert into clientens (CPF, Nome, Endereco, Telefone) values (@CPF, @Nome, @Endereco, @Telefone) ";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
                 cmd.Parameters.AddWithValue("@CPF", txtCPF.Text);
-                cmd.Parameters.AddWithValue("@Endereço", txtEndereço.Text);
+                cmd.Parameters.AddWithValue("@Endereco", txtEndereço.Text);
                 cmd.Parameters.AddWithValue("@Telefone", txtTelefone.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Cliente cadastrado");
+                MessageBox.Show("Clienten cadastrado");
             }
             catch (Exception ex) { }
             try
             {
-                string sql = "SELECT * FROM clientes";
+                string sql = "SELECT * FROM clientens";
 
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
@@ -92,7 +92,10 @@ namespace Menu
                 dgvClientes.DataSource = dt;
                 dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
 
 
@@ -121,7 +124,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sqldelete = "DELETE FROM clientes WHERE id_cliente = @id_cliente";
+                string sqldelete = "DELETE FROM clientens WHERE id_cliente = @id_cliente";
                 MySqlCommand cmd = new MySqlCommand(sqldelete, con);
                 cmd.Parameters.AddWithValue("@id_cliente", idSelecionado);
                 cmd.ExecuteNonQuery();
@@ -135,7 +138,7 @@ namespace Menu
 
             try
             {
-                string sql = "SELECT * FROM clientes";
+                string sql = "SELECT * FROM clientens";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();

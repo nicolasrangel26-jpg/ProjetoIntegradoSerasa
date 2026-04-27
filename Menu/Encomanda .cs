@@ -20,7 +20,7 @@ namespace Menu
             MySqlConnection con = new MySqlConnection(conexao);
 
             InitializeComponent();
-            string sql = "SELECT * FROM perdidos";
+            string sql = "SELECT * FROM pedidos";
 
             MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
@@ -108,7 +108,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO perdidos (id_cliente,id_pizza,quant_pizza,id_bebida,quant_bebida,obs) VALUES (@id_cliente,@id_pizza,@quant_pizza,@id_bebida,@quant_bebida,@obs)";
+                string sql = "INSERT INTO pedidos (id_cliente,id_pizza,quant_pizza,id_bebida,quant_bebida,obs) VALUES (@id_cliente,@id_pizza,@quant_pizza,@id_bebida,@quant_bebida,@obs)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
                 cmd.Parameters.AddWithValue("@id_cliente", cbbClientes);
@@ -128,7 +128,7 @@ namespace Menu
 
             try
             {
-                string sql = "SELECT * FROM perdidos";
+                string sql = "SELECT * FROM pedidos";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
@@ -159,7 +159,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO pizzaz (sabores) values (@sabores)";
+                string sql = "INSERT INTO pizzasx (sabores) values (@sabores)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@sabores", txtNovoSabor.Text);
 
@@ -214,7 +214,7 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "select * from pizzaz ";
+                string sql = "select * from pizzasx ";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
@@ -248,7 +248,7 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "select * from bebidas ";
+                string sql = "select * from berbidas ";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
@@ -280,7 +280,7 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "select * from pizzaz ";
+                string sql = "select * from pizzasx ";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
@@ -320,7 +320,7 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM clientes";
+                string sql = "SELECT * FROM clientens";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();

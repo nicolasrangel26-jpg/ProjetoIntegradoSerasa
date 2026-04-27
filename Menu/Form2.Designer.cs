@@ -92,7 +92,7 @@
             // 
             pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(18, 527);
+            pictureBox6.Location = new Point(18, 539);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(42, 40);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -105,7 +105,7 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 517);
+            button1.Location = new Point(3, 529);
             button1.Name = "button1";
             button1.Size = new Size(197, 66);
             button1.TabIndex = 14;
@@ -127,7 +127,7 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(18, 614);
+            pictureBox5.Location = new Point(18, 643);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(42, 37);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -140,7 +140,7 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 600);
+            button5.Location = new Point(3, 629);
             button5.Name = "button5";
             button5.Size = new Size(197, 66);
             button5.TabIndex = 11;
@@ -223,7 +223,7 @@
             // panel3
             // 
             panel3.BackColor = Color.OrangeRed;
-            panel3.Location = new Point(90, 135);
+            panel3.Location = new Point(90, 138);
             panel3.Name = "panel3";
             panel3.Size = new Size(16, 567);
             panel3.TabIndex = 7;
