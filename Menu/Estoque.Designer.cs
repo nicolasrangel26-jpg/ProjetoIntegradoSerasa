@@ -110,9 +110,9 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(18, 524);
+            pictureBox5.Location = new Point(18, 539);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(42, 39);
+            pictureBox5.Size = new Size(42, 40);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 16;
             pictureBox5.TabStop = false;
@@ -123,7 +123,7 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 513);
+            button2.Location = new Point(3, 529);
             button2.Name = "button2";
             button2.Size = new Size(197, 66);
             button2.TabIndex = 15;
@@ -191,9 +191,9 @@
             // 
             pictureBox2.BackColor = Color.White;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(13, 616);
+            pictureBox2.Location = new Point(18, 643);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(42, 36);
+            pictureBox2.Size = new Size(42, 38);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
@@ -226,7 +226,7 @@
             btnMenuEstoque.FlatStyle = FlatStyle.Popup;
             btnMenuEstoque.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMenuEstoque.ForeColor = Color.White;
-            btnMenuEstoque.Location = new Point(3, 600);
+            btnMenuEstoque.Location = new Point(3, 629);
             btnMenuEstoque.Name = "btnMenuEstoque";
             btnMenuEstoque.Size = new Size(197, 66);
             btnMenuEstoque.TabIndex = 2;

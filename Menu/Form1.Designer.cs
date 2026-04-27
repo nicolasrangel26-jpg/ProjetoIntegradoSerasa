@@ -45,6 +45,8 @@
             panel3 = new Panel();
             pictureBox7 = new PictureBox();
             pictureBox1 = new PictureBox();
+            pictureBox8 = new PictureBox();
+            button2 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -54,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -79,7 +82,9 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox3);
@@ -97,6 +102,7 @@
             // 
             // pictureBox6
             // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(13, 335);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(42, 40);
@@ -142,9 +148,9 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(18, 545);
+            pictureBox5.Location = new Point(18, 643);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(42, 39);
+            pictureBox5.Size = new Size(42, 38);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 11;
             pictureBox5.TabStop = false;
@@ -154,7 +160,7 @@
             btnFechar.FlatStyle = FlatStyle.Popup;
             btnFechar.Font = new Font("Times New Roman", 15.75F);
             btnFechar.ForeColor = Color.White;
-            btnFechar.Location = new Point(3, 530);
+            btnFechar.Location = new Point(3, 629);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(197, 66);
             btnFechar.TabIndex = 10;
@@ -238,6 +244,30 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.White;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(18, 539);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(42, 40);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 18;
+            pictureBox8.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(3, 529);
+            button2.Name = "button2";
+            button2.Size = new Size(197, 66);
+            button2.TabIndex = 17;
+            button2.Text = " Menu";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -264,6 +294,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 
@@ -285,5 +316,7 @@
         private PictureBox pictureBox6;
         private Button button1;
         private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
+        private Button button2;
     }
 }

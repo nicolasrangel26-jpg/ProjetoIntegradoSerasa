@@ -123,9 +123,9 @@
             // 
             pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(18, 516);
+            pictureBox6.Location = new Point(18, 539);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(42, 38);
+            pictureBox6.Size = new Size(42, 40);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 29;
             pictureBox6.TabStop = false;
@@ -136,7 +136,7 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 505);
+            button2.Location = new Point(3, 529);
             button2.Name = "button2";
             button2.Size = new Size(197, 66);
             button2.TabIndex = 14;
@@ -147,7 +147,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(18, 427);
+            pictureBox4.Location = new Point(18, 435);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(42, 48);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -158,7 +158,7 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(18, 612);
+            pictureBox5.Location = new Point(18, 643);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(42, 38);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -171,7 +171,7 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(3, 600);
+            button5.Location = new Point(3, 629);
             button5.Name = "button5";
             button5.Size = new Size(197, 66);
             button5.TabIndex = 11;
@@ -185,7 +185,7 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(3, 417);
+            button4.Location = new Point(3, 426);
             button4.Name = "button4";
             button4.Size = new Size(197, 66);
             button4.TabIndex = 10;

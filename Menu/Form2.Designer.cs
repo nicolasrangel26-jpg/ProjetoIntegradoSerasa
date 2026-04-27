@@ -129,7 +129,7 @@
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(18, 643);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(42, 37);
+            pictureBox5.Size = new Size(42, 38);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 12;
             pictureBox5.TabStop = false;
@@ -223,7 +223,7 @@
             // panel3
             // 
             panel3.BackColor = Color.OrangeRed;
-            panel3.Location = new Point(90, 138);
+            panel3.Location = new Point(90, 135);
             panel3.Name = "panel3";
             panel3.Size = new Size(16, 567);
             panel3.TabIndex = 7;
