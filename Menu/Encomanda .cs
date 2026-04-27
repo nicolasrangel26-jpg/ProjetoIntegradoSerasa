@@ -104,6 +104,10 @@ namespace Menu
 
         private void btnConfirmarPed_Click(object sender, EventArgs e)
         {
+            int idCliente = Convert.ToInt32(cbbClientes.SelectedValue);
+            int idSabor = Convert.ToInt32(cbbPedidos.SelectedValue);
+            int idBebida = Convert.ToInt32(comboBox3.SelectedValue);
+
             MySqlConnection con = new MySqlConnection(conexao);
             try
             {
@@ -111,15 +115,16 @@ namespace Menu
                 string sql = "INSERT INTO pedidos (id_cliente,id_pizza,quant_pizza,id_bebida,quant_bebida,obs) VALUES (@id_cliente,@id_pizza,@quant_pizza,@id_bebida,@quant_bebida,@obs)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
-                cmd.Parameters.AddWithValue("@id_cliente", cbbClientes);
-                cmd.Parameters.AddWithValue("@id_pizza", cbbPedidos);
+                cmd.Parameters.AddWithValue("@id_cliente", idCliente);
+                cmd.Parameters.AddWithValue("@id_pizza", idSabor);
                 cmd.Parameters.AddWithValue("@quant_pizza", numericUpDown2.Value);
-                cmd.Parameters.AddWithValue("@id_bebida", comboBox3);
+                cmd.Parameters.AddWithValue("@id_bebida", idBebida);
                 cmd.Parameters.AddWithValue("@quant_bebida", numericUpDown3.Value);
                 cmd.Parameters.AddWithValue("@obs", txtObs.Text);
 
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Pedido salvo");
 
+                cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -128,6 +133,28 @@ namespace Menu
 
             try
             {
+                string sql = "SELECT clientens.nome, pizzasx.sabores, pedidos.quant_pizza, bebidas.nome, pedidos.quant_bebida, pedidos.obs " +
+                    "From pedidos " +
+                    "INNER JOIN clientens ON pedidos.id_cliente = clientens.id_cliente " +
+                    "INNER JOIN pizzasx ON pedidos.id_pizza = pizzasx.id_pizza" +
+                    "INNER JOIN berbidas ON pedidos.id_bebida = berbidas.id_bebida";
+
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+
+                banco.Fill(dt);
+                dgvPedidos.DataSource = dt;
+                dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+
+
                 string sql = "SELECT * FROM pedidos";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
@@ -140,9 +167,6 @@ namespace Menu
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
-
-
             }
 
 
