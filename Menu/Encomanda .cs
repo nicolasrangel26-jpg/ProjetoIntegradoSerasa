@@ -170,6 +170,14 @@ namespace Menu
                 MessageBox.Show(ex.Message);
 
             }
+
+            string sqql = "SELECT * FROM pedidos";
+
+            MySqlDataAdapter bancoo = new MySqlDataAdapter(sqql, con);
+            DataTable dtt = new DataTable();
+
+            bancoo.Fill(dtt);
+            dgvPedidos.DataSource = dtt;
         }
 
         private void button5_Click(object sender, EventArgs e)
