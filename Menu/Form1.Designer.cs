@@ -32,7 +32,9 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            pictureBox8 = new PictureBox();
             pictureBox6 = new PictureBox();
+            button2 = new Button();
             button1 = new Button();
             label2 = new Label();
             pictureBox3 = new PictureBox();
@@ -45,10 +47,9 @@
             panel3 = new Panel();
             pictureBox7 = new PictureBox();
             pictureBox1 = new PictureBox();
-            pictureBox8 = new PictureBox();
-            button2 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -56,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -100,6 +100,17 @@
             panel2.Size = new Size(200, 783);
             panel2.TabIndex = 1;
             // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.White;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(18, 539);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(42, 40);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 18;
+            pictureBox8.TabStop = false;
+            // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
@@ -109,6 +120,19 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 16;
             pictureBox6.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(3, 529);
+            button2.Name = "button2";
+            button2.Size = new Size(197, 66);
+            button2.TabIndex = 17;
+            button2.Text = " Menu";
+            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -226,9 +250,9 @@
             // 
             pictureBox7.BackColor = Color.Transparent;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(247, 194);
+            pictureBox7.Location = new Point(247, 207);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(510, 442);
+            pictureBox7.Size = new Size(497, 491);
             pictureBox7.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox7.TabIndex = 3;
             pictureBox7.TabStop = false;
@@ -243,30 +267,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.BackColor = Color.White;
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(18, 539);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(42, 40);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 18;
-            pictureBox8.TabStop = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(64, 64, 64);
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 529);
-            button2.Name = "button2";
-            button2.Size = new Size(197, 66);
-            button2.TabIndex = 17;
-            button2.Text = " Menu";
-            button2.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -287,6 +287,7 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -294,7 +295,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 
