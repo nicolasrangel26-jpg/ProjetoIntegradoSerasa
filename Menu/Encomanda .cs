@@ -20,7 +20,7 @@ namespace Menu
             MySqlConnection con = new MySqlConnection(conexao);
 
             InitializeComponent();
-            string sql = "SELECT * FROM perdidos";
+            string sql = "SELECT * FROM pedidos";
 
             MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
@@ -108,14 +108,14 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO perdidos (id_cliente,id_pizza,quant_pizza,id_bebida,quant_bebida,obs) VALUES (@id_cliente,@id_pizza,@quant_pizza,@id_bebida,@quant_bebida,@obs)";
+                string sql = "INSERT INTO pedidos (id_cliente,id_pizza,quant_pizza,id_bebida,quant_bebida,obs) VALUES (@id_cliente,@id_pizza,@quant_pizza,@id_bebida,@quant_bebida,@obs)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
                 cmd.Parameters.AddWithValue("@id_cliente", cbbClientes);
                 cmd.Parameters.AddWithValue("@id_pizza", cbbPedidos);
-                cmd.Parameters.AddWithValue("@quant_pizza", numericUpDown2);
+                cmd.Parameters.AddWithValue("@quant_pizza", numericUpDown2.Value);
                 cmd.Parameters.AddWithValue("@id_bebida", comboBox3);
-                cmd.Parameters.AddWithValue("@quant_bebida", numericUpDown3);
+                cmd.Parameters.AddWithValue("@quant_bebida", numericUpDown3.Value);
                 cmd.Parameters.AddWithValue("@obs", txtObs.Text);
 
                 cmd.ExecuteNonQuery();
@@ -128,7 +128,7 @@ namespace Menu
 
             try
             {
-                string sql = "SELECT * FROM perdidos";
+                string sql = "SELECT * FROM pedidos";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
@@ -151,7 +151,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO pizzaz (obs) values (@obs)";
+                string sql = "INSERT INTO pizzasx (obs) values (@obs)";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@sabores", txtObs.Text);
 
@@ -188,7 +188,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO pizzaz (sabores) values (@sabores)";
+                string sql = "INSERT INTO pizzasx (sabores) values (@sabores)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@sabores", txtNovoSabor.Text);
 
@@ -243,7 +243,7 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "select * from pizzaz ";
+                string sql = "select * from pizzasx ";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
@@ -277,7 +277,7 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "select * from bebidas ";
+                string sql = "select * from berbidas ";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
@@ -309,14 +309,14 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "select * from pizzaz ";
+                string sql = "select * from pizzasx ";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
                 banco.Fill(dt);
 
                 cbbPedidos.DataSource = dt;
-                cbbPedidos.DisplayMember = "bebidas";
+                cbbPedidos.DisplayMember = "berbidas";
 
 
                 conn.Close();
@@ -349,7 +349,7 @@ namespace Menu
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM clientes";
+                string sql = "SELECT * FROM clientens";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
