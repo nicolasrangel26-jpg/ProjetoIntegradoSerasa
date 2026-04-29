@@ -12,25 +12,28 @@ using System.Windows.Forms;
 namespace Menu
 {
     public partial class Estoque : Form
-
-
     {
-        string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
-
-
+        string conexao = "Server=localhost; Database=pizzaria; Uid=root; Pwd=;";
         public Estoque()
         {
-            MySqlConnection con = new MySqlConnection(conexao);
-
             InitializeComponent();
-            string sql = "SELECT * FROM estorque";
+        }
 
-            MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-            DataTable dt = new DataTable();
+        public void CarregarEstoque()
+        {
+            MySqlConnection con = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sql = "SELECT * FROM estorque";
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
 
-            banco.Fill(dt);
-            dgvTabelaEstoque.DataSource = dt;
-            dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                banco.Fill(dt);
+                dgvTabelaEstoque.DataSource = dt;
+                dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch { }
         }
 
         private void btnEncoEstoque_Click(object sender, EventArgs e)
@@ -62,22 +65,7 @@ namespace Menu
                 txtNomeProduto.Clear();
                 txtQuant.Clear();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            try
-            {
-                string sql = "SELECT * FROM estorque";
-
-                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
-
-                banco.Fill(dt);
-                dgvTabelaEstoque.DataSource = dt;
-                dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                CarregarEstoque();
             }
             catch (Exception ex)
             {
@@ -99,28 +87,13 @@ namespace Menu
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Produto excluído com sucesso");
+
+                CarregarEstoque();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            try
-            {
-                string sql = "SELECT * FROM estorque";
-
-                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
-
-                banco.Fill(dt);
-                dgvTabelaEstoque.DataSource = dt;
-                dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -140,6 +113,29 @@ namespace Menu
             Form2 form2 = new Form2();
             form2.Show();
             this.Close();
+        }
+
+        private void btnEditarEstoque_Click(object sender, EventArgs e)
+        {
+            if(dgvTabelaEstoque.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione um produto");
+                return;
+            }
+
+            int id = Convert.ToInt32(dgvTabelaEstoque.CurrentRow.Cells["id_produto"].Value);
+            string produto = dgvTabelaEstoque.CurrentRow.Cells["produto"].ToString();
+            int quant = Convert.ToInt32(dgvTabelaEstoque.CurrentRow.Cells["quant"].Value);
+            DateTime validade = Convert.ToDateTime(dgvTabelaEstoque.CurrentRow.Cells["validade"].ToString());
+
+            EditarEstoque frm = new EditarEstoque(id, produto, quant, validade);
+            frm.ShowDialog();
+            CarregarEstoque();
+        }
+
+        private void Estoque_Load(object sender, EventArgs e)
+        {
+            CarregarEstoque();
         }
     }
 }

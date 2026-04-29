@@ -53,6 +53,7 @@
             label3 = new Label();
             label4 = new Label();
             panel5 = new Panel();
+            btnEditarEstoque = new Button();
             dateTimePicker2 = new DateTimePicker();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -253,14 +254,14 @@
             // 
             // txtNomeProduto
             // 
-            txtNomeProduto.Location = new Point(341, 197);
+            txtNomeProduto.Location = new Point(298, 197);
             txtNomeProduto.Name = "txtNomeProduto";
             txtNomeProduto.Size = new Size(231, 23);
             txtNomeProduto.TabIndex = 3;
             // 
             // txtQuant
             // 
-            txtQuant.Location = new Point(609, 197);
+            txtQuant.Location = new Point(566, 197);
             txtQuant.Name = "txtQuant";
             txtQuant.Size = new Size(124, 23);
             txtQuant.TabIndex = 4;
@@ -269,7 +270,7 @@
             // 
             btnAdicionarEstoque.FlatStyle = FlatStyle.System;
             btnAdicionarEstoque.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdicionarEstoque.Location = new Point(982, 191);
+            btnAdicionarEstoque.Location = new Point(939, 191);
             btnAdicionarEstoque.Name = "btnAdicionarEstoque";
             btnAdicionarEstoque.Size = new Size(101, 30);
             btnAdicionarEstoque.TabIndex = 6;
@@ -281,7 +282,7 @@
             // 
             btnRemoveEstoque.FlatStyle = FlatStyle.System;
             btnRemoveEstoque.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRemoveEstoque.Location = new Point(768, 40);
+            btnRemoveEstoque.Location = new Point(763, 40);
             btnRemoveEstoque.Name = "btnRemoveEstoque";
             btnRemoveEstoque.Size = new Size(90, 30);
             btnRemoveEstoque.TabIndex = 7;
@@ -293,7 +294,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Georgia", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(341, 170);
+            label2.Location = new Point(298, 170);
             label2.Name = "label2";
             label2.Size = new Size(141, 15);
             label2.TabIndex = 8;
@@ -303,7 +304,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Georgia", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(609, 170);
+            label3.Location = new Point(566, 170);
             label3.Name = "label3";
             label3.Size = new Size(100, 15);
             label3.TabIndex = 9;
@@ -313,7 +314,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Georgia", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(776, 170);
+            label4.Location = new Point(733, 170);
             label4.Name = "label4";
             label4.Size = new Size(143, 15);
             label4.TabIndex = 10;
@@ -323,12 +324,25 @@
             // 
             panel5.BackColor = Color.WhiteSmoke;
             panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(btnEditarEstoque);
             panel5.Controls.Add(dateTimePicker2);
             panel5.Controls.Add(btnRemoveEstoque);
-            panel5.Location = new Point(332, 150);
+            panel5.Location = new Point(289, 150);
             panel5.Name = "panel5";
-            panel5.Size = new Size(869, 78);
+            panel5.Size = new Size(964, 78);
             panel5.TabIndex = 15;
+            // 
+            // btnEditarEstoque
+            // 
+            btnEditarEstoque.FlatStyle = FlatStyle.System;
+            btnEditarEstoque.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditarEstoque.Location = new Point(864, 40);
+            btnEditarEstoque.Name = "btnEditarEstoque";
+            btnEditarEstoque.Size = new Size(90, 30);
+            btnEditarEstoque.TabIndex = 17;
+            btnEditarEstoque.Text = "EDITAR";
+            btnEditarEstoque.UseVisualStyleBackColor = true;
+            btnEditarEstoque.Click += btnEditarEstoque_Click;
             // 
             // dateTimePicker2
             // 
@@ -359,6 +373,7 @@
             Name = "Estoque";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Estoque";
+            Load += Estoque_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -402,5 +417,6 @@
         private DateTimePicker dateTimePicker2;
         private PictureBox pictureBox5;
         private Button button2;
+        private Button btnEditarEstoque;
     }
 }
