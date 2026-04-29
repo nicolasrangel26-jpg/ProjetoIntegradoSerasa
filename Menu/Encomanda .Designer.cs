@@ -61,6 +61,13 @@
             numericUpDown2 = new NumericUpDown();
             numericUpDown3 = new NumericUpDown();
             panel5 = new Panel();
+            label3 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            panel6 = new Panel();
+            txtNovaBebida = new TextBox();
+            label10 = new Label();
+            button3 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -74,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
             panel5.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -282,7 +290,7 @@
             // cbbPedidos
             // 
             cbbPedidos.FormattingEnabled = true;
-            cbbPedidos.Location = new Point(27, 101);
+            cbbPedidos.Location = new Point(27, 118);
             cbbPedidos.Name = "cbbPedidos";
             cbbPedidos.Size = new Size(121, 23);
             cbbPedidos.TabIndex = 25;
@@ -297,7 +305,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Georgia", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(114, 19);
+            label9.Location = new Point(114, 8);
             label9.Name = "label9";
             label9.Size = new Size(98, 31);
             label9.TabIndex = 19;
@@ -309,7 +317,7 @@
             btnConfirmarPed.BackColor = Color.LightGray;
             btnConfirmarPed.FlatStyle = FlatStyle.Popup;
             btnConfirmarPed.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnConfirmarPed.Location = new Point(68, 304);
+            btnConfirmarPed.Location = new Point(65, 261);
             btnConfirmarPed.Name = "btnConfirmarPed";
             btnConfirmarPed.Size = new Size(200, 31);
             btnConfirmarPed.TabIndex = 14;
@@ -319,7 +327,7 @@
             // 
             // txtObs
             // 
-            txtObs.Location = new Point(47, 243);
+            txtObs.Location = new Point(47, 223);
             txtObs.Name = "txtObs";
             txtObs.Size = new Size(237, 23);
             txtObs.TabIndex = 20;
@@ -331,7 +339,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(47, 223);
+            label2.Location = new Point(47, 203);
             label2.Name = "label2";
             label2.Size = new Size(91, 18);
             label2.TabIndex = 19;
@@ -345,12 +353,12 @@
             panel4.Controls.Add(button1);
             panel4.Location = new Point(229, 143);
             panel4.Name = "panel4";
-            panel4.Size = new Size(338, 158);
+            panel4.Size = new Size(338, 131);
             panel4.TabIndex = 23;
             // 
             // txtNovoSabor
             // 
-            txtNovoSabor.Location = new Point(55, 61);
+            txtNovoSabor.Location = new Point(55, 51);
             txtNovoSabor.Name = "txtNovoSabor";
             txtNovoSabor.Size = new Size(221, 23);
             txtNovoSabor.TabIndex = 20;
@@ -359,20 +367,20 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Georgia", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(49, 9);
+            label5.Location = new Point(85, 9);
             label5.Name = "label5";
-            label5.Size = new Size(239, 43);
+            label5.Size = new Size(162, 34);
             label5.TabIndex = 19;
-            label5.Text = "Novo sabores";
+            label5.Text = "Novo sabor";
             // 
             // button1
             // 
             button1.BackColor = Color.LightGray;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(66, 101);
+            button1.Location = new Point(65, 88);
             button1.Name = "button1";
             button1.Size = new Size(200, 31);
             button1.TabIndex = 14;
@@ -383,14 +391,14 @@
             // dgvPedidos
             // 
             dgvPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPedidos.Location = new Point(610, 244);
+            dgvPedidos.Location = new Point(610, 226);
             dgvPedidos.Name = "dgvPedidos";
-            dgvPedidos.Size = new Size(703, 501);
+            dgvPedidos.Size = new Size(703, 519);
             dgvPedidos.TabIndex = 24;
             // 
             // cbbClientes
             // 
-            cbbClientes.Location = new Point(27, 53);
+            cbbClientes.Location = new Point(27, 66);
             cbbClientes.Name = "cbbClientes";
             cbbClientes.Size = new Size(273, 23);
             cbbClientes.TabIndex = 28;
@@ -400,7 +408,7 @@
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(27, 140);
+            comboBox3.Location = new Point(27, 170);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(121, 23);
             comboBox3.TabIndex = 2;
@@ -408,7 +416,7 @@
             // 
             // numericUpDown2
             // 
-            numericUpDown2.Location = new Point(180, 102);
+            numericUpDown2.Location = new Point(180, 119);
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(120, 23);
             numericUpDown2.TabIndex = 3;
@@ -417,7 +425,7 @@
             // 
             // numericUpDown3
             // 
-            numericUpDown3.Location = new Point(180, 140);
+            numericUpDown3.Location = new Point(180, 170);
             numericUpDown3.Name = "numericUpDown3";
             numericUpDown3.Size = new Size(120, 23);
             numericUpDown3.TabIndex = 4;
@@ -425,6 +433,9 @@
             // panel5
             // 
             panel5.BackColor = Color.WhiteSmoke;
+            panel5.Controls.Add(label8);
+            panel5.Controls.Add(label7);
+            panel5.Controls.Add(label3);
             panel5.Controls.Add(label9);
             panel5.Controls.Add(comboBox3);
             panel5.Controls.Add(cbbClientes);
@@ -434,10 +445,82 @@
             panel5.Controls.Add(btnConfirmarPed);
             panel5.Controls.Add(cbbPedidos);
             panel5.Controls.Add(txtObs);
-            panel5.Location = new Point(229, 321);
+            panel5.Location = new Point(229, 431);
             panel5.Name = "panel5";
-            panel5.Size = new Size(338, 424);
+            panel5.Size = new Size(338, 314);
             panel5.TabIndex = 28;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(27, 48);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 15);
+            label3.TabIndex = 29;
+            label3.Text = "Cliente";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(27, 100);
+            label7.Name = "label7";
+            label7.Size = new Size(35, 15);
+            label7.TabIndex = 30;
+            label7.Text = "Pizza";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(27, 152);
+            label8.Name = "label8";
+            label8.Size = new Size(46, 15);
+            label8.TabIndex = 31;
+            label8.Text = "Bebida";
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.WhiteSmoke;
+            panel6.Controls.Add(txtNovaBebida);
+            panel6.Controls.Add(label10);
+            panel6.Controls.Add(button3);
+            panel6.Location = new Point(229, 286);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(338, 131);
+            panel6.TabIndex = 24;
+            // 
+            // txtNovaBebida
+            // 
+            txtNovaBebida.Location = new Point(55, 51);
+            txtNovaBebida.Name = "txtNovaBebida";
+            txtNovaBebida.Size = new Size(221, 23);
+            txtNovaBebida.TabIndex = 20;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Georgia", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.Black;
+            label10.Location = new Point(78, 8);
+            label10.Name = "label10";
+            label10.Size = new Size(176, 34);
+            label10.TabIndex = 19;
+            label10.Text = "Nova bebida";
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.LightGray;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Location = new Point(65, 88);
+            button3.Name = "button3";
+            button3.Size = new Size(200, 31);
+            button3.TabIndex = 14;
+            button3.Text = "Confirmar ";
+            button3.UseVisualStyleBackColor = false;
             // 
             // Encomanda
             // 
@@ -445,6 +528,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(panel6);
             Controls.Add(panel5);
             Controls.Add(dgvPedidos);
             Controls.Add(panel4);
@@ -473,6 +557,8 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -511,5 +597,12 @@
         private Panel panel5;
         private Button button2;
         private PictureBox pictureBox6;
+        private Label label8;
+        private Label label7;
+        private Label label3;
+        private Panel panel6;
+        private TextBox txtNovaBebida;
+        private Label label10;
+        private Button button3;
     }
 }
