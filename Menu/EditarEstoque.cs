@@ -32,7 +32,7 @@ namespace Menu
             {
                 con.Open();
 
-                string sql = "UPDATE estorque SET produto=@produto, quant=@quant, validade=@validade WHERE id_produto=@id_produto;";
+                string sql = "UPDATE estoque SET produto=@produto, quant=@quant, validade=@validade WHERE id_produto=@id_produto;";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
                 cmd.Parameters.AddWithValue("@produto", txtProdutoEditar.Text);

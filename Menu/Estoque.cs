@@ -25,7 +25,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "SELECT * FROM estorque";
+                string sql = "SELECT * FROM estoque";
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
 
@@ -54,7 +54,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO estorque (produto, quant, validade) VALUES (@produto,@quant,@validade)";
+                string sql = "INSERT INTO estoque (produto, quant, validade) VALUES (@produto,@quant,@validade)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
                 cmd.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
@@ -81,7 +81,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sqldelete = "DELETE FROM estorque WHERE id_produto = @id_produto";
+                string sqldelete = "DELETE FROM estoque WHERE id_produto = @id_produto";
                 MySqlCommand cmd = new MySqlCommand(sqldelete, con);
                 cmd.Parameters.AddWithValue("@id_produto", idSelecionado);
                 cmd.ExecuteNonQuery();
@@ -124,9 +124,9 @@ namespace Menu
             }
 
             int id = Convert.ToInt32(dgvTabelaEstoque.CurrentRow.Cells["id_produto"].Value);
-            string produto = dgvTabelaEstoque.CurrentRow.Cells["produto"].ToString();
+            string produto = dgvTabelaEstoque.CurrentRow.Cells["produto"].Value.ToString();
             int quant = Convert.ToInt32(dgvTabelaEstoque.CurrentRow.Cells["quant"].Value);
-            DateTime validade = Convert.ToDateTime(dgvTabelaEstoque.CurrentRow.Cells["validade"].ToString());
+            DateTime validade = Convert.ToDateTime(dgvTabelaEstoque.CurrentRow.Cells["validade"].Value);
 
             EditarEstoque frm = new EditarEstoque(id, produto, quant, validade);
             frm.ShowDialog();

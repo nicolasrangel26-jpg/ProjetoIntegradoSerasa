@@ -16,27 +16,29 @@ namespace Menu
         string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
         public Form2()
         {
-
-            MySqlConnection con = new MySqlConnection(conexao);
-
             InitializeComponent();
-
-            string sql = "SELECT * FROM clientens";
-
-
-            MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-            DataTable dt = new DataTable();
-
-            banco.Fill(dt);
-            dgvClientes.DataSource = dt;
-            dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        public void CarregarClientes()
+        {
+            MySqlConnection con = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sql = "SELECT * FROM clientes";
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
 
+                banco.Fill(dt);
+                dgvClientes.DataSource = dt;
+                dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch { }
+        }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            CarregarClientes();
         }
 
         private void btnEstoqueEnco_Click(object sender, EventArgs e)
@@ -70,35 +72,18 @@ namespace Menu
             {
                 con.Open();
 
-                string sql = "insert into clientens (CPF, Nome, Endereco, Telefone) values (@CPF, @Nome, @Endereco, @Telefone) ";
+                string sql = "insert into clientes (Nome, CPF, Endereco, Telefone) values (@Nome, @CPF, @Endereco, @Telefone) ";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
                 cmd.Parameters.AddWithValue("@CPF", txtCPF.Text);
                 cmd.Parameters.AddWithValue("@Endereco", txtEndereço.Text);
                 cmd.Parameters.AddWithValue("@Telefone", txtTelefone.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Clienten cadastrado");
+                MessageBox.Show("Cliente cadastrado");
+
+                CarregarClientes();
             }
             catch (Exception ex) { }
-            try
-            {
-                string sql = "SELECT * FROM clientens";
-
-
-                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
-
-                banco.Fill(dt);
-                dgvClientes.DataSource = dt;
-                dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-
         }
 
         private void txtEndereço_TextChanged(object sender, EventArgs e)
@@ -124,28 +109,14 @@ namespace Menu
             try
             {
                 con.Open();
-                string sqldelete = "DELETE FROM clientens WHERE id_cliente = @id_cliente";
+                string sqldelete = "DELETE FROM clientes WHERE id_cliente = @id_cliente";
                 MySqlCommand cmd = new MySqlCommand(sqldelete, con);
                 cmd.Parameters.AddWithValue("@id_cliente", idSelecionado);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Cliente excluído com sucesso");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
-            try
-            {
-                string sql = "SELECT * FROM clientens";
-
-                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
-
-                banco.Fill(dt);
-                dgvClientes.DataSource = dt;
-                dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                CarregarClientes();
             }
             catch (Exception ex)
             {
