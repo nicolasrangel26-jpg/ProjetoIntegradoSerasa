@@ -50,6 +50,18 @@ namespace Menu
 
         private void btnAdicionarEstoque_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNomeProduto.Text) ||
+                    string.IsNullOrWhiteSpace(txtQuant.Text))
+            {
+                MessageBox.Show(
+                    "Preencha todas as informações!",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
             MySqlConnection con = new MySqlConnection(conexao);
             try
             {
@@ -75,6 +87,15 @@ namespace Menu
 
         private void btnRemoveEstoque_Click(object sender, EventArgs e)
         {
+            if (dgvTabelaEstoque.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione um produto",
+                "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
             int idSelecionado = Convert.ToInt32(dgvTabelaEstoque.CurrentRow.Cells["id_produto"].Value);
 
             MySqlConnection con = new MySqlConnection(conexao);
@@ -119,7 +140,10 @@ namespace Menu
         {
             if(dgvTabelaEstoque.CurrentRow == null)
             {
-                MessageBox.Show("Selecione um produto");
+                MessageBox.Show("Selecione um produto",
+                "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
 
