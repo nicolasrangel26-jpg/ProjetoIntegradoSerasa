@@ -67,6 +67,20 @@ namespace Menu
 
         public void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNome.Text) ||
+                    string.IsNullOrWhiteSpace(txtEndereço.Text) ||
+                    string.IsNullOrWhiteSpace(txtCPF.Text) ||
+                    string.IsNullOrWhiteSpace(txtTelefone.Text))
+            {
+                MessageBox.Show(
+                    "Preencha todas as informações!",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
             MySqlConnection con = new MySqlConnection(conexao);
             try
             {
@@ -103,6 +117,15 @@ namespace Menu
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
+            if (dgvClientes.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione um cliente",
+                "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
             int idSelecionado = Convert.ToInt32(dgvClientes.CurrentRow.Cells["id_cliente"].Value);
 
             MySqlConnection con = new MySqlConnection(conexao);
@@ -135,7 +158,10 @@ namespace Menu
         {
             if (dgvClientes.CurrentRow == null)
             {
-                MessageBox.Show("Selecione um cliente");
+                MessageBox.Show("Selecione um cliente",
+                "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
 

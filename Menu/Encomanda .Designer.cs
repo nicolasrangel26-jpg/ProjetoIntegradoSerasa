@@ -61,9 +61,9 @@
             numericUpDown2 = new NumericUpDown();
             numericUpDown3 = new NumericUpDown();
             panel5 = new Panel();
-            label3 = new Label();
-            label7 = new Label();
             label8 = new Label();
+            label7 = new Label();
+            label3 = new Label();
             panel6 = new Panel();
             txtNovaBebida = new TextBox();
             label10 = new Label();
@@ -450,15 +450,15 @@
             panel5.Size = new Size(338, 314);
             panel5.TabIndex = 28;
             // 
-            // label3
+            // label8
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(27, 48);
-            label3.Name = "label3";
-            label3.Size = new Size(48, 15);
-            label3.TabIndex = 29;
-            label3.Text = "Cliente";
+            label8.AutoSize = true;
+            label8.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(27, 152);
+            label8.Name = "label8";
+            label8.Size = new Size(46, 15);
+            label8.TabIndex = 31;
+            label8.Text = "Bebida";
             // 
             // label7
             // 
@@ -470,15 +470,15 @@
             label7.TabIndex = 30;
             label7.Text = "Pizza";
             // 
-            // label8
+            // label3
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(27, 152);
-            label8.Name = "label8";
-            label8.Size = new Size(46, 15);
-            label8.TabIndex = 31;
-            label8.Text = "Bebida";
+            label3.AutoSize = true;
+            label3.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(27, 48);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 15);
+            label3.TabIndex = 29;
+            label3.Text = "Cliente";
             // 
             // panel6
             // 
@@ -521,6 +521,7 @@
             button3.TabIndex = 14;
             button3.Text = "Confirmar ";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // Encomanda
             // 

@@ -213,6 +213,17 @@ namespace Menu
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNovoSabor.Text))
+            {
+                MessageBox.Show(
+                    "Preencha o novo sabor!",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
             MySqlConnection con = new MySqlConnection(conexao);
             try
             {
@@ -223,20 +234,14 @@ namespace Menu
 
                 cmd.ExecuteNonQuery();
 
-
-
                 MessageBox.Show("Novo sabor registrado");
 
                 txtNovoSabor.Clear();
-
-
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
-
             }
         }
 
@@ -410,6 +415,40 @@ namespace Menu
         private void txtObs_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNovaBebida.Text))
+            {
+                MessageBox.Show(
+                    "Preencha a nova bebida!",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            MySqlConnection con = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sql = "INSERT INTO bebidas (nome) values (@nome)";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@nome", txtNovaBebida.Text);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Nova bebida registrada");
+
+                txtNovoSabor.Clear();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

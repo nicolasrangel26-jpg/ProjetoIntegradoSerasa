@@ -27,7 +27,19 @@ namespace Menu
 
         private void btnSalvarEditar_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection(conexao);
+            if (string.IsNullOrWhiteSpace(txtProdutoEditar.Text) ||
+                    string.IsNullOrWhiteSpace(txtQuantEditar.Text))
+            {
+                MessageBox.Show(
+                    "Preencha todas as informações!",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+                MySqlConnection con = new MySqlConnection(conexao);
             try
             {
                 con.Open();

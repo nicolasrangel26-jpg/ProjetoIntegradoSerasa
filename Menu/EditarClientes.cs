@@ -28,7 +28,21 @@ namespace Menu
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection(conexao);
+            if (string.IsNullOrWhiteSpace(txtNome.Text) ||
+                    string.IsNullOrWhiteSpace(txtEndereco.Text) ||
+                    string.IsNullOrWhiteSpace(txtCPF.Text) ||
+                    string.IsNullOrWhiteSpace(txtTelefone.Text))
+            {
+                MessageBox.Show(
+                    "Preencha todas as informações!",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+                MySqlConnection con = new MySqlConnection(conexao);
             try
             {
                 con.Open();
