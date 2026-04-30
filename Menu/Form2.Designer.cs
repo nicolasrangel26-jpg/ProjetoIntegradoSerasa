@@ -56,6 +56,7 @@
             dgvClientes = new DataGridView();
             btnRemover = new Button();
             groupBox1 = new GroupBox();
+            btnEditar = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -328,7 +329,7 @@
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(1193, 163);
+            btnSalvar.Location = new Point(1193, 141);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(116, 44);
             btnSalvar.TabIndex = 13;
@@ -347,7 +348,7 @@
             // btnRemover
             // 
             btnRemover.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRemover.Location = new Point(1193, 230);
+            btnRemover.Location = new Point(1193, 197);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(116, 44);
             btnRemover.TabIndex = 24;
@@ -372,12 +373,24 @@
             groupBox1.TabIndex = 25;
             groupBox1.TabStop = false;
             // 
+            // btnEditar
+            // 
+            btnEditar.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar.Location = new Point(1193, 252);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(116, 44);
+            btnEditar.TabIndex = 26;
+            btnEditar.Text = "EDITAR";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(btnEditar);
             Controls.Add(groupBox1);
             Controls.Add(btnRemover);
             Controls.Add(dgvClientes);
@@ -433,5 +446,6 @@
         private GroupBox groupBox1;
         private PictureBox pictureBox6;
         private Button button1;
+        private Button btnEditar;
     }
 }

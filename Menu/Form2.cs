@@ -130,5 +130,24 @@ namespace Menu
             frm.Show();
             this.Close();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione um cliente");
+                return;
+            }
+
+            int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells["id_cliente"].Value);
+            string nome = dgvClientes.CurrentRow.Cells["nome"].Value.ToString();
+            string endereco = dgvClientes.CurrentRow.Cells["endereco"].Value.ToString();
+            int cpf = Convert.ToInt32(dgvClientes.CurrentRow.Cells["cpf"].Value.ToString());
+            int telefone = Convert.ToInt32(dgvClientes.CurrentRow.Cells["telefone"].Value.ToString());
+
+            EditarClientes frm = new EditarClientes(id, nome, endereco, cpf, telefone);
+            frm.ShowDialog();
+            CarregarClientes();
+        }
     }
 }
