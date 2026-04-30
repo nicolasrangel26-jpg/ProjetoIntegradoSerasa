@@ -170,13 +170,9 @@ namespace Menu
             MySqlConnection conn = new MySqlConnection(conexao);
             try
             {
-<<<<<<< HEAD
-                conn.Open();
-                string sql = "INSERT INTO pedidos (obs) values (@obs)";
-=======
                 con.Open();
                 string sql = "INSERT INTO pizzas (obs) values (@obs)";
->>>>>>> a3494a31ab384935e80d2920a9772566b00a8d43
+
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@sabores", txtObs.Text);
 
