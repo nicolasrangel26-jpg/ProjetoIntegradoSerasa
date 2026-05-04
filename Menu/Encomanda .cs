@@ -116,7 +116,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO pedidos (id_cliente,id_pizza,quant_pizza,id_bebida,quant_bebida,obs) VALUES (@id_cliente,@id_pizza,@quant_pizza,@id_bebida,@quant_bebida,@obs)";
+                string sql = "INSERT INTO pedidos (id_cliente, id_pizza, quant_pizza, id_bebida, quant_bebida, obs) VALUES (@id_cliente, @id_pizza, @quant_pizza, @id_bebida, @quant_bebida, @obs)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
                 cmd.Parameters.AddWithValue("@id_cliente", idCliente);
@@ -150,26 +150,6 @@ namespace Menu
             {
                 MessageBox.Show(ex.Message);
             }
-
-            MySqlConnection conn = new MySqlConnection(conexao);
-            try
-            {
-                con.Open();
-                string sql = "INSERT INTO pizzas (obs) values (@obs)";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@sabores", txtObs.Text);
-
-                cmd.ExecuteNonQuery();
-
-                txtObs.Clear();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            CarregarPedidos();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -181,9 +161,44 @@ namespace Menu
         {
             CarregarPedidos();
 
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try 
+            {
+                conn.Open();
+
+                string sql = "SELECT * FROM clientes";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                cbbClientes.DataSource = dt;
+                cbbClientes.DisplayMember = "Nome";
+                cbbClientes.ValueMember = "id_cliente";
 
 
+                string sqlPizzas = "SELECT * FROM pizzas";
+                MySqlDataAdapter adp = new MySqlDataAdapter(sqlPizzas, conn);
 
+                DataTable dt2 = new DataTable();
+                adp.Fill(dt2);
+
+                cbbPedidos.DataSource = dt2;
+                cbbPedidos.DisplayMember = "sabores";
+                cbbPedidos.ValueMember = "id_pizza";
+
+
+                string sqlBebidas = "SELECT * FROM bebidas";
+                MySqlDataAdapter adp2 = new MySqlDataAdapter(sqlBebidas, conn);
+
+                DataTable dt3 = new DataTable();
+                adp2.Fill(dt3);
+
+                comboBox3.DataSource = dt3;
+                comboBox3.DisplayMember = "nome";
+                comboBox3.ValueMember = "id_bebida";
+            }
+            catch { }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -259,9 +274,9 @@ namespace Menu
 
                 cbbPedidos.DataSource = dt;
                 cbbPedidos.DisplayMember = "sabores";
+                cbbPedidos.ValueMember = "id_pizza";
 
                 conn.Close();
-
             }
             catch (Exception ex)
             {
@@ -290,7 +305,7 @@ namespace Menu
 
                 comboBox3.DataSource = dt;
                 comboBox3.DisplayMember = "nome";
-
+                comboBox3.ValueMember = "id_bebida";
 
                 conn.Close();
 
@@ -333,6 +348,9 @@ namespace Menu
                 banco.Fill(dt);
                 cbbClientes.DataSource = dt;
                 cbbClientes.DisplayMember = "Nome";
+                cbbClientes.ValueMember = "id_cliente";
+
+                conn.Close();
 
             }
             catch { }
