@@ -17,19 +17,25 @@ namespace Menu
         string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
         public Encomanda()
         {
-            MySqlConnection con = new MySqlConnection(conexao);
-
             InitializeComponent();
-            string sql = "SELECT * FROM pedidos";
-
-            MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-            DataTable dt = new DataTable();
-
-            banco.Fill(dt);
-            dgvPedidos.DataSource = dt;
-            dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        public void CarregarPedidos()
+        {
+            MySqlConnection con = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sql = "SELECT * FROM pedidos";
+                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+
+                banco.Fill(dt);
+                dgvPedidos.DataSource = dt;
+                dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch { }
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -51,8 +57,6 @@ namespace Menu
             Estoque estoque = new Estoque();
             estoque.Show();
             this.Close();
-
-
         }
 
         private void BtnMenuEnco_Click(object sender, EventArgs e)
@@ -147,26 +151,6 @@ namespace Menu
                 MessageBox.Show(ex.Message);
             }
 
-            try
-            {
-
-
-                string sql = "SELECT * FROM pedidos";
-
-                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
-
-                banco.Fill(dt);
-                dgvPedidos.DataSource = dt;
-                dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-
             MySqlConnection conn = new MySqlConnection(conexao);
             try
             {
@@ -178,27 +162,15 @@ namespace Menu
 
                 cmd.ExecuteNonQuery();
 
-
-                
-
                 txtObs.Clear();
-
-
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
             }
 
-            string sqql = "SELECT * FROM pedidos";
-
-            MySqlDataAdapter bancoo = new MySqlDataAdapter(sqql, con);
-            DataTable dtt = new DataTable();
-
-            bancoo.Fill(dtt);
-            dgvPedidos.DataSource = dtt;
+            CarregarPedidos();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -208,6 +180,10 @@ namespace Menu
 
         private void Encomanda_Load(object sender, EventArgs e)
         {
+            CarregarPedidos();
+
+
+
 
         }
 
@@ -272,7 +248,6 @@ namespace Menu
 
         private void cbbPedidos_Click(object sender, EventArgs e)
         {
-
             MySqlConnection conn = new MySqlConnection(conexao);
             try
             {
@@ -286,7 +261,6 @@ namespace Menu
                 cbbPedidos.DataSource = dt;
                 cbbPedidos.DisplayMember = "sabores";
 
-
                 conn.Close();
 
             }
@@ -294,7 +268,6 @@ namespace Menu
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void btnConfirmarObs_Click(object sender, EventArgs e)
@@ -306,12 +279,11 @@ namespace Menu
 
         private void comboBox3_Click(object sender, EventArgs e)
         {
-
             MySqlConnection conn = new MySqlConnection(conexao);
             try
             {
                 conn.Open();
-                string sql = "select * from bebidas ";
+                string sql = "select * from bebidas";
 
                 MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
@@ -328,40 +300,12 @@ namespace Menu
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void comboBox2_Click(object sender, EventArgs e)
-        {
-
-            MySqlConnection conn = new MySqlConnection(conexao);
-            try
-            {
-                conn.Open();
-                string sql = "select * from pizzas ";
-
-                MySqlDataAdapter banco = new MySqlDataAdapter(sql, conn);
-                DataTable dt = new DataTable();
-                banco.Fill(dt);
-
-                cbbPedidos.DataSource = dt;
-                cbbPedidos.DisplayMember = "bebidas";
-
-
-                conn.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
 
         private void cbbClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -375,10 +319,9 @@ namespace Menu
             form1.Show();
             this.Close();
         }
+
         private void cbbClientes_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.btnSalvar_Click(sender, e);
             MySqlConnection conn = new MySqlConnection(conexao);
             try
             {
