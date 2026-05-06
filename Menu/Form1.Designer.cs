@@ -104,7 +104,7 @@
             // 
             pictureBox8.BackColor = Color.White;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(18, 539);
+            pictureBox8.Location = new Point(18, 237);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(42, 40);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
@@ -127,7 +127,7 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 529);
+            button2.Location = new Point(3, 227);
             button2.Name = "button2";
             button2.Size = new Size(197, 66);
             button2.TabIndex = 17;
@@ -205,7 +205,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Caixa;
-            pictureBox2.Location = new Point(18, 230);
+            pictureBox2.Location = new Point(18, 540);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(42, 48);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -230,7 +230,7 @@
             btnEstoqueMenu.FlatStyle = FlatStyle.Popup;
             btnEstoqueMenu.Font = new Font("Times New Roman", 15.75F);
             btnEstoqueMenu.ForeColor = Color.White;
-            btnEstoqueMenu.Location = new Point(3, 221);
+            btnEstoqueMenu.Location = new Point(3, 531);
             btnEstoqueMenu.Name = "btnEstoqueMenu";
             btnEstoqueMenu.Size = new Size(197, 66);
             btnEstoqueMenu.TabIndex = 2;
@@ -250,9 +250,9 @@
             // 
             pictureBox7.BackColor = Color.Transparent;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(247, 207);
+            pictureBox7.Location = new Point(224, 206);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(497, 491);
+            pictureBox7.Size = new Size(518, 504);
             pictureBox7.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox7.TabIndex = 3;
             pictureBox7.TabStop = false;
@@ -261,7 +261,7 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(763, 194);
+            pictureBox1.Location = new Point(786, 233);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(510, 442);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;

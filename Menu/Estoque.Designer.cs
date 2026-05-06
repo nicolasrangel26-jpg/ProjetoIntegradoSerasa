@@ -111,7 +111,7 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(18, 539);
+            pictureBox5.Location = new Point(18, 237);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(42, 40);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -124,7 +124,7 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 529);
+            button2.Location = new Point(3, 227);
             button2.Name = "button2";
             button2.Size = new Size(197, 66);
             button2.TabIndex = 15;
@@ -145,7 +145,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(18, 230);
+            pictureBox4.Location = new Point(18, 540);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(42, 48);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -168,10 +168,11 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(80, 80, 80);
-            button1.FlatStyle = FlatStyle.Popup;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(3, 221);
+            button1.Location = new Point(3, 531);
             button1.Name = "button1";
             button1.Size = new Size(197, 66);
             button1.TabIndex = 16;
@@ -257,7 +258,7 @@
             txtNomeProduto.Location = new Point(298, 197);
             txtNomeProduto.Name = "txtNomeProduto";
             txtNomeProduto.Size = new Size(231, 23);
-            txtNomeProduto.TabIndex = 3;
+            txtNomeProduto.TabIndex = 1;
             // 
             // txtQuant
             // 

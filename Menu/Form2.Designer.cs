@@ -93,7 +93,7 @@
             // 
             pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(18, 539);
+            pictureBox6.Location = new Point(18, 237);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(42, 40);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -106,7 +106,7 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(3, 529);
+            button1.Location = new Point(3, 227);
             button1.Name = "button1";
             button1.Size = new Size(197, 66);
             button1.TabIndex = 14;
@@ -176,7 +176,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(18, 230);
+            pictureBox1.Location = new Point(18, 540);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(42, 48);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -189,7 +189,7 @@
             btnEstoqueEnco.FlatStyle = FlatStyle.Popup;
             btnEstoqueEnco.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEstoqueEnco.ForeColor = Color.White;
-            btnEstoqueEnco.Location = new Point(3, 221);
+            btnEstoqueEnco.Location = new Point(3, 531);
             btnEstoqueEnco.Name = "btnEstoqueEnco";
             btnEstoqueEnco.Size = new Size(197, 66);
             btnEstoqueEnco.TabIndex = 4;
@@ -302,28 +302,28 @@
             txtTelefone.Location = new Point(453, 120);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(281, 23);
-            txtTelefone.TabIndex = 8;
+            txtTelefone.TabIndex = 4;
             // 
             // txtCPF
             // 
             txtCPF.Location = new Point(17, 120);
             txtCPF.Name = "txtCPF";
             txtCPF.Size = new Size(296, 23);
-            txtCPF.TabIndex = 9;
+            txtCPF.TabIndex = 3;
             // 
             // txtNome
             // 
             txtNome.Location = new Point(17, 53);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(381, 23);
-            txtNome.TabIndex = 10;
+            txtNome.TabIndex = 1;
             // 
             // txtEndereço
             // 
             txtEndereço.Location = new Point(453, 53);
             txtEndereço.Name = "txtEndereço";
             txtEndereço.Size = new Size(461, 23);
-            txtEndereço.TabIndex = 11;
+            txtEndereço.TabIndex = 2;
             txtEndereço.TextChanged += txtEndereço_TextChanged;
             // 
             // btnSalvar
@@ -332,7 +332,7 @@
             btnSalvar.Location = new Point(1193, 141);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(116, 44);
-            btnSalvar.TabIndex = 13;
+            btnSalvar.TabIndex = 5;
             btnSalvar.Text = "SALVAR";
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
@@ -343,7 +343,7 @@
             dgvClientes.Location = new Point(270, 318);
             dgvClientes.Name = "dgvClientes";
             dgvClientes.Size = new Size(1009, 422);
-            dgvClientes.TabIndex = 22;
+            dgvClientes.TabIndex = 8;
             // 
             // btnRemover
             // 
@@ -351,7 +351,7 @@
             btnRemover.Location = new Point(1193, 197);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(116, 44);
-            btnRemover.TabIndex = 24;
+            btnRemover.TabIndex = 6;
             btnRemover.Text = "REMOVER";
             btnRemover.UseVisualStyleBackColor = true;
             btnRemover.Click += btnRemover_Click;
@@ -379,7 +379,7 @@
             btnEditar.Location = new Point(1193, 252);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(116, 44);
-            btnEditar.TabIndex = 26;
+            btnEditar.TabIndex = 7;
             btnEditar.Text = "EDITAR";
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;

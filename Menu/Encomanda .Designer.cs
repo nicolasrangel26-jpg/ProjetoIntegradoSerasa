@@ -68,6 +68,10 @@
             txtNovaBebida = new TextBox();
             label10 = new Label();
             button3 = new Button();
+            btnEditar = new Button();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            btnExcluir = new Button();
+            panel7 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -82,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -92,7 +97,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1399, 132);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // label1
             // 
@@ -104,7 +108,6 @@
             label1.Size = new Size(369, 80);
             label1.TabIndex = 2;
             label1.Text = "Encomendas";
-            label1.Click += label1_Click;
             // 
             // panel2
             // 
@@ -125,13 +128,12 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
             panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
             // 
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(18, 539);
+            pictureBox6.Location = new Point(18, 237);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(42, 40);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -144,7 +146,7 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 529);
+            button2.Location = new Point(3, 227);
             button2.Name = "button2";
             button2.Size = new Size(197, 66);
             button2.TabIndex = 14;
@@ -214,13 +216,12 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(18, 230);
+            pictureBox1.Location = new Point(18, 540);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(42, 48);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // btnEstoqueEnco
             // 
@@ -228,7 +229,7 @@
             btnEstoqueEnco.FlatStyle = FlatStyle.Popup;
             btnEstoqueEnco.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEstoqueEnco.ForeColor = Color.White;
-            btnEstoqueEnco.Location = new Point(3, 221);
+            btnEstoqueEnco.Location = new Point(3, 531);
             btnEstoqueEnco.Name = "btnEstoqueEnco";
             btnEstoqueEnco.Size = new Size(197, 66);
             btnEstoqueEnco.TabIndex = 4;
@@ -258,7 +259,6 @@
             BtnMenuEnco.TabIndex = 5;
             BtnMenuEnco.Text = "     Cadastro";
             BtnMenuEnco.UseVisualStyleBackColor = false;
-            BtnMenuEnco.Click += BtnMenuEnco_Click;
             // 
             // panel3
             // 
@@ -280,12 +280,11 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(760, 152);
+            label6.Location = new Point(760, 128);
             label6.Name = "label6";
             label6.Size = new Size(418, 43);
             label6.TabIndex = 19;
             label6.Text = "Total de pedidos de hoje";
-            label6.Click += label6_Click;
             // 
             // cbbPedidos
             // 
@@ -310,7 +309,6 @@
             label9.Size = new Size(98, 31);
             label9.TabIndex = 19;
             label9.Text = "Pedido";
-            label9.Click += label9_Click;
             // 
             // btnConfirmarPed
             // 
@@ -331,7 +329,6 @@
             txtObs.Name = "txtObs";
             txtObs.Size = new Size(237, 23);
             txtObs.TabIndex = 20;
-            txtObs.TextChanged += txtObs_TextChanged;
             // 
             // label2
             // 
@@ -420,8 +417,6 @@
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(120, 23);
             numericUpDown2.TabIndex = 3;
-            numericUpDown2.ValueChanged += numericUpDown2_ValueChanged;
-            numericUpDown2.Click += numericUpDown2_Click;
             // 
             // numericUpDown3
             // 
@@ -523,6 +518,38 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
             // 
+            // btnEditar
+            // 
+            btnEditar.Font = new Font("Georgia", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEditar.Location = new Point(557, 14);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(143, 26);
+            btnEditar.TabIndex = 29;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click_1;
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.Font = new Font("Georgia", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnExcluir.Location = new Point(389, 14);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(143, 26);
+            btnExcluir.TabIndex = 30;
+            btnExcluir.Text = "Exluir";
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click_1;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.WhiteSmoke;
+            panel7.Controls.Add(btnEditar);
+            panel7.Controls.Add(btnExcluir);
+            panel7.Location = new Point(610, 180);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(703, 52);
+            panel7.TabIndex = 24;
+            // 
             // Encomanda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -537,6 +564,7 @@
             Controls.Add(label4);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(panel7);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Encomanda";
             StartPosition = FormStartPosition.CenterScreen;
@@ -560,6 +588,7 @@
             panel5.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            panel7.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -605,5 +634,9 @@
         private TextBox txtNovaBebida;
         private Label label10;
         private Button button3;
+        private Button btnEditar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button btnExcluir;
+        private Panel panel7;
     }
 }
