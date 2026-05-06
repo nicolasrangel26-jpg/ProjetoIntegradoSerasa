@@ -87,7 +87,7 @@
             panel2.Location = new Point(-6, -4);
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
-            panel2.TabIndex = 2;
+            panel2.TabIndex = 4;
             // 
             // pictureBox6
             // 
@@ -109,7 +109,7 @@
             button1.Location = new Point(3, 227);
             button1.Name = "button1";
             button1.Size = new Size(197, 66);
-            button1.TabIndex = 14;
+            button1.TabIndex = 0;
             button1.Text = " Menu";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -144,7 +144,7 @@
             button5.Location = new Point(3, 629);
             button5.Name = "button5";
             button5.Size = new Size(197, 66);
-            button5.TabIndex = 11;
+            button5.TabIndex = 4;
             button5.Text = "  Fechar";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -158,7 +158,7 @@
             button4.Location = new Point(3, 426);
             button4.Name = "button4";
             button4.Size = new Size(197, 66);
-            button4.TabIndex = 10;
+            button4.TabIndex = 2;
             button4.Text = "        Encomendas";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
@@ -192,7 +192,7 @@
             btnEstoqueEnco.Location = new Point(3, 531);
             btnEstoqueEnco.Name = "btnEstoqueEnco";
             btnEstoqueEnco.Size = new Size(197, 66);
-            btnEstoqueEnco.TabIndex = 4;
+            btnEstoqueEnco.TabIndex = 3;
             btnEstoqueEnco.Text = "      Estoque";
             btnEstoqueEnco.UseVisualStyleBackColor = false;
             btnEstoqueEnco.Click += btnEstoqueEnco_Click;
@@ -216,7 +216,7 @@
             BtnMenuEnco.Location = new Point(3, 322);
             BtnMenuEnco.Name = "BtnMenuEnco";
             BtnMenuEnco.Size = new Size(197, 66);
-            BtnMenuEnco.TabIndex = 5;
+            BtnMenuEnco.TabIndex = 1;
             BtnMenuEnco.Text = "     Cadastro";
             BtnMenuEnco.UseVisualStyleBackColor = false;
             BtnMenuEnco.Click += BtnMenuEnco_Click;
@@ -302,28 +302,28 @@
             txtTelefone.Location = new Point(453, 120);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(281, 23);
-            txtTelefone.TabIndex = 4;
+            txtTelefone.TabIndex = 3;
             // 
             // txtCPF
             // 
             txtCPF.Location = new Point(17, 120);
             txtCPF.Name = "txtCPF";
             txtCPF.Size = new Size(296, 23);
-            txtCPF.TabIndex = 3;
+            txtCPF.TabIndex = 2;
             // 
             // txtNome
             // 
             txtNome.Location = new Point(17, 53);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(381, 23);
-            txtNome.TabIndex = 1;
+            txtNome.TabIndex = 0;
             // 
             // txtEndereço
             // 
             txtEndereço.Location = new Point(453, 53);
             txtEndereço.Name = "txtEndereço";
             txtEndereço.Size = new Size(461, 23);
-            txtEndereço.TabIndex = 2;
+            txtEndereço.TabIndex = 1;
             txtEndereço.TextChanged += txtEndereço_TextChanged;
             // 
             // btnSalvar
@@ -332,7 +332,7 @@
             btnSalvar.Location = new Point(1193, 141);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(116, 44);
-            btnSalvar.TabIndex = 5;
+            btnSalvar.TabIndex = 1;
             btnSalvar.Text = "SALVAR";
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
@@ -343,7 +343,7 @@
             dgvClientes.Location = new Point(270, 318);
             dgvClientes.Name = "dgvClientes";
             dgvClientes.Size = new Size(1009, 422);
-            dgvClientes.TabIndex = 8;
+            dgvClientes.TabIndex = 5;
             // 
             // btnRemover
             // 
@@ -351,7 +351,7 @@
             btnRemover.Location = new Point(1193, 197);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(116, 44);
-            btnRemover.TabIndex = 6;
+            btnRemover.TabIndex = 2;
             btnRemover.Text = "REMOVER";
             btnRemover.UseVisualStyleBackColor = true;
             btnRemover.Click += btnRemover_Click;
@@ -370,7 +370,7 @@
             groupBox1.Location = new Point(218, 141);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(952, 155);
-            groupBox1.TabIndex = 25;
+            groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
             // btnEditar
@@ -379,7 +379,7 @@
             btnEditar.Location = new Point(1193, 252);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(116, 44);
-            btnEditar.TabIndex = 7;
+            btnEditar.TabIndex = 3;
             btnEditar.Text = "EDITAR";
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
@@ -400,7 +400,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
             Load += Form2_Load;
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();

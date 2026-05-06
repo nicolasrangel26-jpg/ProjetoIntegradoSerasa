@@ -139,7 +139,17 @@ namespace Menu
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show(
+                    "Deseja realmente fechar o aplicativo?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void Encomanda_Load(object sender, EventArgs e)
@@ -437,6 +447,13 @@ namespace Menu
             frm.ShowDialog();
             CarregarPedidos();
 
+        }
+
+        private void BtnMenuEnco_Click(object sender, EventArgs e)
+        {
+            Form2 telaCadastro = new Form2();
+            telaCadastro.Show();
+            this.Close();
         }
     }
 }

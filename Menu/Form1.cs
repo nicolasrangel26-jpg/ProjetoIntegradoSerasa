@@ -38,7 +38,17 @@ namespace Menu
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show(
+                    "Deseja realmente fechar o aplicativo?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

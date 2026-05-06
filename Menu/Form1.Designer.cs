@@ -66,7 +66,7 @@
             panel1.Location = new Point(-47, -7);
             panel1.Name = "panel1";
             panel1.Size = new Size(1399, 132);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -98,7 +98,7 @@
             panel2.Location = new Point(-6, -4);
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
-            panel2.TabIndex = 1;
+            panel2.TabIndex = 0;
             // 
             // pictureBox8
             // 
@@ -123,14 +123,14 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.BackColor = Color.FromArgb(80, 80, 80);
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
             button2.Location = new Point(3, 227);
             button2.Name = "button2";
             button2.Size = new Size(197, 66);
-            button2.TabIndex = 17;
+            button2.TabIndex = 0;
             button2.Text = " Menu";
             button2.UseVisualStyleBackColor = false;
             // 
@@ -142,7 +142,7 @@
             button1.Location = new Point(3, 322);
             button1.Name = "button1";
             button1.Size = new Size(197, 66);
-            button1.TabIndex = 15;
+            button1.TabIndex = 1;
             button1.Text = "     Cadastro";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -187,7 +187,7 @@
             btnFechar.Location = new Point(3, 629);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(197, 66);
-            btnFechar.TabIndex = 10;
+            btnFechar.TabIndex = 4;
             btnFechar.Text = "  Fechar";
             btnFechar.UseVisualStyleBackColor = true;
             btnFechar.Click += btnFechar_Click;
@@ -220,7 +220,7 @@
             btnEncoMenu.Location = new Point(3, 426);
             btnEncoMenu.Name = "btnEncoMenu";
             btnEncoMenu.Size = new Size(197, 66);
-            btnEncoMenu.TabIndex = 4;
+            btnEncoMenu.TabIndex = 2;
             btnEncoMenu.Text = "        Encomendas";
             btnEncoMenu.UseVisualStyleBackColor = true;
             btnEncoMenu.Click += btnEncoMenu_Click;
@@ -233,7 +233,7 @@
             btnEstoqueMenu.Location = new Point(3, 531);
             btnEstoqueMenu.Name = "btnEstoqueMenu";
             btnEstoqueMenu.Size = new Size(197, 66);
-            btnEstoqueMenu.TabIndex = 2;
+            btnEstoqueMenu.TabIndex = 3;
             btnEstoqueMenu.Text = "      Estoque";
             btnEstoqueMenu.UseVisualStyleBackColor = true;
             btnEstoqueMenu.Click += btnEstoqueMenu_Click;
@@ -281,7 +281,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = " ";
+            Text = "0";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

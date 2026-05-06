@@ -45,7 +45,17 @@ namespace Menu
 
         private void btnMenuEstoque_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show(
+                    "Deseja realmente fechar o aplicativo?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnAdicionarEstoque_Click(object sender, EventArgs e)
@@ -131,14 +141,14 @@ namespace Menu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Show();
+            Form1 frm = new Form1();
+            frm.Show();
             this.Close();
         }
 
         private void btnEditarEstoque_Click(object sender, EventArgs e)
         {
-            if(dgvTabelaEstoque.CurrentRow == null)
+            if (dgvTabelaEstoque.CurrentRow == null)
             {
                 MessageBox.Show("Selecione um produto",
                 "Aviso",
@@ -160,6 +170,11 @@ namespace Menu
         private void Estoque_Load(object sender, EventArgs e)
         {
             CarregarEstoque();
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

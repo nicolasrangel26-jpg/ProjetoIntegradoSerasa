@@ -127,7 +127,7 @@
             panel2.Location = new Point(-6, -4);
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
-            panel2.TabIndex = 1;
+            panel2.TabIndex = 4;
             // 
             // pictureBox6
             // 
@@ -149,7 +149,7 @@
             button2.Location = new Point(3, 227);
             button2.Name = "button2";
             button2.Size = new Size(197, 66);
-            button2.TabIndex = 14;
+            button2.TabIndex = 0;
             button2.Text = " Menu";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
@@ -184,7 +184,7 @@
             button5.Location = new Point(3, 629);
             button5.Name = "button5";
             button5.Size = new Size(197, 66);
-            button5.TabIndex = 11;
+            button5.TabIndex = 4;
             button5.Text = "  Fechar";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -198,7 +198,7 @@
             button4.Location = new Point(3, 426);
             button4.Name = "button4";
             button4.Size = new Size(197, 66);
-            button4.TabIndex = 10;
+            button4.TabIndex = 2;
             button4.Text = "        Encomendas";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
@@ -232,7 +232,7 @@
             btnEstoqueEnco.Location = new Point(3, 531);
             btnEstoqueEnco.Name = "btnEstoqueEnco";
             btnEstoqueEnco.Size = new Size(197, 66);
-            btnEstoqueEnco.TabIndex = 4;
+            btnEstoqueEnco.TabIndex = 3;
             btnEstoqueEnco.Text = "      Estoque";
             btnEstoqueEnco.UseVisualStyleBackColor = false;
             btnEstoqueEnco.Click += button1_Click;
@@ -256,9 +256,10 @@
             BtnMenuEnco.Location = new Point(3, 322);
             BtnMenuEnco.Name = "BtnMenuEnco";
             BtnMenuEnco.Size = new Size(197, 66);
-            BtnMenuEnco.TabIndex = 5;
+            BtnMenuEnco.TabIndex = 1;
             BtnMenuEnco.Text = "     Cadastro";
             BtnMenuEnco.UseVisualStyleBackColor = false;
+            BtnMenuEnco.Click += BtnMenuEnco_Click;
             // 
             // panel3
             // 
@@ -292,7 +293,7 @@
             cbbPedidos.Location = new Point(27, 118);
             cbbPedidos.Name = "cbbPedidos";
             cbbPedidos.Size = new Size(121, 23);
-            cbbPedidos.TabIndex = 25;
+            cbbPedidos.TabIndex = 1;
             cbbPedidos.SelectedIndexChanged += cbbPedidos_SelectedIndexChanged;
             cbbPedidos.Click += cbbPedidos_Click;
             cbbPedidos.KeyPress += cbbPedidos_KeyPress;
@@ -318,7 +319,7 @@
             btnConfirmarPed.Location = new Point(65, 261);
             btnConfirmarPed.Name = "btnConfirmarPed";
             btnConfirmarPed.Size = new Size(200, 31);
-            btnConfirmarPed.TabIndex = 14;
+            btnConfirmarPed.TabIndex = 6;
             btnConfirmarPed.Text = "Confirmar ";
             btnConfirmarPed.UseVisualStyleBackColor = false;
             btnConfirmarPed.Click += btnConfirmarPed_Click;
@@ -328,7 +329,7 @@
             txtObs.Location = new Point(47, 223);
             txtObs.Name = "txtObs";
             txtObs.Size = new Size(237, 23);
-            txtObs.TabIndex = 20;
+            txtObs.TabIndex = 5;
             // 
             // label2
             // 
@@ -351,14 +352,14 @@
             panel4.Location = new Point(229, 143);
             panel4.Name = "panel4";
             panel4.Size = new Size(338, 131);
-            panel4.TabIndex = 23;
+            panel4.TabIndex = 0;
             // 
             // txtNovoSabor
             // 
             txtNovoSabor.Location = new Point(55, 51);
             txtNovoSabor.Name = "txtNovoSabor";
             txtNovoSabor.Size = new Size(221, 23);
-            txtNovoSabor.TabIndex = 20;
+            txtNovoSabor.TabIndex = 0;
             // 
             // label5
             // 
@@ -380,7 +381,7 @@
             button1.Location = new Point(65, 88);
             button1.Name = "button1";
             button1.Size = new Size(200, 31);
-            button1.TabIndex = 14;
+            button1.TabIndex = 1;
             button1.Text = "Confirmar ";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
@@ -391,14 +392,14 @@
             dgvPedidos.Location = new Point(610, 226);
             dgvPedidos.Name = "dgvPedidos";
             dgvPedidos.Size = new Size(703, 519);
-            dgvPedidos.TabIndex = 24;
+            dgvPedidos.TabIndex = 5;
             // 
             // cbbClientes
             // 
             cbbClientes.Location = new Point(27, 66);
             cbbClientes.Name = "cbbClientes";
             cbbClientes.Size = new Size(273, 23);
-            cbbClientes.TabIndex = 28;
+            cbbClientes.TabIndex = 0;
             cbbClientes.SelectedIndexChanged += cbbClientes_SelectedIndexChanged;
             cbbClientes.Click += cbbClientes_Click;
             // 
@@ -408,7 +409,7 @@
             comboBox3.Location = new Point(27, 170);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(121, 23);
-            comboBox3.TabIndex = 2;
+            comboBox3.TabIndex = 3;
             comboBox3.Click += comboBox3_Click;
             // 
             // numericUpDown2
@@ -416,7 +417,7 @@
             numericUpDown2.Location = new Point(180, 119);
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(120, 23);
-            numericUpDown2.TabIndex = 3;
+            numericUpDown2.TabIndex = 2;
             // 
             // numericUpDown3
             // 
@@ -443,7 +444,7 @@
             panel5.Location = new Point(229, 431);
             panel5.Name = "panel5";
             panel5.Size = new Size(338, 314);
-            panel5.TabIndex = 28;
+            panel5.TabIndex = 2;
             // 
             // label8
             // 
@@ -484,14 +485,14 @@
             panel6.Location = new Point(229, 286);
             panel6.Name = "panel6";
             panel6.Size = new Size(338, 131);
-            panel6.TabIndex = 24;
+            panel6.TabIndex = 1;
             // 
             // txtNovaBebida
             // 
             txtNovaBebida.Location = new Point(55, 51);
             txtNovaBebida.Name = "txtNovaBebida";
             txtNovaBebida.Size = new Size(221, 23);
-            txtNovaBebida.TabIndex = 20;
+            txtNovaBebida.TabIndex = 0;
             // 
             // label10
             // 
@@ -513,7 +514,7 @@
             button3.Location = new Point(65, 88);
             button3.Name = "button3";
             button3.Size = new Size(200, 31);
-            button3.TabIndex = 14;
+            button3.TabIndex = 1;
             button3.Text = "Confirmar ";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
@@ -524,7 +525,7 @@
             btnEditar.Location = new Point(557, 14);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(143, 26);
-            btnEditar.TabIndex = 29;
+            btnEditar.TabIndex = 1;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click_1;
@@ -535,7 +536,7 @@
             btnExcluir.Location = new Point(389, 14);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(143, 26);
-            btnExcluir.TabIndex = 30;
+            btnExcluir.TabIndex = 0;
             btnExcluir.Text = "Exluir";
             btnExcluir.UseVisualStyleBackColor = true;
             btnExcluir.Click += btnExcluir_Click_1;
@@ -548,7 +549,7 @@
             panel7.Location = new Point(610, 180);
             panel7.Name = "panel7";
             panel7.Size = new Size(703, 52);
-            panel7.TabIndex = 24;
+            panel7.TabIndex = 3;
             // 
             // Encomanda
             // 

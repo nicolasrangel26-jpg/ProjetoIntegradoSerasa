@@ -64,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).BeginInit();
-            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -105,7 +104,7 @@
             panel2.Location = new Point(-6, -4);
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
-            panel2.TabIndex = 1;
+            panel2.TabIndex = 6;
             // 
             // pictureBox5
             // 
@@ -127,7 +126,7 @@
             button2.Location = new Point(3, 227);
             button2.Name = "button2";
             button2.Size = new Size(197, 66);
-            button2.TabIndex = 15;
+            button2.TabIndex = 0;
             button2.Text = " Menu";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
@@ -160,7 +159,7 @@
             btnCadastroEstoque.Location = new Point(3, 322);
             btnCadastroEstoque.Name = "btnCadastroEstoque";
             btnCadastroEstoque.Size = new Size(197, 66);
-            btnCadastroEstoque.TabIndex = 17;
+            btnCadastroEstoque.TabIndex = 1;
             btnCadastroEstoque.Text = "     Cadastro";
             btnCadastroEstoque.UseVisualStyleBackColor = true;
             btnCadastroEstoque.Click += btnCadastroEstoque_Click;
@@ -169,13 +168,13 @@
             // 
             button1.BackColor = Color.FromArgb(80, 80, 80);
             button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
             button1.Location = new Point(3, 531);
             button1.Name = "button1";
             button1.Size = new Size(197, 66);
-            button1.TabIndex = 16;
+            button1.TabIndex = 3;
             button1.Text = "      Estoque";
             button1.UseVisualStyleBackColor = false;
             // 
@@ -218,7 +217,7 @@
             btnEncoEstoque.Location = new Point(3, 426);
             btnEncoEstoque.Name = "btnEncoEstoque";
             btnEncoEstoque.Size = new Size(197, 66);
-            btnEncoEstoque.TabIndex = 4;
+            btnEncoEstoque.TabIndex = 2;
             btnEncoEstoque.Text = "        Encomendas";
             btnEncoEstoque.UseVisualStyleBackColor = true;
             btnEncoEstoque.Click += btnEncoEstoque_Click;
@@ -231,7 +230,7 @@
             btnMenuEstoque.Location = new Point(3, 629);
             btnMenuEstoque.Name = "btnMenuEstoque";
             btnMenuEstoque.Size = new Size(197, 66);
-            btnMenuEstoque.TabIndex = 2;
+            btnMenuEstoque.TabIndex = 4;
             btnMenuEstoque.Text = "  Fechar";
             btnMenuEstoque.UseVisualStyleBackColor = true;
             btnMenuEstoque.Click += btnMenuEstoque_Click;
@@ -248,24 +247,24 @@
             // 
             dgvTabelaEstoque.AllowUserToOrderColumns = true;
             dgvTabelaEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTabelaEstoque.Location = new Point(250, 273);
+            dgvTabelaEstoque.Location = new Point(250, 263);
             dgvTabelaEstoque.Name = "dgvTabelaEstoque";
-            dgvTabelaEstoque.Size = new Size(1037, 453);
-            dgvTabelaEstoque.TabIndex = 2;
+            dgvTabelaEstoque.Size = new Size(1037, 463);
+            dgvTabelaEstoque.TabIndex = 7;
             // 
             // txtNomeProduto
             // 
             txtNomeProduto.Location = new Point(298, 197);
             txtNomeProduto.Name = "txtNomeProduto";
             txtNomeProduto.Size = new Size(231, 23);
-            txtNomeProduto.TabIndex = 1;
+            txtNomeProduto.TabIndex = 0;
             // 
             // txtQuant
             // 
             txtQuant.Location = new Point(566, 197);
             txtQuant.Name = "txtQuant";
             txtQuant.Size = new Size(124, 23);
-            txtQuant.TabIndex = 4;
+            txtQuant.TabIndex = 1;
             // 
             // btnAdicionarEstoque
             // 
@@ -274,7 +273,7 @@
             btnAdicionarEstoque.Location = new Point(939, 191);
             btnAdicionarEstoque.Name = "btnAdicionarEstoque";
             btnAdicionarEstoque.Size = new Size(101, 30);
-            btnAdicionarEstoque.TabIndex = 6;
+            btnAdicionarEstoque.TabIndex = 3;
             btnAdicionarEstoque.Text = "ADICIONAR";
             btnAdicionarEstoque.UseVisualStyleBackColor = true;
             btnAdicionarEstoque.Click += btnAdicionarEstoque_Click;
@@ -283,10 +282,10 @@
             // 
             btnRemoveEstoque.FlatStyle = FlatStyle.System;
             btnRemoveEstoque.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRemoveEstoque.Location = new Point(763, 40);
+            btnRemoveEstoque.Location = new Point(1046, 191);
             btnRemoveEstoque.Name = "btnRemoveEstoque";
             btnRemoveEstoque.Size = new Size(90, 30);
-            btnRemoveEstoque.TabIndex = 7;
+            btnRemoveEstoque.TabIndex = 4;
             btnRemoveEstoque.Text = "REMOVER";
             btnRemoveEstoque.UseVisualStyleBackColor = true;
             btnRemoveEstoque.Click += btnRemoveEstoque_Click;
@@ -325,22 +324,19 @@
             // 
             panel5.BackColor = Color.WhiteSmoke;
             panel5.BorderStyle = BorderStyle.FixedSingle;
-            panel5.Controls.Add(btnEditarEstoque);
-            panel5.Controls.Add(dateTimePicker2);
-            panel5.Controls.Add(btnRemoveEstoque);
-            panel5.Location = new Point(289, 150);
+            panel5.Location = new Point(287, 154);
             panel5.Name = "panel5";
-            panel5.Size = new Size(964, 78);
-            panel5.TabIndex = 15;
+            panel5.Size = new Size(955, 83);
+            panel5.TabIndex = 2;
             // 
             // btnEditarEstoque
             // 
             btnEditarEstoque.FlatStyle = FlatStyle.System;
             btnEditarEstoque.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEditarEstoque.Location = new Point(864, 40);
+            btnEditarEstoque.Location = new Point(1142, 191);
             btnEditarEstoque.Name = "btnEditarEstoque";
             btnEditarEstoque.Size = new Size(90, 30);
-            btnEditarEstoque.TabIndex = 17;
+            btnEditarEstoque.TabIndex = 5;
             btnEditarEstoque.Text = "EDITAR";
             btnEditarEstoque.UseVisualStyleBackColor = true;
             btnEditarEstoque.Click += btnEditarEstoque_Click;
@@ -349,10 +345,11 @@
             // 
             dateTimePicker2.Format = DateTimePickerFormat.Short;
             dateTimePicker2.ImeMode = ImeMode.On;
-            dateTimePicker2.Location = new Point(443, 43);
+            dateTimePicker2.Location = new Point(733, 197);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(143, 23);
-            dateTimePicker2.TabIndex = 16;
+            dateTimePicker2.TabIndex = 2;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
             // Estoque
             // 
@@ -360,7 +357,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(btnEditarEstoque);
             Controls.Add(label4);
+            Controls.Add(btnRemoveEstoque);
+            Controls.Add(dateTimePicker2);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(btnAdicionarEstoque);
@@ -385,7 +385,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).EndInit();
-            panel5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -414,7 +413,6 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox6;
         private Button btnCadastroEstoque;
-        private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
         private PictureBox pictureBox5;
         private Button button2;

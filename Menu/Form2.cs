@@ -62,7 +62,17 @@ namespace Menu
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show(
+                    "Deseja realmente fechar o aplicativo?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         public void btnSalvar_Click(object sender, EventArgs e)
