@@ -138,6 +138,7 @@
             Controls.Add(txtEndereco);
             Controls.Add(txtNome);
             Name = "EditarClientes";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EditarClientes";
             ResumeLayout(false);
             PerformLayout();

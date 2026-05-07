@@ -180,6 +180,7 @@
             Controls.Add(txtEdtObs);
             Controls.Add(btnEditarEnco);
             Name = "EditarEncomenda";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EditarEncomenda";
             Load += EditarEncomenda_Load;
             ((System.ComponentModel.ISupportInitialize)nudEdtQuantSabor).EndInit();

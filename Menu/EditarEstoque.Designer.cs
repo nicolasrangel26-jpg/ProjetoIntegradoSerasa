@@ -113,6 +113,7 @@
             Controls.Add(txtQuantEditar);
             Controls.Add(txtProdutoEditar);
             Name = "EditarEstoque";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EditarEstoque";
             ResumeLayout(false);
             PerformLayout();
