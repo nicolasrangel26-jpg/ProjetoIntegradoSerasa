@@ -181,6 +181,7 @@
             Controls.Add(btnEditarEnco);
             Name = "EditarEncomenda";
             Text = "EditarEncomenda";
+            Load += EditarEncomenda_Load;
             ((System.ComponentModel.ISupportInitialize)nudEdtQuantSabor).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudEdtQuantBebida).EndInit();
             ResumeLayout(false);

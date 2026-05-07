@@ -28,25 +28,17 @@ namespace Menu
                 {
                     con.Open();
 
-                    string sql = @"
-                SELECT 
-                    c.nome AS Nome,
-                    p.sabores AS Sabores,
-                    pe.quant_pizza AS QuantPizza,
-                    b.nome AS Bebida,
-                    pe.quant_bebida AS QuantBebida,
-                    pe.obs AS Observacao
-                FROM pedidos pe
-                INNER JOIN clientes c ON pe.id_cliente = c.id_cliente
-                INNER JOIN pizzas p ON pe.id_pizza = p.id_pizza
-                INNER JOIN bebidas b ON pe.id_bebida = b.id_bebida
-            ";
+                    string sql = "SELECT pedidos.id_pedido, clientes.nome, pizzas.sabores, pedidos.quant_pizza, bebidas.nome AS bebida, pedidos.quant_bebida, pedidos.obs FROM pedidos " +
+                                 "INNER JOIN clientes ON pedidos.id_cliente = clientes.id_cliente " +
+                                 "INNER JOIN pizzas ON pedidos.id_pizza = pizzas.id_pizza " +
+                                 "INNER JOIN bebidas ON pedidos.id_bebida = bebidas.id_bebida";
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(sql, con);
+                    MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
                     DataTable dt = new DataTable();
-                    da.Fill(dt);
 
+                    banco.Fill(dt);
                     dgvPedidos.DataSource = dt;
+                    dgvPedidos.Columns["id_pedido"].Visible = false;
                     dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
                 catch (Exception ex)
@@ -89,49 +81,14 @@ namespace Menu
 
                 cmd.ExecuteNonQuery();
 
+                CarregarPedidos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
-            try
-            {
-
-                string sql = "SELECT clientes.nome, pizzas.sabores, pedidos.quant_pizza, bebidas.nome, pedidos.quant_bebida, pedidos.obs From pedidos INNER JOIN clientes ON pedidos.id_cliente = clientes.id_cliente INNER JOIN pizzas ON pedidos.id_pizza = pizzas.id_pizza INNER JOIN bebidas ON pedidos.id_bebida = bebidas.id_bebida";
-
-                MySqlDataAdapter banco = new MySqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
-
-                banco.Fill(dt);
-                dgvPedidos.DataSource = dt;
-                dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-            MySqlConnection conn = new MySqlConnection(conexao);
-            try
-            {
-                con.Open();
-                string sql = "INSERT INTO pizzas (obs) values (@obs)";
-
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@obs", txtObs.Text);
-
-                cmd.ExecuteNonQuery();
-
-                txtObs.Clear();
-                con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+          
 
 
 
@@ -392,25 +349,25 @@ namespace Menu
         {
             if (dgvPedidos.CurrentRow == null)
             {
-                MessageBox.Show("Selecione um cliente",
+                MessageBox.Show("Selecione um pedido",
                 "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 return;
             }
 
-            int idSelecionado = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["id_cliente"].Value);
+            int idSelecionado = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["id_pedido"].Value);
 
             MySqlConnection con = new MySqlConnection(conexao);
             try
             {
                 con.Open();
-                string sqldelete = "DELETE FROM clientes WHERE id_cliente = @id_cliente";
+                string sqldelete = "DELETE FROM pedidos WHERE id_pedido = @id_pedido";
                 MySqlCommand cmd = new MySqlCommand(sqldelete, con);
-                cmd.Parameters.AddWithValue("@id_cliente", idSelecionado);
+                cmd.Parameters.AddWithValue("@id_pedido", idSelecionado);
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Cliente excluído com sucesso");
+                MessageBox.Show("Pedido excluído com sucesso");
 
                 CarregarPedidos();
             }
@@ -423,8 +380,6 @@ namespace Menu
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-
-
             if (dgvPedidos.CurrentRow == null)
             {
                 MessageBox.Show("Selecione um cliente",
@@ -434,13 +389,13 @@ namespace Menu
                 return;
             }
 
-            int id = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["id"].Value);
+            int id = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["id_pedido"].Value);
             string Nome = dgvPedidos.CurrentRow.Cells["Nome"].Value.ToString();
             string Sabores = dgvPedidos.CurrentRow.Cells["Sabores"].Value.ToString();
-            int QP = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["QuantPizza"].Value.ToString());
+            int QP = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["Quant_Pizza"].Value.ToString());
             string Bebida = dgvPedidos.CurrentRow.Cells["Bebida"].Value.ToString();
-            int QB = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["QuantBebida"].Value.ToString());
-            string OBS = dgvPedidos.CurrentRow.Cells["Observacao"].Value.ToString();
+            int QB = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["Quant_Bebida"].Value.ToString());
+            string OBS = dgvPedidos.CurrentRow.Cells["Obs"].Value.ToString();
 
 
             EditarEncomenda frm = new EditarEncomenda(id, Nome, Sabores, QP, Bebida, QB, OBS);
