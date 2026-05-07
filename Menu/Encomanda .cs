@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Menu
 {
@@ -127,6 +128,7 @@ namespace Menu
                 cbbClientes.DataSource = dt;
                 cbbClientes.DisplayMember = "Nome";
                 cbbClientes.ValueMember = "id_cliente";
+                cbbClientes.SelectedIndex = -1;
 
 
                 string sqlPizzas = "SELECT * FROM pizzas";
@@ -138,6 +140,7 @@ namespace Menu
                 cbbPedidos.DataSource = dt2;
                 cbbPedidos.DisplayMember = "sabores";
                 cbbPedidos.ValueMember = "id_pizza";
+                cbbPedidos.SelectedIndex = -1;
 
 
                 string sqlBebidas = "SELECT * FROM bebidas";
@@ -149,6 +152,7 @@ namespace Menu
                 comboBox3.DataSource = dt3;
                 comboBox3.DisplayMember = "nome";
                 comboBox3.ValueMember = "id_bebida";
+                comboBox3.SelectedIndex = -1;
 
 
             }
