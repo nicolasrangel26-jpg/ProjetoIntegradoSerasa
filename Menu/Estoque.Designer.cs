@@ -249,6 +249,7 @@
             dgvTabelaEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTabelaEstoque.Location = new Point(250, 263);
             dgvTabelaEstoque.Name = "dgvTabelaEstoque";
+            dgvTabelaEstoque.ReadOnly = true;
             dgvTabelaEstoque.Size = new Size(1037, 463);
             dgvTabelaEstoque.TabIndex = 7;
             // 

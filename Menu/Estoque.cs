@@ -32,6 +32,7 @@ namespace Menu
                 banco.Fill(dt);
                 dgvTabelaEstoque.DataSource = dt;
                 dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvTabelaEstoque.ClearSelection();
             }
             catch { }
         }
@@ -97,7 +98,7 @@ namespace Menu
 
         private void btnRemoveEstoque_Click(object sender, EventArgs e)
         {
-            if (dgvTabelaEstoque.CurrentRow == null)
+            if (dgvTabelaEstoque.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um produto",
                 "Aviso",
@@ -148,7 +149,7 @@ namespace Menu
 
         private void btnEditarEstoque_Click(object sender, EventArgs e)
         {
-            if (dgvTabelaEstoque.CurrentRow == null)
+            if (dgvTabelaEstoque.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um produto",
                 "Aviso",

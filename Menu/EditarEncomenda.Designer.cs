@@ -115,6 +115,7 @@
             // 
             // cbbSabooor
             // 
+            cbbSabooor.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbSabooor.FormattingEnabled = true;
             cbbSabooor.Location = new Point(12, 41);
             cbbSabooor.Name = "cbbSabooor";
@@ -147,6 +148,7 @@
             // 
             // cbbBebidas2
             // 
+            cbbBebidas2.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbBebidas2.FormattingEnabled = true;
             cbbBebidas2.Location = new Point(12, 110);
             cbbBebidas2.Name = "cbbBebidas2";
@@ -155,6 +157,7 @@
             // 
             // cbbClientes
             // 
+            cbbClientes.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbClientes.FormattingEnabled = true;
             cbbClientes.Location = new Point(12, 175);
             cbbClientes.Name = "cbbClientes";

@@ -32,9 +32,7 @@ namespace Menu
             if (string.IsNullOrWhiteSpace(cbbBebidas2.Text) ||
                    string.IsNullOrWhiteSpace(cbbClientes.Text) ||
                      string.IsNullOrWhiteSpace(cbbSabooor.Text) ||
-                         string.IsNullOrWhiteSpace(nudEdtQuantBebida.Text) ||
-                            string.IsNullOrWhiteSpace(txtEdtObs.Text) ||
-                string.IsNullOrWhiteSpace(nudEdtQuantSabor.Text))
+                nudEdtQuantSabor.Value == 0)
 
             {
                 MessageBox.Show(

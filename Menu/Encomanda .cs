@@ -41,6 +41,7 @@ namespace Menu
                     dgvPedidos.DataSource = dt;
                     dgvPedidos.Columns["id_pedido"].Visible = false;
                     dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvPedidos.ClearSelection();
                 }
                 catch (Exception ex)
                 {
@@ -60,6 +61,20 @@ namespace Menu
 
         private void btnConfirmarPed_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(cbbClientes.Text) ||
+                string.IsNullOrWhiteSpace(cbbPedidos.Text) ||
+                string.IsNullOrWhiteSpace(comboBox3.Text) ||
+                numericUpDown2.Value == 0)
+            {
+                MessageBox.Show(
+                    "Preencha todas as informações!",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
             int idCliente = Convert.ToInt32(cbbClientes.SelectedValue);
             int idSabor = Convert.ToInt32(cbbPedidos.SelectedValue);
             int idBebida = Convert.ToInt32(comboBox3.SelectedValue);
@@ -153,8 +168,6 @@ namespace Menu
                 comboBox3.DisplayMember = "nome";
                 comboBox3.ValueMember = "id_bebida";
                 comboBox3.SelectedIndex = -1;
-
-
             }
             catch { }
         }
@@ -351,7 +364,7 @@ namespace Menu
         }
         private void btnExcluir_Click_1(object sender, EventArgs e)
         {
-            if (dgvPedidos.CurrentRow == null)
+            if (dgvPedidos.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um pedido",
                 "Aviso",
@@ -384,7 +397,7 @@ namespace Menu
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            if (dgvPedidos.CurrentRow == null)
+            if (dgvPedidos.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um cliente",
                 "Aviso",

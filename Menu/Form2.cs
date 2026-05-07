@@ -32,6 +32,7 @@ namespace Menu
                 banco.Fill(dt);
                 dgvClientes.DataSource = dt;
                 dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvClientes.ClearSelection();
             }
             catch { }
         }
@@ -105,6 +106,11 @@ namespace Menu
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Cliente cadastrado");
 
+                txtNome.Clear();
+                txtCPF.Clear();
+                txtTelefone.Clear();
+                txtEndereço.Clear();
+
                 CarregarClientes();
             }
             catch (Exception ex) { }
@@ -127,10 +133,11 @@ namespace Menu
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.CurrentRow == null)
+
+            if (dgvClientes.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um cliente",
-                "Aviso",
+                            "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 return;
@@ -166,7 +173,7 @@ namespace Menu
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.CurrentRow == null)
+            if (dgvClientes.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um cliente",
                 "Aviso",
