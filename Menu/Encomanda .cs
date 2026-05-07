@@ -336,7 +336,7 @@ namespace Menu
 
                 MessageBox.Show("Nova bebida registrada");
 
-                txtNovoSabor.Clear();
+                txtNovaBebida.Clear();
                 con.Close();
 
             }

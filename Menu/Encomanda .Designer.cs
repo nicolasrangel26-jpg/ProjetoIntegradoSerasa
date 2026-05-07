@@ -289,6 +289,7 @@
             // 
             // cbbPedidos
             // 
+            cbbPedidos.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbPedidos.FormattingEnabled = true;
             cbbPedidos.Location = new Point(27, 118);
             cbbPedidos.Name = "cbbPedidos";
@@ -396,6 +397,7 @@
             // 
             // cbbClientes
             // 
+            cbbClientes.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbClientes.Location = new Point(27, 66);
             cbbClientes.Name = "cbbClientes";
             cbbClientes.Size = new Size(273, 23);
@@ -405,6 +407,7 @@
             // 
             // comboBox3
             // 
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.FormattingEnabled = true;
             comboBox3.Location = new Point(27, 170);
             comboBox3.Name = "comboBox3";
