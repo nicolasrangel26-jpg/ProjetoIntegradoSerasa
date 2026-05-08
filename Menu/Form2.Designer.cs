@@ -165,6 +165,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.BackColor = Color.White;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(13, 335);
             pictureBox3.Name = "pictureBox3";

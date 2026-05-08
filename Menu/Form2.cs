@@ -136,7 +136,7 @@ namespace Menu
 
             if (dgvClientes.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um cliente",
+                MessageBox.Show("Selecione a linha de um cliente",
                             "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -175,7 +175,7 @@ namespace Menu
         {
             if (dgvClientes.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um cliente",
+                MessageBox.Show("Selecione a linha de um cliente",
                 "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);

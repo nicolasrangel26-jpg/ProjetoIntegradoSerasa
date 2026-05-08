@@ -100,7 +100,7 @@ namespace Menu
         {
             if (dgvTabelaEstoque.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um produto",
+                MessageBox.Show("Selecione a linha de um produto",
                 "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -151,7 +151,7 @@ namespace Menu
         {
             if (dgvTabelaEstoque.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um produto",
+                MessageBox.Show("Selecione a linha de um produto",
                 "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);

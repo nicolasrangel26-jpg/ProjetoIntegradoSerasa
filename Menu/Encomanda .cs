@@ -98,16 +98,21 @@ namespace Menu
                 cmd.ExecuteNonQuery();
 
                 CarregarPedidos();
+
+
+                cbbClientes.SelectedIndex = -1;
+                cbbPedidos.SelectedIndex = -1;
+                comboBox3.SelectedIndex = -1;
+
+                numericUpDown2.Value = 0;
+                numericUpDown3.Value = 0;
+
+                txtObs.Clear();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-          
-
-
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -366,7 +371,7 @@ namespace Menu
         {
             if (dgvPedidos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um pedido",
+                MessageBox.Show("Selecione a linha de um pedido",
                 "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -399,7 +404,7 @@ namespace Menu
         {
             if (dgvPedidos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um cliente",
+                MessageBox.Show("Selecione a linha de um pedido",
                 "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);

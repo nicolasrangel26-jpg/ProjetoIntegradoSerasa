@@ -133,6 +133,7 @@
             // 
             // pictureBox6
             // 
+            pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(13, 335);
             pictureBox6.Name = "pictureBox6";
@@ -143,6 +144,7 @@
             // 
             // pictureBox4
             // 
+            pictureBox4.BackColor = Color.FromArgb(80, 80, 80);
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(18, 540);
             pictureBox4.Name = "pictureBox4";
