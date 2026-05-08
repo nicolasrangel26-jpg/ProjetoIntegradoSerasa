@@ -40,6 +40,8 @@
             label4 = new Label();
             linkSenha = new LinkLabel();
             linkCadastrar = new LinkLabel();
+            btnFechar = new Button();
+            chkSenha = new CheckBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -88,6 +90,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(216, 23);
             txtSenha.TabIndex = 7;
+            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // btnEntrar
             // 
@@ -98,6 +101,7 @@
             btnEntrar.TabIndex = 8;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // label2
             // 
@@ -148,6 +152,27 @@
             linkCadastrar.TabIndex = 13;
             linkCadastrar.TabStop = true;
             linkCadastrar.Text = "Cadastre-se ";
+            linkCadastrar.LinkClicked += linkCadastrar_LinkClicked;
+            // 
+            // btnFechar
+            // 
+            btnFechar.Location = new Point(233, 617);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(216, 61);
+            btnFechar.TabIndex = 14;
+            btnFechar.Text = "Fechar";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
+            // 
+            // chkSenha
+            // 
+            chkSenha.AutoSize = true;
+            chkSenha.Location = new Point(430, 394);
+            chkSenha.Name = "chkSenha";
+            chkSenha.Size = new Size(15, 14);
+            chkSenha.TabIndex = 15;
+            chkSenha.UseVisualStyleBackColor = true;
+            chkSenha.CheckedChanged += chkSenha_CheckedChanged;
             // 
             // Login
             // 
@@ -158,6 +183,8 @@
             BackColor = Color.SeaShell;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1331, 737);
+            Controls.Add(chkSenha);
+            Controls.Add(btnFechar);
             Controls.Add(linkCadastrar);
             Controls.Add(linkSenha);
             Controls.Add(label4);
@@ -192,5 +219,7 @@
         private Label label4;
         private LinkLabel linkSenha;
         private LinkLabel linkCadastrar;
+        private Button btnFechar;
+        private CheckBox chkSenha;
     }
 }
