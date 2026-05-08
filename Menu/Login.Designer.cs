@@ -48,7 +48,7 @@
             // 
             panel1.BackColor = Color.FromArgb(192, 0, 0);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(-5, -6);
+            panel1.Location = new Point(-5, -14);
             panel1.Name = "panel1";
             panel1.Size = new Size(1405, 139);
             panel1.TabIndex = 1;
@@ -58,7 +58,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Impact", 48F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLight;
-            label1.Location = new Point(549, 19);
+            label1.Location = new Point(578, 35);
             label1.Name = "label1";
             label1.Size = new Size(174, 80);
             label1.TabIndex = 2;
@@ -68,23 +68,23 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(652, 139);
+            pictureBox2.Location = new Point(151, 21);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(678, 577);
+            pictureBox2.Size = new Size(1044, 775);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
             // txtLogin
             // 
-            txtLogin.Location = new Point(233, 294);
+            txtLogin.Location = new Point(560, 332);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(216, 23);
             txtLogin.TabIndex = 6;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(233, 389);
+            txtSenha.Location = new Point(560, 427);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(216, 23);
             txtSenha.TabIndex = 7;
@@ -92,7 +92,7 @@
             // btnEntrar
             // 
             btnEntrar.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEntrar.Location = new Point(233, 449);
+            btnEntrar.Location = new Point(560, 487);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(216, 38);
             btnEntrar.TabIndex = 8;
@@ -102,7 +102,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(315, 256);
+            label2.Location = new Point(655, 274);
             label2.Name = "label2";
             label2.Size = new Size(0, 15);
             label2.TabIndex = 9;
@@ -112,7 +112,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(311, 354);
+            label3.Location = new Point(638, 392);
             label3.Name = "label3";
             label3.Size = new Size(62, 23);
             label3.TabIndex = 10;
@@ -122,7 +122,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(311, 249);
+            label4.Location = new Point(638, 287);
             label4.Name = "label4";
             label4.Size = new Size(58, 23);
             label4.TabIndex = 11;
@@ -132,7 +132,7 @@
             // linkSenha
             // 
             linkSenha.AutoSize = true;
-            linkSenha.Location = new Point(280, 514);
+            linkSenha.Location = new Point(607, 552);
             linkSenha.Name = "linkSenha";
             linkSenha.Size = new Size(117, 15);
             linkSenha.TabIndex = 12;
@@ -142,7 +142,7 @@
             // linkCadastrar
             // 
             linkCadastrar.AutoSize = true;
-            linkCadastrar.Location = new Point(299, 548);
+            linkCadastrar.Location = new Point(626, 586);
             linkCadastrar.Name = "linkCadastrar";
             linkCadastrar.Size = new Size(72, 15);
             linkCadastrar.TabIndex = 13;
@@ -157,17 +157,17 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.SeaShell;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1331, 737);
+            ClientSize = new Size(1347, 776);
             Controls.Add(linkCadastrar);
             Controls.Add(linkSenha);
             Controls.Add(label4);
-            Controls.Add(pictureBox2);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(btnEntrar);
             Controls.Add(txtSenha);
             Controls.Add(txtLogin);
             Controls.Add(panel1);
+            Controls.Add(pictureBox2);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Login";

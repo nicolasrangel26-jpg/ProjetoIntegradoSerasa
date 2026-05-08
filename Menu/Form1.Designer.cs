@@ -195,6 +195,7 @@
             // 
             // pictureBox4
             // 
+            pictureBox4.BackColor = Color.White;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(18, 435);
             pictureBox4.Name = "pictureBox4";
@@ -205,7 +206,8 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.Caixa;
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(18, 540);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(42, 48);
