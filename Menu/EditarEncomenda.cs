@@ -14,18 +14,31 @@ namespace Menu
     public partial class EditarEncomenda : Form
     {
         int PedidoId;
+
+        int idCliente;
+        int idPizza;
+        int idBebida;
+
+        int quantPizza;
+        int quantBebida;
+        string obs;
+
         string conexao = "Server=localhost; Database=pizzaria; Uid=root; Pwd=;";
-        public EditarEncomenda(int id, string Nome, string Sabores, int QP, string Bebida, int QB, string OBS)
+        public EditarEncomenda(int id, int cliente, int pizza, int bebida, int qp, int qb, string OBS)
         {
             InitializeComponent();
+
             PedidoId = id;
-            cbbClientes.Text = Nome;
-            cbbSabooor.Text = Sabores;
-            nudEdtQuantSabor.Text = QP.ToString();
-            cbbBebidas2.Text = Bebida;
-            nudEdtQuantBebida.Text = QB.ToString();
-            txtEdtObs.Text = OBS;
+
+            idCliente = cliente;
+            idPizza = pizza;
+            idBebida = bebida;
+
+            quantPizza = qp;
+            quantBebida = qb;
+            obs = OBS;
         }
+
 
         private void btnEditarEnco_Click(object sender, EventArgs e)
         {
@@ -109,6 +122,15 @@ namespace Menu
                 cbbBebidas2.DisplayMember = "nome";
                 cbbBebidas2.ValueMember = "id_bebida";
 
+
+                cbbClientes.SelectedValue = idCliente;
+                cbbSabooor.SelectedValue = idPizza;
+                cbbBebidas2.SelectedValue = idBebida;
+
+                nudEdtQuantSabor.Value = quantPizza;
+                nudEdtQuantBebida.Value = quantBebida;
+
+                txtEdtObs.Text = obs;
 
             }
             catch { }

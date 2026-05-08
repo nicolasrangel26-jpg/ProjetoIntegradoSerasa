@@ -77,6 +77,27 @@ namespace Menu
             try
             {
                 con.Open();
+
+                string verificar = "SELECT COUNT(*) FROM estoque WHERE produto = @produto";
+                MySqlCommand cmdVerificar = new MySqlCommand(verificar, con);
+                cmdVerificar.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
+
+                int existe = Convert.ToInt32(cmdVerificar.ExecuteScalar());
+
+                if (existe > 0)
+                {
+                    string update = "UPDATE estoque SET quant = quant + @quant WHERE produto = @produto";
+                    MySqlCommand cmdUpdate = new MySqlCommand(update, con);
+                    cmdUpdate.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
+                    cmdUpdate.Parameters.AddWithValue("@quant", txtQuant.Text);
+
+                    cmdUpdate.ExecuteNonQuery();
+
+                    MessageBox.Show("Quantidade atualizada!");
+                    CarregarEstoque();
+                    return;
+                }
+
                 string sql = "INSERT INTO estoque (produto, quant, validade) VALUES (@produto,@quant,@validade)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 

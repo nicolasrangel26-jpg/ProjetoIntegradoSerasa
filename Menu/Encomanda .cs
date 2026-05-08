@@ -29,7 +29,7 @@ namespace Menu
                 {
                     con.Open();
 
-                    string sql = "SELECT pedidos.id_pedido, clientes.nome, pizzas.sabores, pedidos.quant_pizza, bebidas.nome AS bebida, pedidos.quant_bebida, pedidos.obs FROM pedidos " +
+                    string sql = "SELECT pedidos.id_pedido, pedidos.id_cliente, clientes.nome, pedidos.id_pizza, pizzas.sabores, pedidos.quant_pizza, pedidos.id_bebida, bebidas.nome AS bebida, pedidos.quant_bebida, pedidos.obs FROM pedidos " +
                                  "INNER JOIN clientes ON pedidos.id_cliente = clientes.id_cliente " +
                                  "INNER JOIN pizzas ON pedidos.id_pizza = pizzas.id_pizza " +
                                  "INNER JOIN bebidas ON pedidos.id_bebida = bebidas.id_bebida";
@@ -40,6 +40,9 @@ namespace Menu
                     banco.Fill(dt);
                     dgvPedidos.DataSource = dt;
                     dgvPedidos.Columns["id_pedido"].Visible = false;
+                    dgvPedidos.Columns["id_cliente"].Visible = false;
+                    dgvPedidos.Columns["id_pizza"].Visible = false;
+                    dgvPedidos.Columns["id_bebida"].Visible = false;
                     dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dgvPedidos.ClearSelection();
                 }
@@ -412,15 +415,17 @@ namespace Menu
             }
 
             int id = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["id_pedido"].Value);
-            string Nome = dgvPedidos.CurrentRow.Cells["Nome"].Value.ToString();
-            string Sabores = dgvPedidos.CurrentRow.Cells["Sabores"].Value.ToString();
-            int QP = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["Quant_Pizza"].Value.ToString());
-            string Bebida = dgvPedidos.CurrentRow.Cells["Bebida"].Value.ToString();
-            int QB = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["Quant_Bebida"].Value.ToString());
-            string OBS = dgvPedidos.CurrentRow.Cells["Obs"].Value.ToString();
 
+            int idCliente = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["id_cliente"].Value);
+            int idPizza = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["id_pizza"].Value);
+            int idBebida = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["id_bebida"].Value);
 
-            EditarEncomenda frm = new EditarEncomenda(id, Nome, Sabores, QP, Bebida, QB, OBS);
+            int qp = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["quant_pizza"].Value);
+            int qb = Convert.ToInt32(dgvPedidos.CurrentRow.Cells["quant_bebida"].Value);
+            string obs = dgvPedidos.CurrentRow.Cells["obs"].Value?.ToString();
+
+            EditarEncomenda frm = new EditarEncomenda(id, idCliente, idPizza, idBebida, qp, qb, obs);
+
             frm.ShowDialog();
             CarregarPedidos();
 
