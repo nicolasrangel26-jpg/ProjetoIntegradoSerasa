@@ -45,6 +45,11 @@ namespace Menu
                     dgvPedidos.Columns["id_bebida"].Visible = false;
                     dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dgvPedidos.ClearSelection();
+
+                    dgvPedidos.EnableHeadersVisualStyles = false;
+                    dgvPedidos.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(225, 0, 0);
+                    dgvPedidos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                    dgvPedidos.ColumnHeadersDefaultCellStyle.Font = new Font("Impact", 12, FontStyle.Italic);
                 }
                 catch (Exception ex)
                 {

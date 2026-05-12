@@ -33,6 +33,12 @@ namespace Menu
                 dgvClientes.DataSource = dt;
                 dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvClientes.ClearSelection();
+
+                dgvClientes.EnableHeadersVisualStyles = false;
+                dgvClientes.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(225, 0, 0);
+                dgvClientes.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                dgvClientes.ColumnHeadersDefaultCellStyle.Font = new Font("Impact", 12, FontStyle.Italic);
+
             }
             catch { }
         }

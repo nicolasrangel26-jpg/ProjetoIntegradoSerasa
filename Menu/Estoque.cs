@@ -33,6 +33,11 @@ namespace Menu
                 dgvTabelaEstoque.DataSource = dt;
                 dgvTabelaEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvTabelaEstoque.ClearSelection();
+
+                dgvTabelaEstoque.EnableHeadersVisualStyles = false;
+                dgvTabelaEstoque.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(225, 0, 0);
+                dgvTabelaEstoque.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                dgvTabelaEstoque.ColumnHeadersDefaultCellStyle.Font = new Font("Impact", 12, FontStyle.Italic);
             }
             catch { }
         }
@@ -93,7 +98,8 @@ namespace Menu
 
                     cmdUpdate.ExecuteNonQuery();
 
-                    MessageBox.Show("Quantidade atualizada!");
+                    MessageBox.Show("Quantidade atualizada!",
+                        "Sucesso");
                     CarregarEstoque();
                     return;
                 }
@@ -106,6 +112,9 @@ namespace Menu
                 cmd.Parameters.AddWithValue("@validade", dateTimePicker2.Value);
 
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Produto Cadastrado",
+                    "Sucesso ");
+
                 txtNomeProduto.Clear();
                 txtQuant.Clear();
 
