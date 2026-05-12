@@ -22,13 +22,20 @@ namespace Menu
 
         private void btnSCadastro_Click(object sender, EventArgs e)
         {
-
             string usuario = txtusuario.Text;
             string senha = txtSenha.Text;
 
-
-
-
+            if (string.IsNullOrWhiteSpace(txtusuario.Text) ||
+                    string.IsNullOrWhiteSpace(txtSenha.Text))
+            {
+                MessageBox.Show(
+                    "Preencha todas as informações!",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
             using (MySqlConnection conn = new MySqlConnection(conexao))
             {
                 try
@@ -56,24 +63,19 @@ namespace Menu
 
         private void chksenha_CheckedChanged(object sender, EventArgs e)
         {
-           
-
             if (chksenha.Checked)
             {
-
                 txtSenha.UseSystemPasswordChar = false;
             }
             else
             {
                 txtSenha.UseSystemPasswordChar = true;
             }
-
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
-            txtSenha.UseSystemPasswordChar = true;
-           
+            txtSenha.UseSystemPasswordChar = true;    
         }
     }
 }

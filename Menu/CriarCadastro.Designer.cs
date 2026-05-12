@@ -101,6 +101,7 @@
             Controls.Add(label1);
             Controls.Add(btnSCadastro);
             Name = "CriarCadastro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CriarCadastro";
             ResumeLayout(false);
             PerformLayout();

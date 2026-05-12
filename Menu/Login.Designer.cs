@@ -142,6 +142,7 @@
             linkSenha.TabIndex = 12;
             linkSenha.TabStop = true;
             linkSenha.Text = "Esqueceu sua senha?";
+            linkSenha.LinkClicked += linkSenha_LinkClicked;
             // 
             // linkCadastrar
             // 
@@ -198,6 +199,7 @@
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

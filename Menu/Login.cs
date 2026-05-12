@@ -56,7 +56,6 @@ namespace Menu
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@nome", nome);
                     cmd.Parameters.AddWithValue("@senha", senha);
-                    cmd.ExecuteNonQuery();
                     int resultado = Convert.ToInt32(cmd.ExecuteScalar());
                     if (resultado > 0)
                     {
@@ -87,7 +86,17 @@ namespace Menu
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show(
+                                "Deseja realmente fechar o aplicativo?",
+                                "Confirmação",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question
+                            );
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void chkSenha_CheckedChanged(object sender, EventArgs e)
@@ -110,6 +119,12 @@ namespace Menu
 
             txtSenha.UseSystemPasswordChar = true;
 
+        }
+
+        private void linkSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Esqueceu esqueceu_senha = new Esqueceu();
+            esqueceu_senha.Show();
         }
     }
 
