@@ -82,10 +82,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.LightBlue;
+            label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(44, 16);
+            label1.Size = new Size(46, 18);
             label1.TabIndex = 5;
             label1.Text = "Nome";
             // 
@@ -93,10 +94,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.LightBlue;
+            label2.BorderStyle = BorderStyle.Fixed3D;
             label2.Font = new Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(430, 9);
             label2.Name = "label2";
-            label2.Size = new Size(66, 16);
+            label2.Size = new Size(68, 18);
             label2.TabIndex = 6;
             label2.Text = "Endereço";
             // 
@@ -104,10 +106,11 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.LightBlue;
+            label3.BorderStyle = BorderStyle.Fixed3D;
             label3.Font = new Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(12, 71);
             label3.Name = "label3";
-            label3.Size = new Size(31, 16);
+            label3.Size = new Size(33, 18);
             label3.TabIndex = 7;
             label3.Text = "CPF";
             // 
@@ -115,10 +118,11 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.LightBlue;
+            label4.BorderStyle = BorderStyle.Fixed3D;
             label4.Font = new Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(360, 71);
             label4.Name = "label4";
-            label4.Size = new Size(60, 16);
+            label4.Size = new Size(62, 18);
             label4.TabIndex = 8;
             label4.Text = "Telefone";
             // 

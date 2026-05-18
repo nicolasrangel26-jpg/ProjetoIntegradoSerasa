@@ -340,6 +340,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.SeaShell;
             label5.Font = new Font("Georgia", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(10, 77);
             label5.Name = "label5";
