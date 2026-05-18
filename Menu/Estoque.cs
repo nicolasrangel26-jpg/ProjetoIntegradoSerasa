@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Menu
 {
@@ -160,7 +161,6 @@ namespace Menu
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void btnCadastroEstoque_Click(object sender, EventArgs e)
@@ -206,6 +206,38 @@ namespace Menu
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        public void BuscarProduto(string texto)
+        {
+            using (MySqlConnection con = new MySqlConnection(conexao))
+            {
+                try
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM estoque WHERE produto LIKE @busca";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("@busca", "%" + texto + "%");
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    dgvTabelaEstoque.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            BuscarProduto(txtPesquisa.Text);
         }
     }
 }

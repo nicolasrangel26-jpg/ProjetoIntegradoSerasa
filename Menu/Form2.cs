@@ -198,5 +198,37 @@ namespace Menu
             frm.ShowDialog();
             CarregarClientes();
         }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            BuscarProduto(txtPesquisa.Text);
+        }
+
+        public void BuscarProduto(string texto)
+        {
+            using (MySqlConnection con = new MySqlConnection(conexao))
+            {
+                try
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM clientes WHERE nome LIKE @busca OR cpf LIKE @busca";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("@busca", "%" + texto + "%");
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    dgvClientes.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
     }
 }

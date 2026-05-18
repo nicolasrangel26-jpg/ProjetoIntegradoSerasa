@@ -53,8 +53,10 @@
             label3 = new Label();
             label4 = new Label();
             panel5 = new Panel();
+            label5 = new Label();
             btnEditarEstoque = new Button();
             dateTimePicker2 = new DateTimePicker();
+            txtPesquisa = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -64,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).BeginInit();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -250,10 +253,10 @@
             // 
             dgvTabelaEstoque.AllowUserToOrderColumns = true;
             dgvTabelaEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTabelaEstoque.Location = new Point(250, 263);
+            dgvTabelaEstoque.Location = new Point(250, 318);
             dgvTabelaEstoque.Name = "dgvTabelaEstoque";
             dgvTabelaEstoque.ReadOnly = true;
-            dgvTabelaEstoque.Size = new Size(1037, 463);
+            dgvTabelaEstoque.Size = new Size(1037, 408);
             dgvTabelaEstoque.TabIndex = 7;
             // 
             // txtNomeProduto
@@ -328,10 +331,21 @@
             // 
             panel5.BackColor = Color.WhiteSmoke;
             panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(label5);
             panel5.Location = new Point(287, 154);
             panel5.Name = "panel5";
-            panel5.Size = new Size(955, 83);
+            panel5.Size = new Size(955, 135);
             panel5.TabIndex = 2;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Georgia", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(10, 77);
+            label5.Name = "label5";
+            label5.Size = new Size(78, 15);
+            label5.TabIndex = 9;
+            label5.Text = "PESQUISA ";
             // 
             // btnEditarEstoque
             // 
@@ -355,12 +369,21 @@
             dateTimePicker2.TabIndex = 2;
             dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
+            // txtPesquisa
+            // 
+            txtPesquisa.Location = new Point(298, 250);
+            txtPesquisa.Name = "txtPesquisa";
+            txtPesquisa.Size = new Size(231, 23);
+            txtPesquisa.TabIndex = 11;
+            txtPesquisa.TextChanged += txtPesquisa_TextChanged;
+            // 
             // Estoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(txtPesquisa);
             Controls.Add(btnEditarEstoque);
             Controls.Add(label4);
             Controls.Add(btnRemoveEstoque);
@@ -389,6 +412,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -421,5 +446,7 @@
         private PictureBox pictureBox5;
         private Button button2;
         private Button btnEditarEstoque;
+        private TextBox txtPesquisa;
+        private Label label5;
     }
 }
