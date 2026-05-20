@@ -57,6 +57,8 @@
             btnRemover = new Button();
             groupBox1 = new GroupBox();
             btnEditar = new Button();
+            txtPesquisa = new TextBox();
+            label6 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -344,10 +346,10 @@
             // dgvClientes
             // 
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Location = new Point(270, 318);
+            dgvClientes.Location = new Point(218, 377);
             dgvClientes.Name = "dgvClientes";
             dgvClientes.ReadOnly = true;
-            dgvClientes.Size = new Size(1009, 422);
+            dgvClientes.Size = new Size(1117, 358);
             dgvClientes.TabIndex = 5;
             // 
             // btnRemover
@@ -374,7 +376,7 @@
             groupBox1.Controls.Add(txtCPF);
             groupBox1.Location = new Point(218, 141);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(952, 155);
+            groupBox1.Size = new Size(952, 230);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
@@ -389,12 +391,34 @@
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
             // 
+            // txtPesquisa
+            // 
+            txtPesquisa.Location = new Point(235, 331);
+            txtPesquisa.Name = "txtPesquisa";
+            txtPesquisa.Size = new Size(381, 23);
+            txtPesquisa.TabIndex = 6;
+            txtPesquisa.TextChanged += txtPesquisa_TextChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.LightBlue;
+            label6.BorderStyle = BorderStyle.Fixed3D;
+            label6.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(235, 299);
+            label6.Name = "label6";
+            label6.Size = new Size(233, 31);
+            label6.TabIndex = 7;
+            label6.Text = "Pesquisa de clientes ";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(label6);
+            Controls.Add(txtPesquisa);
             Controls.Add(btnEditar);
             Controls.Add(groupBox1);
             Controls.Add(btnRemover);
@@ -419,6 +443,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -451,5 +476,7 @@
         private PictureBox pictureBox6;
         private Button button1;
         private Button btnEditar;
+        private TextBox txtPesquisa;
+        private Label label6;
     }
 }
