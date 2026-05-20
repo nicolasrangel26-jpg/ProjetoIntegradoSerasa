@@ -256,10 +256,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.LightBlue;
+            label2.BorderStyle = BorderStyle.Fixed3D;
             label2.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(17, 21);
             label2.Name = "label2";
-            label2.Size = new Size(83, 29);
+            label2.Size = new Size(85, 31);
             label2.TabIndex = 4;
             label2.Text = "Nome ";
             // 
